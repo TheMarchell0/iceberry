@@ -1,0 +1,37 @@
+.header {
+
+  &__container {
+    display: flex;
+    padding-top: 17px;
+    align-items: center;
+  }
+
+  &__img-wrapper {
+    flex: 0 1 203px;
+    position: relative;
+
+    & a,
+    & img {
+      border-radius: 50%;
+      max-width: 113px;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+
+    &-item {
+
+      &:not(:last-child) {
+        margin-right: 90px;
+      }
+
+      & a {
+        font-size: 20px;
+        line-height: 22px;
+        color: #E31A4D;
+        text-decoration: none;
+      }
+    }
+  }
+}
