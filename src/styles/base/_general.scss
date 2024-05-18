@@ -25,3 +25,12 @@ main {
     height: 100%;
     z-index: 2;
 }
+
+.main-title {
+    font-family: 'Intro Bold';
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 66px;
+    color: $mainColor;
+    text-transform: uppercase;
+}

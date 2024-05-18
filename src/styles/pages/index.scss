@@ -1,0 +1,12 @@
+@import "../helpers/variables";
+
+.hero {
+    background: url('../../img/hero-bg.svg') no-repeat center;
+    display: flex;
+
+    &__info {
+        &-subtitle {
+            color: $mainColor;
+        }
+    }
+}

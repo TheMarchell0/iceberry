@@ -25,10 +25,10 @@ gulp.task("styles", () => {
         .pipe(plumber())
         .pipe(sass())
         .pipe(groupmedia())
-        .pipe(gulpif(production, autoprefixer({
+        .pipe(autoprefixer({  // Уберите обертку в gulpif здесь
             cascade: false,
             grid: true
-        })))
+        }))
         .pipe(gulpif(production, mincss({
             compatibility: "ie8", level: {
                 1: {
