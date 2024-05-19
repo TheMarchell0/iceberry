@@ -1,6 +1,7 @@
 @import "../../helpers/variables";
 
 .brands {
+  margin-top: 63px;
 
   &__title {
     text-transform: uppercase;
@@ -45,6 +46,7 @@
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           background: url('../../../img/brands-bg-1@2x.png') no-repeat center;
+          background-size: cover;
         }
 
         & .brands__title {
@@ -60,6 +62,7 @@
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           background: url('../../../img/brands-bg-2@2x.png') no-repeat center;
+          background-size: cover;
         }
       }
 
@@ -69,6 +72,7 @@
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           background: url('../../../img/brands-bg-3@2x.png') no-repeat center;
+          background-size: cover;
         }
 
         & .brands__title {
@@ -86,6 +90,7 @@
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           background: url('../../../img/brands-bg-4@2x.png') no-repeat center;
+          background-size: cover;
         }
       }
 
@@ -95,6 +100,7 @@
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           background: url('../../../img/brands-bg-5@2x.png') no-repeat center;
+          background-size: cover;
         }
       }
 
@@ -104,6 +110,7 @@
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
           background: url('../../../img/brands-bg-6@2x.png') no-repeat center;
+          background-size: cover;
         }
 
         & .brands__title {

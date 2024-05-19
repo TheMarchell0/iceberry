@@ -7,7 +7,7 @@
 
   &__container {
     padding-top: 30px;
-    padding-bottom:41px;
+    padding-bottom: 41px;
     display: flex;
   }
 
@@ -46,14 +46,24 @@
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: auto;
+    margin-top: 10px;
+
     &-title {
       font-family: 'Intro Bold';
+      font-weight: 700;
+      color: #FFFFFF;
     }
 
     &-socials {
       display: flex;
+      margin-top: 15px;
 
       &-item {
+        border-radius: 50%;
 
         &:not(:last-child) {
           margin-right: 20px;

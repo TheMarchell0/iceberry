@@ -1,6 +1,7 @@
 @import "../../helpers/variables";
 
 .buy {
+  margin: 25px 0 51px;
 
   &__title {
 
@@ -12,6 +13,7 @@
     line-height: 22px;
     max-width: 626px;
     width: 100%;
+    margin: 23px 0 22px;
   }
 
   &__list {
