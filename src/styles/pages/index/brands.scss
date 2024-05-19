@@ -34,6 +34,11 @@
       padding: 27px 30px;
       min-height: 350px;
       margin-bottom: 20px;
+      transition: 0.2s linear;
+
+      &:hover {
+        scale: 1.05;
+      }
 
       &:not(:nth-child(3n)) {
         margin-right: 20px;

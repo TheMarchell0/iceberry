@@ -66,9 +66,26 @@ p {
     outline: none;
     padding: 11px;
     cursor: pointer;
+    transition: 0.3s linear;
+
+    &:hover {
+        opacity: 0.5;
+
+        & a {
+            opacity: 1;
+        }
+    }
 
     & a {
         color: inherit;
         text-decoration: none;
+    }
+}
+
+a {
+    transition: 0.1s linear;
+
+    &:hover {
+        opacity: 0.5;
     }
 }
