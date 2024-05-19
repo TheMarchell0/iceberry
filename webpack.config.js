@@ -1,8 +1,11 @@
 const path = require("path");
+const { merge } = require("webpack-merge");
+const { entryPages } = require("./webpack.parts");
 
-module.exports = {
+module.exports = merge({
     entry: {
-        main: "./src/js/index.js"
+        main: "./src/js/main.js",
+        ...entryPages()
     },
 
     output: {
@@ -47,4 +50,4 @@ module.exports = {
             "%components%": path.resolve(__dirname, "src/blocks/components")
         }
     }
-};
+});

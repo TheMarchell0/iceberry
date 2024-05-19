@@ -25,7 +25,8 @@ gulp.task("styles", () => {
         .pipe(plumber())
         .pipe(sass())
         .pipe(groupmedia())
-        .pipe(autoprefixer({  // Уберите обертку в gulpif здесь
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 2 versions'],
             cascade: false,
             grid: true
         }))
