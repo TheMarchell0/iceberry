@@ -1,0 +1,20 @@
+@import "../../helpers/variables";
+
+.today {
+
+  &__list {
+    display: flex;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-text {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../helpers/variables";
+
+.quality {
+  background: url('../../../img/quality-bg.png') no-repeat center;
+  background-size: cover;
+
+  @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background: url('../../../img/quality-bg@2x.png') no-repeat center;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+
+    &_bold {
+      font-family: 'Intro Bold';
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 24.2px;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Intro Bold';
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 49px;
+    color: $mainColor;
+  }
+
+  &__descr {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17.6px;
+  }
+}

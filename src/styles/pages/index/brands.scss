@@ -1,0 +1,119 @@
+@import "../../helpers/variables";
+
+.brands {
+
+  &__title {
+    text-transform: uppercase;
+    font-family: 'Intro Bold';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #FFFFFF;
+    max-width: 230px;
+    width: 100%;
+    margin-bottom: 11px;
+  }
+
+  &__descr {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      flex: 0 1 420px;
+      background-size: cover;
+      border-radius: 30px;
+      overflow: hidden;
+      padding: 27px 30px;
+      min-height: 350px;
+      margin-bottom: 20px;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 20px;
+      }
+
+      &_main {
+        background: url('../../../img/brands-bg-1.png') no-repeat center;
+        background-size: cover;
+        padding: 25px 21px;
+
+        @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background: url('../../../img/brands-bg-1@2x.png') no-repeat center;
+        }
+
+        & .brands__title {
+          font-size: 60px;
+          line-height: 66px;
+          margin-bottom: 13px;
+        }
+      }
+
+      &_plombir {
+        background: url('../../../img/brands-bg-2.png') no-repeat center;
+        background-size: cover;
+
+        @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background: url('../../../img/brands-bg-2@2x.png') no-repeat center;
+        }
+      }
+
+      &_filevskoe {
+        background: url('../../../img/brands-bg-3.png') no-repeat center;
+        background-size: cover;
+
+        @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background: url('../../../img/brands-bg-3@2x.png') no-repeat center;
+        }
+
+        & .brands__title {
+          color: $mainColor;
+        }
+
+        & .brands__descr {
+          color: $mainColor;
+        }
+      }
+
+      &_jemchujuna {
+        background: url('../../../img/brands-bg-4.png') no-repeat center;
+        background-size: cover;
+
+        @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background: url('../../../img/brands-bg-4@2x.png') no-repeat center;
+        }
+      }
+
+      &_ded-moroz {
+        background: url('../../../img/brands-bg-5.png') no-repeat center;
+        background-size: cover;
+
+        @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background: url('../../../img/brands-bg-5@2x.png') no-repeat center;
+        }
+      }
+
+      &_vkuslandia {
+        background: url('../../../img/brands-bg-6.png') no-repeat center;
+        background-size: cover;
+
+        @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background: url('../../../img/brands-bg-6@2x.png') no-repeat center;
+        }
+
+        & .brands__title {
+          color: $black;
+        }
+
+        & .brands__descr {
+          color: $black;
+        }
+      }
+    }
+  }
+}
