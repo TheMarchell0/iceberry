@@ -9,7 +9,7 @@
   url("/fonts/Intro Black/intro-black.ttf") format("truetype"), /* Safari, Android, iOS */
   url("/fonts/Intro Black/intro-black.woff") format("woff"), /* Modern Browsers */
   url("/fonts/Intro Black/intro-black.woff2") format("woff2"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -24,7 +24,7 @@
   url("/fonts/Intro Bold/intro-bold.ttf") format("truetype"), /* Safari, Android, iOS */
   url("/fonts/Intro Bold/intro-bold.woff") format("woff"), /* Modern Browsers */
   url("/fonts/Intro Bold/intro-bold.woff2") format("woff2"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -39,7 +39,7 @@
   url("/fonts/Intro Regular/intro-regular.ttf") format("truetype"), /* Safari, Android, iOS */
   url("/fonts/Intro Regular/intro-regular.woff") format("woff"), /* Modern Browsers */
   url("/fonts/Intro Regular/intro-regular.woff2") format("woff2"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -51,7 +51,7 @@
   src: url("/fonts/Rubik/Rubik-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
   url("/fonts/Rubik/Rubik-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
   url("/fonts/Rubik/Rubik-Regular.woff") format("woff"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -63,6 +63,6 @@
   src: url("/fonts/Rubik/Rubik-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
   url("/fonts/Rubik/Rubik-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
   url("/fonts/Rubik/Rubik-Bold.woff") format("woff"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }

@@ -1,13 +1,104 @@
 @import "../helpers/variables";
 
 .hero {
-    background: url('../../img/hero-bg.svg') no-repeat center;
-    background-size: cover;
+  background: url('../../img/hero-bg.svg') no-repeat center;
+  background-size: cover;
+  padding-top: 94px;
+  padding-bottom: 250px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__info {
+    margin-top: 114px;
+
+    &-subtitle {
+      color: $mainColor;
+      font-size: 29px;
+      font-weight: 700;
+      line-height: 31.9px;
+      text-align: right;
+    }
+
+    &-title {
+      color: $mainColor;
+      font-size: 126px;
+      font-weight: 700;
+      line-height: 126px;
+      text-transform: uppercase;
+    }
+
+    &-descr {
+      color: $mainColor;
+      font-family: 'Rubik Regular';
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      border: 1px solid $mainColor;
+      border-radius: 23px;
+      max-width: 256px;
+      width: 100%;
+      margin-top: 41px;
+      padding: 26px 22px;
+    }
+
+    &-img {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.today {
+
+  &__list {
     display: flex;
 
-    &__info {
-        &-subtitle {
-            color: $mainColor;
-        }
+    &-item {
+      display: flex;
+      flex-direction: column;
     }
+
+    &-text {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+}
+
+.awards {
+
+  &__descr {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    max-width: 550px;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 1 190px;
+    }
+
+    &-text {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+
+      & span {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
 }

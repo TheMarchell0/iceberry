@@ -8,6 +8,15 @@
 
 main {
     min-height: 100vh;
+    margin-top: -134px;
+}
+
+section {
+    position: relative;
+}
+
+p {
+    color: $black;
 }
 
 .container {
@@ -32,5 +41,14 @@ main {
     font-size: 60px;
     line-height: 66px;
     color: $mainColor;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: $mainColor;
+    font-family: 'Intro Bold';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
     text-transform: uppercase;
 }

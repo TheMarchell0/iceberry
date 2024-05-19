@@ -1,4 +1,6 @@
 .header {
+  z-index: 1000;
+  position: relative;
 
   &__container {
     display: flex;
