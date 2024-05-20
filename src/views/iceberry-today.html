@@ -10,11 +10,254 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/pages/iceberry-today.css">
 </head>
 <body>
 @@include("../blocks/modules/header/header.html")
 <main>
-    <h1>Айсберри сегодня</h1>
+    <section class="hero">
+        <div class="hero__container container">
+            <div class="hero__content">
+                <picture>
+                    <source
+                            srcset="./img/iceberry-today-hero-img.png 1x, ./img/iceberry-today-hero-img@2x.png 2x"
+                    />
+                    <img
+                            src="./img/iceberry-today-hero-img.png"
+                            alt="Декоративная картинка"
+                            width="686"
+                            class="hero__img"
+                    />
+                </picture>
+                <div class="hero__info">
+                    <p class="hero__info-subtitle">Группа компаний</p>
+                    <h1 class="hero__info-title">Айсберри</h1>
+                    <p class="hero__info-descr">Крупнейший российский производитель мороженого</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="history">
+        <div class="history__container container">
+            <div class="history__content">
+                <div class="history__info">
+                    <h2 class="history__title section-title">История компании</h2>
+                    <p class="history__descr">Преемник первого советского проекта в индустрии мороженого, основанного в
+                        1938 году. Компания создана на базе старейших московских предприятий по производству мороженого
+                        «Айс-Фили» (Хладокомбинат №8) и «Сервис-Холод» (Хладокомбинат №10).</p>
+                    <p class="history__descr">Хладокомбинат №8 — первая и крупнейшая фабрика мороженого в Советском
+                        Союзе — была введена в эксплуатацию в 1938 г. по инициативе наркома Пищепрома Анастаса Микояна в
+                        Филях.</p>
+                </div>
+                <div class="history__images">
+                    <picture>
+                        <source
+                                srcset="./img/iceberry-today-history-img-1.png 1x, ./img/iceberry-today-history-img-1@2x.png 2x"
+                        />
+                        <img
+                                src="./img/iceberry-today-history-img-1.png"
+                                alt="Декоративная картинка"
+                                width="375"
+                                class="history__images-img"
+                        />
+                    </picture>
+                    <picture>
+                        <source
+                                srcset="./img/iceberry-today-history-img-2.png 1x, ./img/iceberry-today-history-img-2@2x.png 2x"
+                        />
+                        <img
+                                src="./img/iceberry-today-history-img-2.png"
+                                alt="Декоративная картинка"
+                                width="375"
+                                class="history__images-img"
+                        />
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="factory">
+        <div class="factory__container container">
+            <div class="factory__info">
+                <h2 class="factory__info-title section-title">Наши фабрики</h2>
+                <p class="factory__info-descr">Единственная компания в России, владеющая тремя фабриками по производству
+                    мороженого. Высокотехнологичные и полностью автоматизированные производства расположены в регионах,
+                    славящихся своими молочными традициями, — г. Тутаев Ярославской области, г. Вологда, г. Пенза.</p>
+                <ul class="factory__list">
+                    <li class="factory__list-item">
+                        <picture>
+                            <source
+                                    srcset="./img/iceberry-today-factory-img-1.png 1x, ./img/iceberry-today-factory-img-1@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/iceberry-today-factory-img-1.png"
+                                    alt="Декоративная картинка"
+                                    width="606"
+                                    class="history__images-img"
+                            />
+                        </picture>
+                        <p class="factory__list-text"><span>100 000</span><br/>тонн мороженого в год</p>
+                    </li>
+                    <li class="factory__list-item">
+                        <picture>
+                            <source
+                                    srcset="./img/iceberry-today-factory-img-2.png 1x, ./img/iceberry-today-factory-img-2@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/iceberry-today-factory-img-2.png"
+                                    alt="Декоративная картинка"
+                                    width="606"
+                                    class="history__images-img"
+                            />
+                        </picture>
+                        <img
+                                src="./img/iceberry-today-factory-icon.svg"
+                                alt="Декоративная картинка"
+                                width="58"
+                                class="history__images-icon"
+                        />
+                        <p class="factory__list-text">все производства имеют сертификат качества</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="icon-info">
+        <div class="icon-info__container container">
+            <picture>
+                <source
+                        srcset="./img/iceberry-today-icon-info-decor.png 1x, ./img/iceberry-today-icon-info-decor@2x.png 2x"
+                />
+                <img
+                        src="./img/iceberry-today-icon-info-decor.png"
+                        alt="Декоративная картинка"
+                        width="253"
+                        class="icon-info__decor"
+                />
+            </picture>
+            <ul class="icon-info__list">
+                <li class="icon-info__list-item">
+                    <img
+                            src="./img/iceberry-today-icon-info-img-1.svg"
+                            alt="Декоративная картинка"
+                            width="100"
+                            class="icon-info__img"
+                    />
+                    <p class="icon-info__title">250<br/>наименований мороженого</p>
+                </li>
+                <li class="icon-info__list-item">
+                    <img
+                            src="./img/iceberry-today-icon-info-img-2.svg"
+                            alt="Декоративная картинка"
+                            width="100"
+                            class="icon-info__img"
+                    />
+                    <p class="icon-info__title">35<br/>филиалов</p>
+                </li>
+                <li class="icon-info__list-item">
+                    <img
+                            src="./img/iceberry-today-icon-info-img-3.svg"
+                            alt="Декоративная картинка"
+                            width="100"
+                            class="icon-info__img"
+                    />
+                    <p class="icon-info__title">300<br/>автомобилей-рефрижераторов</p>
+                </li>
+                <li class="icon-info__list-item">
+                    <img
+                            src="./img/iceberry-today-icon-info-img-4.svg"
+                            alt="Декоративная картинка"
+                            width="100"
+                            class="icon-info__img"
+                    />
+                    <p class="icon-info__title">62&nbsp;000<br/>адресов ритейла</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="info">
+        <div class="info__container container">
+            <ul class="info__list">
+                <li class="info__list-item">
+                    <p class="info__list-title">В ассортименте Айсберри более 250 наименований мороженого с различными
+                        вкусами, в разных ценовых категориях.</p>
+                    <img
+                            src="./img/iceberry-today-info-img-1-1.svg"
+                            alt="Декоративная картинка"
+                            width="108"
+                            class="info-img info-img_1-1"
+                    />
+                    <picture>
+                        <source
+                                srcset="./img/iceberry-today-info-img-1-2.png 1x, ./img/iceberry-today-info-img-1-2@2x.png 2x"
+                        />
+                        <img
+                                src="./img/iceberry-today-info-img-1-2.png"
+                                alt="Декоративная картинка"
+                                width="335"
+                                class="info-img info-img_1-2"
+                        />
+                    </picture>
+                </li>
+                <li class="info__list-item">
+                    <p class="info__list-title">Крупнейшая логистическая инфраструктура, включающая
+                        в себя современные склады для хранения низкотемпературной продукции в 35 регионах России.</p>
+                    <picture>
+                        <source
+                                srcset="./img/iceberry-today-info-img-2-1.png 1x, ./img/iceberry-today-info-img-2-1@2x.png 2x"
+                        />
+                        <img
+                                src="./img/iceberry-today-info-img-2-1.png"
+                                alt="Декоративная картинка"
+                                width="346"
+                                class="info-img info-img_2-1"
+                        />
+                    </picture>
+                </li>
+                <li class="info__list-item">
+                    <p class="info__list-title">Собственный автопарк специализированного транспорта для перевозки мороженого, насчитывающий более 300 автомобилей-рефрижераторов.</p>
+                    <picture>
+                        <source
+                                srcset="./img/iceberry-today-info-img-3-1.png 1x, ./img/iceberry-today-info-img-3-1@2x.png 2x"
+                        />
+                        <img
+                                src="./img/iceberry-today-info-img-3-1.png"
+                                alt="Декоративная картинка"
+                                width="440"
+                                class="info-img info-img_3-1"
+                        />
+                    </picture>
+                </li>
+                <li class="info__list-item">
+                    <p class="info__list-title">Более 62 000 адресов ритейла, где можно приобрести мороженое ТД Айсберри.</p>
+                    <img
+                            src="./img/iceberry-today-info-img-4-1.svg"
+                            alt="Декоративная картинка"
+                            width="273"
+                            class="info-img info-img_4-1"
+                    />
+                    <img
+                            src="./img/iceberry-today-info-img-4-2.svg"
+                            alt="Декоративная картинка"
+                            width="215"
+                            class="info-img info-img_4-2"
+                    />
+                    <img
+                            src="./img/iceberry-today-info-img-4-3.svg"
+                            alt="Декоративная картинка"
+                            width="233"
+                            class="info-img info-img_4-3"
+                    />
+                    <img
+                            src="./img/iceberry-today-info-img-4-4.svg"
+                            alt="Декоративная картинка"
+                            width="162"
+                            class="info-img info-img_4-4"
+                    />
+                </li>
+            </ul>
+        </div>
+    </section>
 </main>
 @@include("../blocks/modules/footer/footer.html")
 <script src="js/main.js"></script>

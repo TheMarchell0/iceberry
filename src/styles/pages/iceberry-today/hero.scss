@@ -1,0 +1,30 @@
+@import "../../helpers/variables";
+
+.hero {
+  background: url('../../../img/iceberry-today-hero-bg.svg') no-repeat center;
+  background-size: cover;
+  color: $mainColor;
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    font-family: 'Intro Bold';
+    font-weight: 700;
+
+    &-subtitle,
+    &-descr {
+      font-size: 29px;
+      line-height: 32px;
+      color: $mainColor;
+    }
+
+    &-title {
+      font-size: 126px;
+      line-height: 126px;
+      text-transform: uppercase;
+    }
+  }
+}
