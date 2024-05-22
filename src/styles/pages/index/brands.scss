@@ -3,6 +3,10 @@
 .brands {
   margin-top: 63px;
 
+  @media (max-width: 767px) {
+    margin-top: 30px;
+  }
+
   &__title {
     text-transform: uppercase;
     font-family: 'Intro Bold';
@@ -13,6 +17,11 @@
     max-width: 230px;
     width: 100%;
     margin-bottom: 11px;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 110%;
+    }
   }
 
   &__descr {
@@ -20,14 +29,28 @@
     font-weight: 400;
     line-height: 18px;
     color: #FFFFFF;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      max-width: 182px;
+      width: 100%;
+    }
   }
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
+
+    @media (min-width: 1024px) {
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      justify-content: center;
+    }
 
     &-item {
-      flex: 0 1 420px;
+      max-width: 420px;
+      width: 100%;
       background-size: cover;
       border-radius: 30px;
       overflow: hidden;
@@ -37,21 +60,40 @@
       transition: 0.2s linear;
       position: relative;
 
-      &:hover {
-        scale: 1.05;
+      @media (min-width: 1024px) and (max-width: 1400px) {
+        margin-bottom: 30px;
       }
 
+      @media (min-width: 1024px) {
+        &:hover {
+          scale: 1.05;
+        }
+      }
+
+
       &:not(:nth-child(3n)) {
-        margin-right: 20px;
+        @media (min-width: 1400px) {
+          margin-right: 20px;
+        }
+      }
+
+      &:nth-child(odd) {
+        @media (min-width: 1024px) and (max-width: 1400px) {
+          margin-right: 30px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
       }
 
       &_main {
-        background: url('../../../img/brands-bg-1.png') no-repeat center;
+        background: url('/img/brands-bg-1.png') no-repeat center;
         background-size: cover;
         padding: 25px 21px;
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-          background: url('../../../img/brands-bg-1@2x.png') no-repeat center;
+          background: url('/img/brands-bg-1@2x.png') no-repeat center;
           background-size: cover;
         }
 
@@ -59,25 +101,30 @@
           font-size: 60px;
           line-height: 66px;
           margin-bottom: 13px;
+
+          @media (max-width: 767px) {
+            font-size: 28px;
+            line-height: 31px;
+          }
         }
       }
 
       &_plombir {
-        background: url('../../../img/brands-bg-2.png') no-repeat center;
+        background: url('/img/brands-bg-2.png') no-repeat center;
         background-size: cover;
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-          background: url('../../../img/brands-bg-2@2x.png') no-repeat center;
+          background: url('/img/brands-bg-2@2x.png') no-repeat center;
           background-size: cover;
         }
       }
 
       &_filevskoe {
-        background: url('../../../img/brands-bg-3.png') no-repeat center;
+        background: url('/img/brands-bg-3.png') no-repeat center;
         background-size: cover;
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-          background: url('../../../img/brands-bg-3@2x.png') no-repeat center;
+          background: url('/img/brands-bg-3@2x.png') no-repeat center;
           background-size: cover;
         }
 
@@ -91,31 +138,31 @@
       }
 
       &_jemchujuna {
-        background: url('../../../img/brands-bg-4.png') no-repeat center;
+        background: url('/img/brands-bg-4.png') no-repeat center;
         background-size: cover;
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-          background: url('../../../img/brands-bg-4@2x.png') no-repeat center;
+          background: url('/img/brands-bg-4@2x.png') no-repeat center;
           background-size: cover;
         }
       }
 
       &_ded-moroz {
-        background: url('../../../img/brands-bg-5.png') no-repeat center;
+        background: url('/img/brands-bg-5.png') no-repeat center;
         background-size: cover;
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-          background: url('../../../img/brands-bg-5@2x.png') no-repeat center;
+          background: url('/img/brands-bg-5@2x.png') no-repeat center;
           background-size: cover;
         }
       }
 
       &_vkuslandia {
-        background: url('../../../img/brands-bg-6.png') no-repeat center;
+        background: url('/img/brands-bg-6.png') no-repeat center;
         background-size: cover;
 
         @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-          background: url('../../../img/brands-bg-6@2x.png') no-repeat center;
+          background: url('/img/brands-bg-6@2x.png') no-repeat center;
           background-size: cover;
         }
 

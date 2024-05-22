@@ -3,6 +3,10 @@
 .awards {
   margin-top: -112px;
 
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
+
   &__descr {
     font-size: 20px;
     font-weight: 400;
@@ -10,19 +14,60 @@
     max-width: 550px;
     width: 100%;
     margin: 24px 0 77px;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 18px;
+      margin: 19px 0 60px;
+    }
   }
 
   &__list {
     display: flex;
 
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     &-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      flex: 0 1 190px;
+      max-width: 190px;
+      width: 100%;
+
+      & img {
+        @media (max-width: 767px) {
+          max-width: 80px;
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 1024px) and (max-width: 1400px) {
+        max-width: 310px;
+      }
 
       &:not(:last-child) {
         margin-right: 31px;
+
+        @media (min-width: 1024px) and (max-width: 1400px) {
+          margin-bottom: 31px;
+        }
+      }
+
+      &:nth-child(3n) {
+        @media (min-width: 1024px) and (max-width: 1400px) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+
+        &:not(:last-child) {
+          margin-right: initial;
+        }
       }
     }
 
@@ -38,5 +83,9 @@
         line-height: 18px;
       }
     }
+  }
+
+  &__slider-arrows {
+    margin-top: 19px;
   }
 }

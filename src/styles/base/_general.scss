@@ -51,6 +51,11 @@ p {
     font-weight: 700;
     line-height: 66px;
     text-transform: uppercase;
+
+    @media (max-width: 767px) {
+        font-size: 28px;
+        line-height: 31px;
+    }
 }
 
 .button {
@@ -87,5 +92,11 @@ a {
 
     &:hover {
         opacity: 0.5;
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper {
+        overflow: visible!important;
     }
 }

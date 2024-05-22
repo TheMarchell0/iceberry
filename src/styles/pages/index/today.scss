@@ -3,23 +3,47 @@
 .today {
   margin-top: 132px;
 
+  @media (max-width: 767px) {
+    margin-top: 2px;
+  }
+
   &__title {
     margin-bottom: 55px;
+
+    @media (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     &-item {
       display: flex;
       flex-direction: column;
+      flex: 0 1 420px;
+      align-items: center;
+
+      @media (min-width: 1400px) {
+        flex: 0 1 310px;
+      }
 
       &:not(:last-child) {
         margin-right: 20px;
+
+        @media (max-width: 767px) {
+          margin-right: 0;
+          margin-bottom: 23px;
+        }
       }
 
       &:nth-child(even) {
-        margin-top: 50px;
+        @media (min-width: 1400px) {
+          margin-top: 50px;
+        }
       }
     }
 
@@ -29,6 +53,11 @@
       line-height: 22px;
       text-align: center;
       margin-top: 13px;
+
+      @media (max-width: 767px) {
+        max-width: 310px;
+        width: 100%;
+      }
     }
   }
 }

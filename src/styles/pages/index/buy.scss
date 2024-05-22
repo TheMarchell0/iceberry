@@ -3,6 +3,10 @@
 .buy {
   margin: 25px 0 51px;
 
+  @media (max-width: 767px) {
+    margin: 29px 0;
+  }
+
   &__title {
 
   }
@@ -14,22 +18,44 @@
     max-width: 626px;
     width: 100%;
     margin: 23px 0 22px;
+
+    @media (max-width: 767px) {
+      margin: 11px 0 22px;
+    }
   }
 
   &__list {
     display: flex;
 
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     &-item {
-      flex: 0 1 310px;
+      max-width: 310px;
+      width: 100%;
       border: 1px solid $mainColor;
       border-radius: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 310px;
+      margin-bottom: 20px;
+      margin-right: 20px;
 
-      &:not(:last-child) {
-        margin-right: 20px;
+      @media (min-width: 1024px) and (max-width: 1400px) {
+        margin-right: 0;
+        max-width: 430px;
+        margin-bottom: 40px;
+
+        &:nth-child(odd) {
+          margin-right: 40px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
       }
     }
   }

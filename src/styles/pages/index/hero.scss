@@ -1,17 +1,33 @@
 @import "../../helpers/variables";
 
 .hero {
-  background: url('../../../img/hero-bg.svg') no-repeat center;
+  background: url('/img/hero-bg.svg') no-repeat center;
   background-size: cover;
   padding-top: 94px;
   padding-bottom: 250px;
+  background-position: 0 100%;
+
+  @media (max-width: 767px) {
+    padding-bottom: 411px;
+    background-position: 81% 0%;
+  }
 
   &__container {
     display: flex;
+    position: relative;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 
   &__info {
     margin-top: 114px;
+
+    @media (max-width: 767px) {
+      margin-top: 73px;
+      max-width: 331px;
+    }
 
     &-subtitle {
       color: $mainColor;
@@ -19,14 +35,31 @@
       font-weight: 700;
       line-height: 31.9px;
       text-align: right;
+
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
 
     &-title {
       color: $mainColor;
-      font-size: 126px;
+      font-size: 91px;
       font-weight: 700;
       line-height: 126px;
       text-transform: uppercase;
+
+      @media (min-width: 1400px) {
+        font-size: 126px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 60px;
+        line-height: 66px;
+      }
+      @media (max-width: 350px) {
+        font-size: 50px;
+      }
     }
 
     &-descr {
@@ -41,11 +74,33 @@
       width: 100%;
       margin-top: 41px;
       padding: 26px 22px;
+
+      @media (max-width: 767px) {
+        margin-top: 26px;
+      }
     }
 
     &-img {
       position: absolute;
-      right: 0;
+      right: -25px;
+      width: 100%;
+      max-width: 600px;
+
+      @media (min-width: 1400px) {
+        max-width: 773px;
+        right: -50px;
+      }
+
+      @media (max-width: 1024px) {
+        max-width: 500px;
+        bottom: -300px;
+      }
+
+      @media (max-width: 767px) {
+        bottom: -383px;
+        right: -27px;
+        width: 402px;
+      }
     }
   }
 }
