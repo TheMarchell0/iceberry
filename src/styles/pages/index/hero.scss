@@ -14,7 +14,6 @@
 
   &__container {
     display: flex;
-    position: relative;
 
     @media (max-width: 767px) {
       flex-direction: column;
@@ -93,13 +92,12 @@
 
       @media (max-width: 1024px) {
         max-width: 500px;
-        bottom: -300px;
+        bottom: -70px;
       }
 
       @media (max-width: 767px) {
-        bottom: -383px;
-        right: -27px;
         width: 402px;
+        bottom: 26px;
       }
     }
   }

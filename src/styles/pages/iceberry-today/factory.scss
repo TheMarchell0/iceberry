@@ -2,4 +2,60 @@
 
 .factory {
 
+  &__container {
+    display: flex;
+
+    @media (max-width: 1024px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__info {
+    margin-top: 107px;
+    flex: 0 1 488px;
+
+    &-title {
+      margin-bottom: 34px;
+    }
+
+    &-descr {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      max-width: 380px;
+      width: 100%;
+    }
+
+    &_mobile {
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    &-item {
+      & .factory__list-text,
+      & .factory__list-icon {
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 18.7px;
+
+      & span {
+        font-family: 'Intro Bold';
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 49.5px;
+      }
+    }
+  }
 }

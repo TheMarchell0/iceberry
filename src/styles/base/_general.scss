@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
 main {
     min-height: 100vh;
     margin-top: -134px;
@@ -93,6 +99,23 @@ a {
     &:hover {
         opacity: 0.5;
     }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    white-space: nowrap !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 767px) {

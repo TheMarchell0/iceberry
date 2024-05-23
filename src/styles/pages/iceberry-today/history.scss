@@ -1,11 +1,63 @@
 @import "../../helpers/variables";
 
 .history {
+  margin-top: -7vw;
+
   background: url('/img/iceberry-today-history-bg.png') no-repeat center;
   background-size: cover;
 
   @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background: url('/img/iceberry-today-history-bg@2x.png') no-repeat center;
     background-size: cover;
+  }
+
+  &__content {
+    display: flex;
+    padding: 9.7vw 0 101px;
+  }
+
+  &__info {
+    margin-top: 62px;
+    flex: 0 1 710px;
+
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      flex: 0 1 43vw;
+    }
+
+    &-title {
+      color: $white;
+      margin-bottom: 47px;
+    }
+
+    &-descr {
+      color: $white;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 26.4px;
+      max-width: 587px;
+      width: 100%;
+      font-family: 'Rubik Regular';
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+
+      &:last-child {
+        max-width: 525px;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      margin:0 auto;
+    }
+
+    & picture:first-child img {
+      transform: translateX(85px);
+    }
   }
 }

@@ -4,15 +4,37 @@
   background: url('/img/iceberry-today-hero-bg.svg') no-repeat center;
   background-size: cover;
   color: $mainColor;
+  z-index: 1;
+  padding-bottom: 41px;
+  background-position: 0 100%;
 
   &__content {
     display: flex;
     align-items: center;
   }
 
+  &__img {
+    width: 450px;
+    transform: translate(0px, 32px);
+
+    @media (min-width: 1400px) {
+      width: auto;
+      transform: translate(-70px, 32px);
+    }
+  }
+
   &__info {
     font-family: 'Intro Bold';
+    margin-top: 66px;
     font-weight: 700;
+
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      margin: 66px auto 0;
+    }
+
+    @media (min-width: 1400px) {
+      transform: translateX(-96px);
+    }
 
     &-subtitle,
     &-descr {
@@ -21,10 +43,24 @@
       color: $mainColor;
     }
 
+    &-subtitle {
+      text-align: right;
+    }
+
     &-title {
-      font-size: 126px;
+      font-family: 'Intro Bold';
+      font-size: 91px;
       line-height: 126px;
       text-transform: uppercase;
+      margin-bottom: 17px;
+
+      @media (min-width:1400px) {
+        font-size: 126px;
+      }
+    }
+
+    &-descr {
+      max-width: 394px;
     }
   }
 }
