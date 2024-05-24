@@ -1,16 +1,22 @@
 @import "../../helpers/variables";
 
 .hero {
-  background: url('/img/iceberry-today-hero-bg.svg') no-repeat center;
-  background-size: cover;
+  background-color: $white;
   color: $mainColor;
-  z-index: 1;
   padding-bottom: 41px;
   background-position: 0 100%;
+
+  @media (min-width: 1024px) and (max-width: 1400px) {
+    padding-bottom: 100px;
+  }
 
   &__content {
     display: flex;
     align-items: center;
+
+    @media (max-width: 1024px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__img {
@@ -21,6 +27,24 @@
       width: auto;
       transform: translate(-70px, 32px);
     }
+
+    @media (max-width: 1024px) {
+      transform: translate(1px, -40px);
+    }
+
+    &_mobile {
+      width: 375px;
+
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    &_desktop {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
   }
 
   &__info {
@@ -28,12 +52,16 @@
     margin-top: 66px;
     font-weight: 700;
 
+    @media (min-width: 1400px) {
+      transform: translateX(-96px);
+    }
+
     @media (min-width: 1024px) and (max-width: 1400px) {
       margin: 66px auto 0;
     }
 
-    @media (min-width: 1400px) {
-      transform: translateX(-96px);
+    @media (max-width: 1024px) {
+      margin-top: 178px;
     }
 
     &-subtitle,
@@ -45,6 +73,11 @@
 
     &-subtitle {
       text-align: right;
+
+      @media (max-width: 1024px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
 
     &-title {
@@ -54,13 +87,24 @@
       text-transform: uppercase;
       margin-bottom: 17px;
 
-      @media (min-width:1400px) {
+      @media (min-width: 1400px) {
         font-size: 126px;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 60px;
+        line-height: 66px;
       }
     }
 
     &-descr {
       max-width: 394px;
+
+      @media (max-width: 1024px) {
+        font-size: 22px;
+        line-height: 24.2px;
+      }
     }
   }
+
 }

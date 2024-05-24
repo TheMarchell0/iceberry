@@ -14,6 +14,7 @@
 
   &__container {
     display: flex;
+    position: relative;
 
     @media (max-width: 767px) {
       flex-direction: column;
@@ -47,6 +48,7 @@
       font-weight: 700;
       line-height: 126px;
       text-transform: uppercase;
+      font-family: 'Intro Bold';
 
       @media (min-width: 1400px) {
         font-size: 126px;
@@ -63,7 +65,6 @@
 
     &-descr {
       color: $mainColor;
-      font-family: 'Rubik Regular';
       font-size: 20px;
       font-weight: 400;
       line-height: 22px;
@@ -74,6 +75,10 @@
       margin-top: 41px;
       padding: 26px 22px;
 
+      & span {
+        font-family: 'Rubik Regular';
+      }
+
       @media (max-width: 767px) {
         margin-top: 26px;
       }
@@ -81,23 +86,29 @@
 
     &-img {
       position: absolute;
-      right: -25px;
       width: 100%;
-      max-width: 600px;
 
       @media (min-width: 1400px) {
-        max-width: 773px;
-        right: -50px;
+        max-width: 892px;
+        right: -169px;
+      }
+
+      @media (min-width: 1024px) and (max-width: 1400px) {
+        bottom: -268px;
+        max-width: 738px;
+        right: -160px;
       }
 
       @media (max-width: 1024px) {
+        right: -72px;
         max-width: 500px;
-        bottom: -70px;
+        bottom: -268px;
       }
 
       @media (max-width: 767px) {
-        width: 402px;
-        bottom: 26px;
+        width: 455px;
+        bottom: -378px;
+        right: -85px;
       }
     }
   }

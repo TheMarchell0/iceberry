@@ -1,6 +1,7 @@
 @import "../../helpers/variables";
 
 .factory {
+  z-index: 2;
 
   &__container {
     display: flex;
@@ -14,8 +15,22 @@
     margin-top: 107px;
     flex: 0 1 488px;
 
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      margin-top: 71px;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-top: -19px;
+      flex: auto;
+    }
+
     &-title {
       margin-bottom: 34px;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 20px;
+      }
     }
 
     &-descr {
@@ -24,11 +39,32 @@
       line-height: 22px;
       max-width: 380px;
       width: 100%;
+
+      @media (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 17.6px;
+        max-width: 310px;
+      }
     }
 
     &_mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 28px 0 38px;
+
       @media (min-width: 1024px) {
         display: none;
+      }
+
+      & .factory__list-text:first-child {
+        margin-bottom: 31px;
+      }
+
+      & .factory__list-text:last-child {
+        max-width: 211px;
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -36,9 +72,65 @@
   &__list {
     display: flex;
 
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      margin: 0 auto;
+    }
+
     &-item {
-      & .factory__list-text,
-      & .factory__list-icon {
+
+      &:nth-child(1) {
+        transform: translate(49px, -82px);
+
+        @media (max-width: 1024px) {
+          transform: translate(-5px, -39px);
+        }
+
+        & .factory__list-text {
+          margin-top: 25px;
+          margin-left: 173px;
+          max-width: 180px;
+          width: 100%;
+
+          @media (min-width: 1024px) and (max-width: 1400px) {
+            margin-left: 50px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        transform: translate(26px, 30px);
+
+        @media (max-width: 1024px) {
+          transform: translate(-19px, 7px);
+        }
+
+        & .factory__list-text {
+          position: relative;
+          max-width: 211px;
+          margin: 74px 0 0 103px;
+
+          @media (min-width: 1024px) and (max-width: 1400px) {
+            margin-left: 50px;
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: -67px;
+            background: url('/img/iceberry-today-factory-icon.svg') no-repeat center;
+            width: 58px;
+            height: 58px;
+
+            @media (max-width: 1024px) {
+              top: -40px;
+            }
+          }
+        }
+      }
+
+      & .factory__list-text {
         @media (max-width: 1024px) {
           display: none;
         }
@@ -55,7 +147,25 @@
         font-size: 45px;
         font-weight: 700;
         line-height: 49.5px;
+
+        @media (min-width: 1024px) and (max-width: 1400px) {
+          width: 300px;
+        }
       }
+    }
+
+    &-img {
+      @media (min-width: 1024px) and (max-width: 1400px) {
+        width: 300px;
+      }
+
+      @media (max-width: 1024px) {
+        width: 179px;
+      }
+    }
+
+    &-icon {
+      margin-bottom: 10px;
     }
   }
 }
