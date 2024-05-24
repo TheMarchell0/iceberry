@@ -5,7 +5,7 @@
   z-index: 1;
   background: url('/img/iceberry-today-history-bg.png') no-repeat center;
   background-size: cover;
-  background-position: 0 0;
+  background-position: 0 0!important;
 
   @media (min-width: 1024px) and (max-width: 1400px) {
     margin-top: -14.5vw;
@@ -21,7 +21,7 @@
     background-size: cover;
 
     @media (min-width: 1024px) {
-      background-position: 0 0;
+      background-position: 0 0!important;
     }
   }
 
