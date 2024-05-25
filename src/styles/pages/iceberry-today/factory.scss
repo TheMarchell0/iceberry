@@ -59,6 +59,10 @@
 
       & .factory__list-text:first-child {
         margin-bottom: 31px;
+
+        @media (max-width: 1024px) {
+          margin-bottom: 95px;
+        }
       }
 
       & .factory__list-text:last-child {
@@ -112,21 +116,6 @@
           @media (min-width: 1024px) and (max-width: 1400px) {
             margin-left: 50px;
           }
-
-          &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            top: -67px;
-            background: url('/img/iceberry-today-factory-icon.svg') no-repeat center;
-            width: 58px;
-            height: 58px;
-
-            @media (max-width: 1024px) {
-              top: -40px;
-            }
-          }
         }
       }
 
@@ -150,6 +139,27 @@
 
         @media (min-width: 1024px) and (max-width: 1400px) {
           width: 300px;
+        }
+      }
+
+      &_icon {
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: -67px;
+          background: url('/img/iceberry-today-factory-icon.svg') no-repeat center;
+          width: 58px;
+          height: 58px;
+
+          @media (max-width: 1024px) {
+            top: -67px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
       }
     }

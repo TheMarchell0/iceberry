@@ -65,10 +65,9 @@
       color: $white;
       font-size: 24px;
       font-weight: 400;
-      line-height: 26.4px;
+      line-height: 26px;
       max-width: 587px;
       width: 100%;
-      font-family: 'Rubik Regular';
 
       @media (max-width: 1024px) {
         font-family: 'Intro Bold';
@@ -87,6 +86,10 @@
 
       &:last-child {
         max-width: 525px;
+      }
+
+      & span {
+        font-family: 'Rubik Regular';
       }
     }
   }
