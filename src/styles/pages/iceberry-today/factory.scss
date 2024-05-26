@@ -6,7 +6,7 @@
   &__container {
     display: flex;
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet) {
       flex-direction: column-reverse;
     }
   }
@@ -15,12 +15,12 @@
     margin-top: 107px;
     flex: 0 1 488px;
 
-    @media (min-width: 1024px) and (max-width: 1400px) {
+    @media (min-width: $tablet) and (max-width: $laptop) {
       margin-top: 71px;
       margin-bottom: 50px;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet) {
       margin-top: -19px;
       flex: auto;
     }
@@ -28,7 +28,7 @@
     &-title {
       margin-bottom: 34px;
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         margin-bottom: 20px;
       }
     }
@@ -40,7 +40,7 @@
       max-width: 380px;
       width: 100%;
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         font-size: 16px;
         line-height: 17.6px;
         max-width: 310px;
@@ -53,14 +53,14 @@
       align-items: center;
       margin: 28px 0 38px;
 
-      @media (min-width: 1024px) {
+      @media (min-width: $tablet) {
         display: none;
       }
 
       & .factory__list-text:first-child {
         margin-bottom: 31px;
 
-        @media (max-width: 1024px) {
+        @media (max-width: $tablet) {
           margin-bottom: 95px;
         }
       }
@@ -76,7 +76,7 @@
   &__list {
     display: flex;
 
-    @media (min-width: 1024px) and (max-width: 1400px) {
+    @media (min-width: $tablet) and (max-width: $laptop) {
       margin: 0 auto;
     }
 
@@ -85,7 +85,7 @@
       &:nth-child(1) {
         transform: translate(49px, -82px);
 
-        @media (max-width: 1024px) {
+        @media (max-width: $tablet) {
           transform: translate(-5px, -39px);
         }
 
@@ -95,7 +95,7 @@
           max-width: 180px;
           width: 100%;
 
-          @media (min-width: 1024px) and (max-width: 1400px) {
+          @media (min-width: $tablet) and (max-width: $laptop) {
             margin-left: 50px;
           }
         }
@@ -104,7 +104,7 @@
       &:nth-child(2) {
         transform: translate(26px, 30px);
 
-        @media (max-width: 1024px) {
+        @media (max-width: $tablet) {
           transform: translate(-19px, 7px);
         }
 
@@ -113,14 +113,14 @@
           max-width: 211px;
           margin: 74px 0 0 103px;
 
-          @media (min-width: 1024px) and (max-width: 1400px) {
+          @media (min-width: $tablet) and (max-width: $laptop) {
             margin-left: 50px;
           }
         }
       }
 
       & .factory__list-text {
-        @media (max-width: 1024px) {
+        @media (max-width: $tablet) {
           display: none;
         }
       }
@@ -137,7 +137,7 @@
         font-weight: 700;
         line-height: 49.5px;
 
-        @media (min-width: 1024px) and (max-width: 1400px) {
+        @media (min-width: $tablet) and (max-width: $laptop) {
           width: 300px;
         }
       }
@@ -155,7 +155,7 @@
           width: 58px;
           height: 58px;
 
-          @media (max-width: 1024px) {
+          @media (max-width: $tablet) {
             top: -67px;
             left: 50%;
             transform: translateX(-50%);
@@ -165,11 +165,11 @@
     }
 
     &-img {
-      @media (min-width: 1024px) and (max-width: 1400px) {
+      @media (min-width: $tablet) and (max-width: $laptop) {
         width: 300px;
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         width: 179px;
       }
     }

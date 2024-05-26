@@ -3,7 +3,7 @@
 .brands {
   margin-top: 63px;
 
-  @media (max-width: 767px) {
+  @media (max-width: $mobile) {
     margin-top: 30px;
   }
 
@@ -18,7 +18,7 @@
     width: 100%;
     margin-bottom: 11px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile) {
       font-size: 18px;
       line-height: 110%;
     }
@@ -30,7 +30,7 @@
     line-height: 18px;
     color: #FFFFFF;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile) {
       font-size: 16px;
       max-width: 182px;
       width: 100%;
@@ -40,11 +40,11 @@
   &__list {
     display: flex;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $tablet) {
       flex-wrap: wrap;
     }
 
-    @media (min-width: 1024px) and (max-width: 1400px) {
+    @media (min-width: $tablet) and (max-width: $laptop) {
       justify-content: center;
     }
 
@@ -60,11 +60,11 @@
       transition: 0.2s linear;
       position: relative;
 
-      @media (min-width: 1024px) and (max-width: 1400px) {
+      @media (min-width: $tablet) and (max-width: $laptop) {
         margin-bottom: 30px;
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: $tablet) {
         &:hover {
           scale: 1.05;
         }
@@ -72,18 +72,18 @@
 
 
       &:not(:nth-child(3n)) {
-        @media (min-width: 1400px) {
+        @media (min-width: $laptop) {
           margin-right: 20px;
         }
       }
 
       &:nth-child(odd) {
-        @media (min-width: 1024px) and (max-width: 1400px) {
+        @media (min-width: $tablet) and (max-width: $laptop) {
           margin-right: 30px;
         }
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         max-width: 100%;
       }
 
@@ -102,7 +102,7 @@
           line-height: 66px;
           margin-bottom: 13px;
 
-          @media (max-width: 767px) {
+          @media (max-width: $mobile) {
             font-size: 28px;
             line-height: 31px;
           }

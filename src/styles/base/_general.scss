@@ -58,7 +58,7 @@ p {
     line-height: 66px;
     text-transform: uppercase;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile) {
         font-size: 28px;
         line-height: 31px;
     }
@@ -118,7 +118,7 @@ a {
     display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile) {
     .swiper {
         overflow: visible!important;
     }

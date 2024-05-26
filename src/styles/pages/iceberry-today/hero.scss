@@ -6,7 +6,7 @@
   padding-bottom: 41px;
   background-position: 0 100%;
 
-  @media (min-width: 1024px) and (max-width: 1400px) {
+  @media (min-width: $tablet) and (max-width: $laptop) {
     padding-bottom: 100px;
   }
 
@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet) {
       flex-direction: column-reverse;
     }
   }
@@ -23,25 +23,25 @@
     width: 450px;
     transform: translate(0px, 32px);
 
-    @media (min-width: 1400px) {
+    @media (min-width: $laptop) {
       width: auto;
       transform: translate(-70px, 32px);
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet) {
       transform: translate(1px, -40px);
     }
 
     &_mobile {
       width: 375px;
 
-      @media (min-width: 1024px) {
+      @media (min-width: $tablet) {
         display: none;
       }
     }
 
     &_desktop {
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         display: none;
       }
     }
@@ -52,15 +52,15 @@
     margin-top: 66px;
     font-weight: 700;
 
-    @media (min-width: 1400px) {
+    @media (min-width: $laptop) {
       transform: translateX(-96px);
     }
 
-    @media (min-width: 1024px) and (max-width: 1400px) {
+    @media (min-width: $tablet) and (max-width: $laptop) {
       margin: 66px auto 0;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet) {
       margin-top: 178px;
     }
 
@@ -74,7 +74,7 @@
     &-subtitle {
       text-align: right;
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         font-size: 20px;
         line-height: 20px;
       }
@@ -87,11 +87,11 @@
       text-transform: uppercase;
       margin-bottom: 17px;
 
-      @media (min-width: 1400px) {
+      @media (min-width: $laptop) {
         font-size: 126px;
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         font-size: 60px;
         line-height: 66px;
       }
@@ -100,7 +100,7 @@
     &-descr {
       max-width: 394px;
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         font-size: 22px;
         line-height: 24.2px;
       }

@@ -3,7 +3,7 @@
 .awards {
   margin-top: -112px;
 
-  @media (max-width: 767px) {
+  @media (max-width: $mobile) {
     margin-top: 0;
   }
 
@@ -15,7 +15,7 @@
     width: 100%;
     margin: 24px 0 77px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile) {
       font-size: 16px;
       line-height: 18px;
       margin: 19px 0 60px;
@@ -25,7 +25,7 @@
   &__list {
     display: flex;
 
-    @media (min-width: 1024px) and (max-width: 1400px) {
+    @media (min-width: $tablet) and (max-width: $laptop) {
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -38,31 +38,31 @@
       width: 100%;
 
       & img {
-        @media (max-width: 767px) {
+        @media (max-width: $mobile) {
           max-width: 80px;
           width: 100%;
         }
       }
 
-      @media (min-width: 1024px) and (max-width: 1400px) {
+      @media (min-width: $tablet) and (max-width: $laptop) {
         max-width: 310px;
       }
 
       &:not(:last-child) {
         margin-right: 31px;
 
-        @media (min-width: 1024px) and (max-width: 1400px) {
+        @media (min-width: $tablet) and (max-width: $laptop) {
           margin-bottom: 31px;
         }
       }
 
       &:nth-child(3n) {
-        @media (min-width: 1024px) and (max-width: 1400px) {
+        @media (min-width: $tablet) and (max-width: $laptop) {
           margin-right: 0;
         }
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         max-width: 100%;
 
         &:not(:last-child) {

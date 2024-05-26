@@ -3,7 +3,7 @@
 .buy {
   margin: 25px 0 51px;
 
-  @media (max-width: 767px) {
+  @media (max-width: $mobile) {
     margin: 29px 0;
   }
 
@@ -19,7 +19,7 @@
     width: 100%;
     margin: 23px 0 22px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile) {
       margin: 11px 0 22px;
     }
   }
@@ -27,7 +27,7 @@
   &__list {
     display: flex;
 
-    @media (min-width: 1024px) and (max-width: 1400px) {
+    @media (min-width: $tablet) and (max-width: $laptop) {
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -44,7 +44,7 @@
       margin-bottom: 20px;
       margin-right: 20px;
 
-      @media (min-width: 1024px) and (max-width: 1400px) {
+      @media (min-width: $tablet) and (max-width: $laptop) {
         margin-right: 0;
         max-width: 430px;
         margin-bottom: 40px;
@@ -54,7 +54,7 @@
         }
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         max-width: 100%;
       }
     }

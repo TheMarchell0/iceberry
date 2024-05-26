@@ -12,11 +12,11 @@
     display: flex;
     padding: 49px 0 50px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet) {
       flex-direction: column;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet) {
       justify-content: center;
       padding: 30px 0 215px;
     }
@@ -30,12 +30,12 @@
       &:not(:last-child) {
         margin-right: 70px;
 
-        @media (min-width: 1024px) and (max-width: 1400px) {
+        @media (min-width: $tablet) and (max-width: $laptop) {
           margin-right: 4.9vw;
           flex: 0 1 15.3vw;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: $tablet) {
           flex: auto;
           margin-right: 0;
           margin-bottom: 37px;
@@ -53,7 +53,7 @@
       max-width: 180px;
       width: 100%;
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         font-size: 20px;
         line-height: 20px;
         text-align: center;
@@ -65,7 +65,7 @@
         font-size: 29px;
         line-height: 31.9px;
 
-        @media (max-width: 1024px) {
+        @media (max-width: $tablet) {
           font-size: 24px;
           line-height: 26.4px;
           text-align: center;
@@ -79,7 +79,7 @@
     right: -271px;
     top: -46px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: $tablet) {
       left: 50%;
       transform: translateX(-47%) rotate(92deg);
       top: initial;

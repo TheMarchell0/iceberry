@@ -7,7 +7,7 @@
   padding-bottom: 250px;
   background-position: 0 100%;
 
-  @media (max-width: 767px) {
+  @media (max-width: $mobile) {
     padding-bottom: 411px;
     background-position: 81% 0%;
   }
@@ -16,7 +16,7 @@
     display: flex;
     position: relative;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile) {
       flex-direction: column;
     }
   }
@@ -24,7 +24,7 @@
   &__info {
     margin-top: 114px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile) {
       margin-top: 73px;
       max-width: 331px;
     }
@@ -36,7 +36,7 @@
       line-height: 31.9px;
       text-align: right;
 
-      @media (max-width: 767px) {
+      @media (max-width: $mobile) {
         font-size: 20px;
         line-height: 20px;
       }
@@ -50,15 +50,15 @@
       text-transform: uppercase;
       font-family: 'Intro Bold';
 
-      @media (min-width: 1400px) {
+      @media (min-width: $laptop) {
         font-size: 126px;
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: $mobile) {
         font-size: 60px;
         line-height: 66px;
       }
-      @media (max-width: 350px) {
+      @media (max-width: $mobileSmall) {
         font-size: 50px;
       }
     }
@@ -79,7 +79,7 @@
         font-family: 'Rubik Regular';
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: $mobile) {
         margin-top: 26px;
       }
     }
@@ -88,24 +88,24 @@
       position: absolute;
       width: 100%;
 
-      @media (min-width: 1400px) {
+      @media (min-width: $laptop) {
         max-width: 892px;
         right: -169px;
       }
 
-      @media (min-width: 1024px) and (max-width: 1400px) {
+      @media (min-width: $tablet) and (max-width: $laptop) {
         bottom: -268px;
         max-width: 738px;
         right: -160px;
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: $tablet) {
         right: -72px;
         max-width: 500px;
         bottom: -268px;
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: $mobile) {
         width: 455px;
         bottom: -378px;
         right: -85px;
