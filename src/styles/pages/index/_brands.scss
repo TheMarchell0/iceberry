@@ -1,0 +1,239 @@
+@import "../../helpers/variables";
+
+.brands {
+  margin-top: 63px;
+
+  @media (max-width: $mobile) {
+    margin-top: 30px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: 'Intro Bold';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #FFFFFF;
+    max-width: 230px;
+    width: 100%;
+    margin-bottom: 11px;
+
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      line-height: 110%;
+      max-width: 202px;
+    }
+  }
+
+  &__descr {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #FFFFFF;
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+      max-width: 182px;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @media (min-width: $tablet) {
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $tablet) and (max-width: $laptop) {
+      justify-content: center;
+    }
+
+    &-item {
+      max-width: 420px;
+      width: 100%;
+      background-size: cover;
+      border-radius: 30px;
+      padding: 27px 30px;
+      min-height: 350px;
+      margin-bottom: 20px;
+      transition: 0.2s linear;
+      position: relative;
+
+      @media (min-width: $tablet) and (max-width: $laptop) {
+        margin-bottom: 30px;
+      }
+
+      @media (min-width: $tablet) {
+        &:hover {
+          scale: 1.05;
+        }
+      }
+
+
+      &:not(:nth-child(3n)) {
+        @media (min-width: $laptop) {
+          margin-right: 20px;
+        }
+      }
+
+      &:nth-child(odd) {
+        @media (min-width: $tablet) and (max-width: $laptop) {
+          margin-right: 30px;
+        }
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 100%;
+      }
+
+      &_main {
+        background-image: url('/img/brands-bg-1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 25px 21px;
+
+        @media (max-width: 430px) {
+            background-image: url('/img/brands-bg-1_mobile.png');
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          @media (min-width: 430px) {
+            background-image: url('/img/brands-bg-1@2x.png');
+          }
+          @media (max-width: 430px) {
+            background-image: url('/img/brands-bg-1_mobile@2x.png');
+          }
+        }
+
+        & .brands__title {
+          font-size: 60px;
+          line-height: 66px;
+          margin-bottom: 13px;
+
+          @media (max-width: $mobile) {
+            font-size: 28px;
+            line-height: 31px;
+          }
+        }
+      }
+
+      &_plombir {
+        background-image: url('/img/brands-bg-2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (max-width: 430px) {
+          background-image: url('/img/brands-bg-2_mobile.png');
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          @media (min-width: 430px) {
+            background-image: url('/img/brands-bg-2@2x.png');
+          }
+          @media (max-width: 430px) {
+            background-image: url('/img/brands-bg-2_mobile@2x.png');
+          }
+        }
+      }
+
+      &_filevskoe {
+        background-image: url('/img/brands-bg-3.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (max-width: 430px) {
+          background-image: url('/img/brands-bg-3_mobile.png');
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          @media (min-width: 430px) {
+            background-image: url('/img/brands-bg-3@2x.png');
+          }
+          @media (max-width: 430px) {
+            background-image: url('/img/brands-bg-3_mobile@2x.png');
+          }
+        }
+
+        & .brands__title {
+          color: $mainColor;
+        }
+
+        & .brands__descr {
+          color: $mainColor;
+        }
+      }
+
+      &_jemchujuna {
+        background-image: url('/img/brands-bg-4.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (max-width: 430px) {
+          background-image: url('/img/brands-bg-4_mobile.png');
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          @media (min-width: 430px) {
+            background-image: url('/img/brands-bg-4@2x.png');
+          }
+          @media (max-width: 430px) {
+            background-image: url('/img/brands-bg-4_mobile@2x.png');
+          }
+        }
+      }
+
+      &_ded-moroz {
+        background-image: url('/img/brands-bg-5.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (max-width: 430px) {
+          background-image: url('/img/brands-bg-5_mobile.png');
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          @media (min-width: 430px) {
+            background-image: url('/img/brands-bg-5@2x.png');
+          }
+          @media (max-width: 430px) {
+            background-image: url('/img/brands-bg-5_mobile@2x.png');
+          }
+        }
+      }
+
+      &_vkuslandia {
+        background-image: url('/img/brands-bg-6.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media (max-width: 430px) {
+          background-image: url('/img/brands-bg-6_mobile.png');
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          @media (min-width: 430px) {
+            background-image: url('/img/brands-bg-6@2x.png');
+          }
+          @media (max-width: 430px) {
+            background-image: url('/img/brands-bg-6_mobile@2x.png');
+          }
+        }
+
+        & .brands__title {
+          color: $black;
+        }
+
+        & .brands__descr {
+          color: $black;
+        }
+      }
+    }
+  }
+}

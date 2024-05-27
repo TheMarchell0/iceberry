@@ -3,20 +3,22 @@
 .icon-info {
   background-color: $white;
   overflow: hidden;
-  
+
   &__container {
     position: relative;
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     padding: 49px 0 50px;
+    gap: 0 70px;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       flex-direction: column;
     }
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       justify-content: center;
       padding: 30px 0 215px;
     }
@@ -27,19 +29,18 @@
       align-items: center;
       flex: 0 1 220px;
 
-      &:not(:last-child) {
-        margin-right: 70px;
+      @media (max-width: $tablet) {
+        flex: 0 1 40%;
+      }
 
-        @media (min-width: $tablet) and (max-width: $laptop) {
-          margin-right: 4.9vw;
-          flex: 0 1 15.3vw;
-        }
+      @media (min-width: $tablet) and (max-width: $laptop) {
+        flex: 0 1 15.3vw;
+      }
 
-        @media (max-width: $tablet) {
-          flex: auto;
-          margin-right: 0;
-          margin-bottom: 37px;
-        }
+      @media (max-width: $mobile) {
+        flex: auto;
+        margin-right: 0;
+        margin-bottom: 37px;
       }
     }
 
@@ -53,7 +54,7 @@
       max-width: 180px;
       width: 100%;
 
-      @media (max-width: $tablet) {
+      @media (max-width: $mobile) {
         font-size: 20px;
         line-height: 20px;
         text-align: center;
@@ -65,7 +66,7 @@
         font-size: 29px;
         line-height: 31.9px;
 
-        @media (max-width: $tablet) {
+        @media (max-width: $mobile) {
           font-size: 24px;
           line-height: 26.4px;
           text-align: center;
@@ -79,7 +80,7 @@
     right: -271px;
     top: -46px;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       left: 50%;
       transform: translateX(-47%) rotate(92deg);
       top: initial;

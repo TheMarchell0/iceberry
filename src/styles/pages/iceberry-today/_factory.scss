@@ -6,7 +6,7 @@
   &__container {
     display: flex;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       flex-direction: column-reverse;
     }
   }
@@ -15,12 +15,12 @@
     margin-top: 107px;
     flex: 0 1 488px;
 
-    @media (min-width: $tablet) and (max-width: $laptop) {
+    @media (min-width: $mobile) and (max-width: $laptop) {
       margin-top: 71px;
       margin-bottom: 50px;
     }
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       margin-top: -19px;
       flex: auto;
     }
@@ -28,7 +28,7 @@
     &-title {
       margin-bottom: 34px;
 
-      @media (max-width: $tablet) {
+      @media (max-width: $mobile) {
         margin-bottom: 20px;
       }
     }
@@ -40,7 +40,7 @@
       max-width: 380px;
       width: 100%;
 
-      @media (max-width: $tablet) {
+      @media (max-width: $mobile) {
         font-size: 16px;
         line-height: 17.6px;
         max-width: 310px;
@@ -50,11 +50,14 @@
     &_mobile {
       display: flex;
       flex-direction: column;
-      align-items: center;
       margin: 28px 0 38px;
 
       @media (min-width: $tablet) {
         display: none;
+      }
+
+      @media (max-width: $mobile) {
+        align-items: center;
       }
 
       & .factory__list-text:first-child {
@@ -76,7 +79,11 @@
   &__list {
     display: flex;
 
-    @media (min-width: $tablet) and (max-width: $laptop) {
+    @media (min-width: $mobile) and (max-width: $tablet) {
+      flex-direction: column;
+    }
+
+    @media (min-width: $mobile) and (max-width: $laptop) {
       margin: 0 auto;
     }
 
@@ -85,7 +92,7 @@
       &:nth-child(1) {
         transform: translate(49px, -82px);
 
-        @media (max-width: $tablet) {
+        @media (max-width: $mobile) {
           transform: translate(-5px, -39px);
         }
 
@@ -104,7 +111,7 @@
       &:nth-child(2) {
         transform: translate(26px, 30px);
 
-        @media (max-width: $tablet) {
+        @media (max-width: $mobile) {
           transform: translate(-19px, 7px);
         }
 
@@ -137,7 +144,7 @@
         font-weight: 700;
         line-height: 49.5px;
 
-        @media (min-width: $tablet) and (max-width: $laptop) {
+        @media (min-width: $mobile) and (max-width: $laptop) {
           width: 300px;
         }
       }
@@ -165,11 +172,12 @@
     }
 
     &-img {
-      @media (min-width: $tablet) and (max-width: $laptop) {
-        width: 300px;
+
+      @media (min-width: $mobile) and (max-width: $laptop) {
+        width: 350px;
       }
 
-      @media (max-width: $tablet) {
+      @media (max-width: $mobile) {
         width: 179px;
       }
     }

@@ -75,6 +75,11 @@
       text-align: right;
 
       @media (max-width: $tablet) {
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      @media (max-width: $mobile) {
         font-size: 20px;
         line-height: 20px;
       }
@@ -92,8 +97,17 @@
       }
 
       @media (max-width: $tablet) {
+        font-size: 90px;
+        line-height: 100px;
+      }
+
+      @media (max-width: $mobile) {
         font-size: 60px;
         line-height: 66px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        font-size: 52px;
       }
     }
 
@@ -101,6 +115,11 @@
       max-width: 394px;
 
       @media (max-width: $tablet) {
+        font-size: 27px;
+        line-height: 30px;
+      }
+
+      @media (max-width: $mobile) {
         font-size: 22px;
         line-height: 24.2px;
       }

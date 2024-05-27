@@ -1,0 +1,84 @@
+@import "../../helpers/variables";
+
+.hero {
+  background: url('/img/quality-hero-bg.svg') no-repeat center;
+  background-size: cover;
+  padding-top: 224px;
+  padding-bottom: 268px;
+  background-position: 0 100%;
+
+  @media (max-width: $tablet) {
+    padding-top: 167px;
+    padding-bottom: 194px;
+    background-position: 46% 0;
+  }
+  
+  &__container {
+    position: relative;
+  }
+
+  &__info {
+    max-width: 578px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+
+    &-title {
+      font-family: 'Intro Bold';
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 66px;
+      text-transform: uppercase;
+      color: $mainColor;
+      margin-bottom: 22px;
+
+      @media (max-width: $tablet) {
+        font-size: 50px;
+        line-height: 55px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        font-size: 43px;
+        line-height: 48px;
+      }
+    }
+
+    &-descr {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 24.2px;
+      color: $mainColor;
+
+      @media (max-width: $tablet) {
+        font-size: 18px;
+        line-height: 19.8px;
+        max-width: 250px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: -101px;
+    right: -50px;
+
+    @media (max-width: $laptop) {
+      top: -53px;
+      right: -49px;
+      width: 956px;
+    }
+
+    @media (max-width: $tablet) {
+      top: -5px;
+      width: 80vw;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100vw;
+      top: initial;
+      bottom: -219px;
+      left: 0;
+    }
+  }
+}

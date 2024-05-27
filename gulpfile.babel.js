@@ -66,10 +66,10 @@ requireDir("./gulp-tasks/");
 export { paths };
 
 export const development = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "replace-paths", "swiper-styles", "robots-txt"]),
+    gulp.parallel(["views", "styles", "scripts", "images", "sprites", "fonts", "favicons", "replace-paths", "swiper-styles", "robots-txt"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip", "replace-paths", "swiper-styles", "robots-txt"]));
+    gulp.parallel(["views", "styles", "scripts", "images", "sprites", "fonts", "favicons", "gzip", "replace-paths", "swiper-styles", "robots-txt"]));
 
 export default development;

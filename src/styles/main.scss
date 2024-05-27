@@ -18,9 +18,11 @@
   width: 100%;
   max-width: 110px;
 
-  &_small {
+  @media (max-width: $tablet) {
     max-width: 70px;
+  }
 
+  &_mobile {
     @media (min-width: $tablet) {
       display: none;
     }

@@ -118,8 +118,6 @@ a {
     display: none;
 }
 
-@media (max-width: $mobile) {
-    .swiper {
-        overflow: visible!important;
-    }
+.swiper {
+    overflow: visible!important;
 }

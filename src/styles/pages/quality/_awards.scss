@@ -1,0 +1,134 @@
+@import "../../helpers/variables";
+
+.awards {
+  background-color: $white;
+  margin-bottom: -46px;
+  padding-bottom: 180px;
+
+  @media (max-width: $mobile) {
+    padding-bottom: 192px;
+  }
+
+  &__container {
+    padding-top: 44px;
+    position: relative;
+
+    @media (max-width: $tablet) {
+      padding-top: 33px;
+    }
+  }
+
+  &__title {
+    color: $black;
+  }
+
+  &__descr {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 23px 0 77px;
+    max-width: 570px;
+    width: 100%;
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      line-height: 17.6px;
+      max-width: 100%;
+      margin: 19px 0 62px;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @media (min-width: $tablet) and (max-width: $laptop) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 190px;
+      width: 100%;
+
+      & img {
+        @media (max-width: $tablet) {
+          max-width: 80px;
+          width: 100%;
+        }
+      }
+
+      @media (min-width: $tablet) and (max-width: $laptop) {
+        max-width: 310px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 31px;
+
+        @media (min-width: $tablet) and (max-width: $laptop) {
+          margin-bottom: 31px;
+        }
+      }
+
+      &:nth-child(3n) {
+        @media (min-width: $tablet) and (max-width: $laptop) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 100%;
+
+        &:not(:last-child) {
+          margin-right: initial;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      margin-top: 58px;
+
+      & span {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__slider-arrows {
+    @media (max-width: $mobile) {
+      margin-top: 19px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: -50px;
+    top: -147px;
+
+    @media (max-width: $tablet) {
+      transform: translateX(-47%) rotate(92deg);
+      left: 50%;
+      bottom: -290px;
+      top: initial;
+    }
+
+    &_desktop {
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+}
