@@ -1,0 +1,32 @@
+.hero {
+
+  &__list {
+
+    &-item {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 100%;
+
+      &_vologodskiy-plombir {
+        background-image: url('/img/brands-hero-bg-1.svg');
+      }
+
+      &_filevskoe {
+        background-image: url('/img/brands-hero-bg-2.svg');
+      }
+
+      &_jemchujina-rossii {
+        background-image: url('/img/brands-hero-bg-3.svg');
+      }
+
+      &_ot-deda-moroza {
+        background-image: url('/img/brands-hero-bg-4.svg');
+      }
+
+      &_vkuslandia {
+        background-image: url('/img/brands-hero-bg-5.svg');
+      }
+    }
+  }
+}

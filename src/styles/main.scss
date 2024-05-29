@@ -75,3 +75,19 @@
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+
+.swiper-pagination {
+  max-width: 89px;
+  bottom: initial!important;
+  top: initial!important;
+  left: initial!important;
+
+  &-bullet {
+    width: 10px!important;
+    height:10px!important;
+    margin: initial!important;
+    opacity:initial!important;
+    background: #FFFFFF!important;
+    border-radius: 50%!important;
+  }
+}

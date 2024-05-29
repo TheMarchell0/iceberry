@@ -10,13 +10,168 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.css">
+    <link rel="stylesheet" href="styles/pages/brands.css">
 </head>
 <body>
 @@include("../blocks/modules/header/header.html")
 <main>
-    <h1>Бренды</h1>
+    <section class="hero">
+            <div class="hero__swiper swiper js-hero-slider">
+                <ul class="hero__list swiper-wrapper">
+                    <li class="hero__list-item swiper-slide hero__list-item_vologodskiy-plombir">
+                        <picture>
+                            <source
+                                    srcset="./img/brands-hero-slider-img-1.png 1x, ./img/brands-hero-slider-img-1@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-hero-slider-img-1.png"
+                                    alt="Декоративная картинка"
+                                    width="695"
+                                    class="hero__list-img"
+                            />
+                        </picture>
+                        <p class="hero__list-title">Вологодский пломбир</p>
+                        <p class="hero__list-descr">Абсолютно натурален!</p>
+                    </li>
+                    <li class="hero__list-item swiper-slide hero__list-item_filevskoe">
+                        <picture>
+                            <source
+                                    srcset="./img/brands-hero-slider-img-2.png 1x, ./img/brands-hero-slider-img-2@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-hero-slider-img-2.png"
+                                    alt="Декоративная картинка"
+                                    width="600"
+                                    class="hero__list-img"
+                            />
+                        </picture>
+                        <p class="hero__list-title">Филевское</p>
+                        <p class="hero__list-descr">По историческим рецептурам!</p>
+                    </li>
+                    <li class="hero__list-item swiper-slide hero__list-item_jemchujina-rossii">
+                        <picture>
+                            <source
+                                    srcset="./img/brands-hero-slider-img-3.png 1x, ./img/brands-hero-slider-img-3@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-hero-slider-img-3.png"
+                                    alt="Декоративная картинка"
+                                    width="842"
+                                    class="hero__list-img"
+                            />
+                        </picture>
+                        <p class="hero__list-title">Жемчужина России</p>
+                        <p class="hero__list-descr">Роскошный вкус<br/>для настоящих гурманов!</p>
+                    </li>
+                    <li class="hero__list-item swiper-slide hero__list-item_ot-deda-moroza">
+                        <picture>
+                            <source
+                                    srcset="./img/brands-hero-slider-img-4.png 1x, ./img/brands-hero-slider-img-4@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-hero-slider-img-4.png"
+                                    alt="Декоративная картинка"
+                                    width="800"
+                                    class="hero__list-img"
+                            />
+                        </picture>
+                        <p class="hero__list-title">От Деда Мороза</p>
+                        <p class="hero__list-descr">Невероятно красочное, вкусное и недорогое мороженое!</p>
+                    </li>
+                    <li class="hero__list-item swiper-slide hero__list-item_vkuslandia">
+                        <picture>
+                            <source
+                                    srcset="./img/brands-hero-slider-img-5.png 1x, ./img/brands-hero-slider-img-5@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-hero-slider-img-5.png"
+                                    alt="Декоративная картинка"
+                                    width="657"
+                                    class="hero__list-img"
+                            />
+                        </picture>
+                        <p class="hero__list-title">Вкусландия</p>
+                        <p class="hero__list-descr">Идеальное сочетание вкусов<br/>по мотивам знаменитых десертов! </p>
+                    </li>
+                </ul>
+                <div class="hero__pagination swiper-pagination"></div>
+            </div>
+            <picture>
+                <source
+                        srcset="./img/brands-hero-decor.png 1x, ./img/brands-hero-decor@2x.png 2x"
+                />
+                <img
+                        src="./img/brands-hero-decor.png"
+                        alt="Декоративная картинка"
+                        width="285"
+                        class="hero__decor"
+                />
+            </picture>
+    </section>
+    <section class="brands">
+        <div class="brands__container container">
+            <div class="brands__swiper swiper js-brands-slider">
+                <ul class="brands__list swiper-wrapper">
+                    <li class="brands__list-item swiper-slide">
+                        <picture>
+                            <source
+                                    srcset="./img/brands-main-logo-1.png 1x, ./img/brands-main-logo-1@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-main-logo-1.png"
+                                    alt="Декоративная картинка"
+                                    width="190"
+                                    class="brands__list-img"
+                            />
+                        </picture>
+                        <p class="brands__list-text">Филевское</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="brands__slider-arrows slider-arrows">
+                <div class="brands__slider-prev swiper-button-prev"></div>
+                <div class="brands__slider-next swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <section class="brands-descr">
+        <div class="brands-descr__container container">
+            <ul class="brands-descr__list">
+                <li class="brands-descr__list-item brands-descr__list-item_filevskoe">
+                    <picture>
+                        <source
+                                srcset="./img/brands-descr-logo-1.png 1x, ./img/brands-descr-logo-1@2x.png 2x"
+                        />
+                        <img
+                                src="./img/brands-descr-logo-1.png"
+                                alt="Декоративная картинка"
+                                width="137"
+                                class="brands-descr__list-img"
+                        />
+                    </picture>
+                    <h2 class="brands-descr__list-title">Филевское</h2>
+                    <p class="brands-descr__list-subtitle">Один из старейших брендов мороженого. Мороженое этой торговой марки производится по историческим рецептурам, строго по ГОСТу и на основе натуральных ингредиентов: свежее молоко, сливочное масло и сгущенное молоко.</p>
+                    <button class="brands-descr__list-button button"><a href="/brands/filevskoe.html">Перейти</a></button>
+                </li>
+            </ul>
+            <picture>
+                <source
+                        srcset="./img/brands-descr-logo-1.png 1x, ./img/brands-descr-logo-1@2x.png 2x"
+                />
+                <img
+                        src="./img/brands-descr-logo-1.png"
+                        alt="Декоративная картинка"
+                        width="137"
+                        class="brands-descr__list-img"
+                />
+            </picture>
+        </div>
+    </section>
 </main>
 @@include("../blocks/modules/footer/footer.html")
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/pages/brands.js"></script>
 </body>
 </html>
