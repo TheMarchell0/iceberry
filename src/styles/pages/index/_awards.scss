@@ -7,6 +7,10 @@
     margin-top: 0;
   }
 
+  &__container {
+    overflow: hidden;
+  }
+
   &__descr {
     font-size: 20px;
     font-weight: 400;
@@ -25,16 +29,18 @@
   &__list {
     display: flex;
 
-    @media (min-width: $tablet) and (max-width: $laptop) {
-      justify-content: center;
-      flex-wrap: wrap;
+    &:not(.active) {
+      @media (min-width: $tablet) and (max-width: $laptop) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
     }
 
     &-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 190px;
+      max-width: 210px;
       width: 100%;
 
       & img {
@@ -45,11 +51,11 @@
       }
 
       @media (min-width: $tablet) and (max-width: $laptop) {
-        max-width: 310px;
+        max-width: 317px;
       }
 
       &:not(:last-child) {
-        margin-right: 31px;
+        margin-right: 11px;
 
         @media (min-width: $tablet) and (max-width: $laptop) {
           margin-bottom: 31px;

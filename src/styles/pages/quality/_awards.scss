@@ -5,6 +5,10 @@
   margin-bottom: -46px;
   padding-bottom: 180px;
 
+  @media (max-width:  $tablet) {
+    overflow: hidden;
+  }
+
   @media (max-width: $mobile) {
     padding-bottom: 192px;
   }
@@ -115,8 +119,12 @@
     @media (max-width: $tablet) {
       transform: translateX(-47%) rotate(92deg);
       left: 50%;
-      bottom: -290px;
+      bottom: -311px;
       top: initial;
+    }
+
+    @media (max-width: $mobile) {
+      bottom: -290px;
     }
 
     &_desktop {

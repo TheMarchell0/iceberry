@@ -2,6 +2,7 @@
 
 .today {
   margin-top: 132px;
+  z-index: 1;
 
   @media (max-width: $mobile) {
     margin-top: 2px;
@@ -31,12 +32,20 @@
         flex: 0 1 310px;
       }
 
-      &:not(:last-child) {
+      @media (max-width: $tablet) {
+        flex: 0 1 48%;
+        margin-bottom: 23px;
+      }
+
+      @media (max-width: $mobile) {
+        flex: 0 1 100%;
+      }
+
+      &:nth-child(odd) {
         margin-right: 20px;
 
         @media (max-width: $mobile) {
           margin-right: 0;
-          margin-bottom: 23px;
         }
       }
 

@@ -7,6 +7,10 @@
   padding-bottom: 250px;
   background-position: 0 100%;
 
+  @media (max-width: $tablet) {
+    overflow: hidden;
+  }
+
   @media (max-width: $mobile) {
     padding-bottom: 411px;
     background-position: 81% 0%;
@@ -25,7 +29,7 @@
     margin-top: 114px;
 
     @media (max-width: $mobile) {
-      margin-top: 73px;
+      margin: 73px auto 0;
       max-width: 331px;
     }
 

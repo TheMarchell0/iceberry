@@ -3,10 +3,18 @@
 .history {
   margin-top: -7.5vw;
   z-index: 1;
-  background-image: url('/img/iceberry-today-history-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
+
+  @media (min-width: 1920px) {
+    background-image: url('/img/iceberry-today-history-bg-desktop.png');
+    background-position: 0 -9vw;
+  }
+
+  @media (max-width: 1920px) {
+    background-image: url('/img/iceberry-today-history-bg.png');
+  }
 
   @media (min-width: $tablet) and (max-width: $laptop) {
     margin-top: -14.5vw;
@@ -18,7 +26,13 @@
   }
 
   @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url('/img/iceberry-today-history-bg@2x.png');
+    @media (min-width: 1920px) {
+      background-image: url('/img/iceberry-today-history-bg-desktop@2x.png');
+    }
+
+    @media (max-width: 1920px) {
+      background-image: url('/img/iceberry-today-history-bg@2x.png');
+    }
   }
 
   &__content {

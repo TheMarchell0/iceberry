@@ -7,6 +7,10 @@
     margin: 29px 0;
   }
 
+  &__container {
+    overflow: hidden;
+  }
+
   &__descr {
     font-size: 20px;
     font-weight: 400;
@@ -23,9 +27,11 @@
   &__list {
     display: flex;
 
-    @media (min-width: $tablet) and (max-width: $laptop) {
-      justify-content: center;
-      flex-wrap: wrap;
+    &:not(.active) {
+      @media (min-width: $tablet) and (max-width: $laptop) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
     }
 
     &-item {
@@ -54,5 +60,12 @@
         max-width: 100%;
       }
     }
+
+    &-img {
+      @media (max-width: $mobileSmall) {
+        width: 210px;
+      }
+    }
   }
+
 }
