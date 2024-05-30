@@ -10,6 +10,9 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      display: flex;
+      padding-top: 280px;
+      padding-bottom: 54px;
 
       &_vologodskiy-plombir {
         background-image: url('/img/brands-hero-bg-1.svg');
@@ -17,6 +20,11 @@
 
       &_filevskoe {
         background-image: url('/img/brands-hero-bg-2.svg');
+
+        & .hero__list-info-title,
+        & .hero__list-info-descr {
+          color: $mainColor;
+        }
       }
 
       &_jemchujina-rossii {
@@ -29,6 +37,33 @@
 
       &_vkuslandia {
         background-image: url('/img/brands-hero-bg-5.svg');
+
+        & .hero__list-info-title,
+        & .hero__list-info-descr {
+          color: $black;
+        }
+      }
+    }
+
+    &-info {
+
+      &-title,
+      &-descr {
+        color: #FFFFFF;
+      }
+
+      &-title {
+        font-family: 'Intro Bold';
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 66px;
+        text-transform: uppercase;
+      }
+
+      &-descr {
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 28.6px;
       }
     }
   }

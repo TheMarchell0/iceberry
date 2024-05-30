@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination = parent.querySelector('.js-hero-pagination'),
         header = document.querySelector('.js-header');
 
-    let activeTheme = 'vologodskiy-plombir';//При загрузке страницы слайдер начинается с Вологодского пломбира
+    let activeTheme = 'vologodskiy-plombir'; //При загрузке страницы слайдер начинается с Вологодского пломбира
     header.classList.add(activeTheme);
 
     const heroSlider = new Swiper(".js-hero-slider", {
@@ -16,6 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
         effect: 'fade',
         slidesPerView: 1,
         allowTouchMove: false,
+    });
+
+    const brandsSlider = new Swiper(".js-brands-slider", {
+        loop: false,
+        navigation: {
+            nextEl: ".brands__slider-next",
+            prevEl: ".brands__slider-prev",
+        },
+        spaceBetween: 10,
+        breakpoints: {
+            320: {
+                slidesPerView: 1.07,
+            },
+            767: {
+                slidesPerView: 5,
+            }
+        }
     });
 
     heroSlider.on('slideChange', function () {

@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-    console.log(screenWidth <= 1024 || awardsContentItems > 6)
+
     if (screenWidth <= 1024 || awardsContentItems > 6) {
         const awardsSlider = new Swiper(".js-awards-slider", {
             loop: false,
