@@ -77,17 +77,20 @@
 }
 
 .swiper-pagination {
-  max-width: 89px;
+  max-width: 114px;
   bottom: initial!important;
   top: initial!important;
-  left: initial!important;
+  left: 50%!important;
+  transform: translateX(-50%)!important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &-bullet {
     width: 10px!important;
     height:10px!important;
     margin: initial!important;
     opacity:initial!important;
-    background: #FFFFFF!important;
-    border-radius: 50%!important;
+    transition: 0.1s linear;
   }
 }

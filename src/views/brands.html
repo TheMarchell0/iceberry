@@ -16,10 +16,10 @@
 <body>
 @@include("../blocks/modules/header/header.html")
 <main>
-    <section class="hero">
+    <section class="hero js-slider-parent">
             <div class="hero__swiper swiper js-hero-slider">
                 <ul class="hero__list swiper-wrapper">
-                    <li class="hero__list-item swiper-slide hero__list-item_vologodskiy-plombir">
+                    <li data-theme="vologodskiy-plombir" class="hero__list-item swiper-slide hero__list-item_vologodskiy-plombir js-brands-slide">
                         <picture>
                             <source
                                     srcset="./img/brands-hero-slider-img-1.png 1x, ./img/brands-hero-slider-img-1@2x.png 2x"
@@ -34,7 +34,7 @@
                         <p class="hero__list-title">Вологодский пломбир</p>
                         <p class="hero__list-descr">Абсолютно натурален!</p>
                     </li>
-                    <li class="hero__list-item swiper-slide hero__list-item_filevskoe">
+                    <li data-theme="filevskoe" class="hero__list-item swiper-slide hero__list-item_filevskoe js-brands-slide">
                         <picture>
                             <source
                                     srcset="./img/brands-hero-slider-img-2.png 1x, ./img/brands-hero-slider-img-2@2x.png 2x"
@@ -49,7 +49,7 @@
                         <p class="hero__list-title">Филевское</p>
                         <p class="hero__list-descr">По историческим рецептурам!</p>
                     </li>
-                    <li class="hero__list-item swiper-slide hero__list-item_jemchujina-rossii">
+                    <li data-theme="jemchujina-rossii" class="hero__list-item swiper-slide hero__list-item_jemchujina-rossii js-brands-slide">
                         <picture>
                             <source
                                     srcset="./img/brands-hero-slider-img-3.png 1x, ./img/brands-hero-slider-img-3@2x.png 2x"
@@ -64,7 +64,7 @@
                         <p class="hero__list-title">Жемчужина России</p>
                         <p class="hero__list-descr">Роскошный вкус<br/>для настоящих гурманов!</p>
                     </li>
-                    <li class="hero__list-item swiper-slide hero__list-item_ot-deda-moroza">
+                    <li data-theme="ot-deda-moroza" class="hero__list-item swiper-slide hero__list-item_ot-deda-moroza js-brands-slide">
                         <picture>
                             <source
                                     srcset="./img/brands-hero-slider-img-4.png 1x, ./img/brands-hero-slider-img-4@2x.png 2x"
@@ -79,7 +79,7 @@
                         <p class="hero__list-title">От Деда Мороза</p>
                         <p class="hero__list-descr">Невероятно красочное, вкусное и недорогое мороженое!</p>
                     </li>
-                    <li class="hero__list-item swiper-slide hero__list-item_vkuslandia">
+                    <li data-theme="vkuslandia" class="hero__list-item swiper-slide hero__list-item_vkuslandia js-brands-slide">
                         <picture>
                             <source
                                     srcset="./img/brands-hero-slider-img-5.png 1x, ./img/brands-hero-slider-img-5@2x.png 2x"
@@ -95,7 +95,7 @@
                         <p class="hero__list-descr">Идеальное сочетание вкусов<br/>по мотивам знаменитых десертов! </p>
                     </li>
                 </ul>
-                <div class="hero__pagination swiper-pagination"></div>
+                <div class="hero__pagination swiper-pagination js-hero-pagination"></div>
             </div>
             <picture>
                 <source

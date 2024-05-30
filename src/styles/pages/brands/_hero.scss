@@ -1,4 +1,8 @@
+@import "../../helpers/variables";
+
 .hero {
+  background-color: black;
+  margin-top: -184px;
 
   &__list {
 
@@ -6,7 +10,6 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: 0 100%;
 
       &_vologodskiy-plombir {
         background-image: url('/img/brands-hero-bg-1.svg');
@@ -27,6 +30,38 @@
       &_vkuslandia {
         background-image: url('/img/brands-hero-bg-5.svg');
       }
+    }
+  }
+
+  &__pagination {
+    transition: 0.2s linear;
+
+    & .swiper-pagination-bullet {
+      background-color: #FFFFFF;
+
+      &-active {
+        scale: 1.4;
+      }
+    }
+
+    &.vologodskiy-plombir .swiper-pagination-bullet {
+      background-color: #FFFFFF;
+    }
+
+    &.filevskoe .swiper-pagination-bullet {
+      background-color: $mainColor;
+    }
+
+    &.jemchujina-rossii .swiper-pagination-bullet {
+      background-color: #FFFFFF;
+    }
+
+    &.ot-deda-moroza .swiper-pagination-bullet {
+      background-color: #FFFFFF;
+    }
+
+    &.vkuslandia .swiper-pagination-bullet {
+      background-color: $black;
     }
   }
 }

@@ -61,6 +61,26 @@
         @media (max-width: $tablet) {
           font-size: 14px;
         }
+
+        .header.vologodskiy-plombir & {
+          color: #FFFFFF;
+        }
+
+        .header.filevskoe & {
+          color: $mainColor;
+        }
+
+        .header.jemchujina-rossii & {
+          color: #FFFFFF;
+        }
+
+        .header.ot-deda-moroza & {
+          color: #FFFFFF;
+        }
+
+        .header.vkuslandia & {
+          color: $mainColor;
+        }
       }
     }
   }
