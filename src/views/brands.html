@@ -88,7 +88,7 @@
                     </picture>
                     <div class="hero__list-info">
                         <p class="hero__list-info-title">От Деда Мороза</p>
-                        <p class="hero__list-info-descr">Невероятно красочное, вкусное и недорогое мороженое!</p>
+                        <p class="hero__list-info-descr">Невероятно красочное, вкусное и&nbsp;недорогое мороженое!</p>
                     </div>
                 </li>
                 <li data-theme="vkuslandia"
@@ -113,17 +113,19 @@
             </ul>
             <div class="hero__pagination swiper-pagination js-hero-pagination"></div>
         </div>
-        <picture>
-            <source
-                    srcset="./img/brands-hero-decor.png 1x, ./img/brands-hero-decor@2x.png 2x"
-            />
-            <img
-                    src="./img/brands-hero-decor.png"
-                    alt="Декоративная картинка"
-                    width="285"
-                    class="hero__decor"
-            />
-        </picture>
+        <div class="hero__container container">
+            <picture>
+                <source
+                        srcset="./img/brands-hero-decor.png 1x, ./img/brands-hero-decor@2x.png 2x"
+                />
+                <img
+                        src="./img/brands-hero-decor.png"
+                        alt="Декоративная картинка"
+                        width="285"
+                        class="hero__decor"
+                />
+            </picture>
+        </div>
     </section>
     <section class="brands">
         <div class="brands__container container">
@@ -266,163 +268,184 @@
     </section>
     <section class="brands-descr">
         <div class="brands-descr__container container">
-            <ul class="brands-descr__list">
-                <li class="brands-descr__list-item brands-descr__list-item_filevskoe filevskoe-bg">
-                    <a class="absolute-link" href="/brands/filevskoe.html"></a>
-                    <picture>
-                        <source
-                                srcset="./img/brands-descr-logo-1.png 1x, ./img/brands-descr-logo-1@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-descr-logo-1.png"
-                                alt="Декоративная картинка"
-                                width="137"
-                                class="brands-descr__list-img"
-                        />
-                    </picture>
-                    <h2 class="brands-descr__list-title filevskoe-text">Филевское</h2>
-                    <p class="brands-descr__list-subtitle filevskoe-text">Один из старейших брендов мороженого. Мороженое этой торговой
-                        марки производится по&nbsp;историческим рецептурам, строго по ГОСТу и&nbsp;на&nbsp;основе натуральных
-                        ингредиентов: свежее молоко, сливочное масло и сгущенное молоко.</p>
-                    <button class="brands-descr__list-button button">Перейти</button>
-                    <picture>
-                        <source
-                                srcset="./img/brands-list-decor-1.png 1x, ./img/brands-list-decor-1@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-list-decor-1.png"
-                                alt="Декоративная картинка"
-                                width="231"
-                                class="brands-descr__list-decor"
-                        />
-                    </picture>
-                </li>
-                <li class="brands-descr__list-item brands-descr__list-item_vologodskiy-plombir vologodskiy-plombir-bg">
-                    <a class="absolute-link" href="/brands/vologodskiy-plombir.html"></a>
-                    <picture>
-                        <source
-                                srcset="./img/brands-descr-logo-2.png 1x, ./img/brands-descr-logo-2@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-descr-logo-2.png"
-                                alt="Декоративная картинка"
-                                width="81"
-                                class="brands-descr__list-img"
-                        />
-                    </picture>
-                    <h2 class="brands-descr__list-title">Вологодский пломбир</h2>
-                    <p class="brands-descr__list-subtitle">Настоящий вологодский продукт, произведенный в&nbsp;Вологде, в регионе с легендарными традициями производства молочной продукции. Насыщенный пломбир высокой жирности имеет особенный ярко выраженный вкус молока, который получен благодаря использованию в рецептуре настоящего вологодского сливочного масла и свежего молока. Вологодский пломбир абсолютно натурален!</p>
-                    <button class="brands-descr__list-button button">Перейти</button>
-                    <picture>
-                        <source
-                                srcset="./img/brands-list-decor-2.png 1x, ./img/brands-list-decor-2@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-list-decor-2.png"
-                                alt="Декоративная картинка"
-                                width="149"
-                                class="brands-descr__list-decor"
-                        />
-                    </picture>
-                </li>
-                <li class="brands-descr__list-item brands-descr__list-item_jemchujina-rossii jemchujina-rossii-bg">
-                    <a class="absolute-link" href="/brands/jemchujina-rossii.html"></a>
-                    <picture>
-                        <source
-                                srcset="./img/brands-descr-logo-3.png 1x, ./img/brands-descr-logo-3@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-descr-logo-3.png"
-                                alt="Декоративная картинка"
-                                width="180"
-                                class="brands-descr__list-img"
-                        />
-                    </picture>
-                    <h2 class="brands-descr__list-title">Жемчужина России</h2>
-                    <p class="brands-descr__list-subtitle">Настоящая «жемчужина» натурального мороженого, созданная специально для&nbsp;настоящих ценителей этого десерта. Все&nbsp;мороженое этого бренда производится по ГОСТу: из свежего молока, сливочного масла, с отборными орехами и&nbsp;специально&nbsp;разработанной молочно- шоколадной глазурью. Роскошный вкус&nbsp;для настоящих гурманов!</p>
-                    <button class="brands-descr__list-button button">Перейти</button>
-                    <picture>
-                        <source
-                                srcset="./img/brands-list-decor-3.png 1x, ./img/brands-list-decor-3@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-list-decor-3.png"
-                                alt="Декоративная картинка"
-                                width="200"
-                                class="brands-descr__list-decor"
-                        />
-                    </picture>
-                </li>
-                <li class="brands-descr__list-item brands-descr__list-item_ot-deda-moroza ot-deda-moroza-bg">
-                    <a class="absolute-link" href="/brands/ot-deda-moroza.html"></a>
-                    <picture>
-                        <source
-                                srcset="./img/brands-descr-logo-4.png 1x, ./img/brands-descr-logo-4@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-descr-logo-4.png"
-                                alt="Декоративная картинка"
-                                width="60"
-                                class="brands-descr__list-img"
-                        />
-                    </picture>
-                    <h2 class="brands-descr__list-title">От Деда Мороза</h2>
-                    <p class="brands-descr__list-subtitle">Невероятно вкусное и недорогое мороженое, которое получается благодаря высокотехнологичному и масштабному производству в&nbsp;сочетании с высококачественным сырьем и многолетними традициями качества.  </p>
-                    <button class="brands-descr__list-button button">Перейти</button>
-                    <picture>
-                        <source
-                                srcset="./img/brands-list-decor-4.png 1x, ./img/brands-list-decor-4@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-list-decor-4.png"
-                                alt="Декоративная картинка"
-                                width="239"
-                                class="brands-descr__list-decor"
-                        />
-                    </picture>
-                </li>
-                <li class="brands-descr__list-item brands-descr__list-item_vkuslandia vkuslandia-bg">
-                    <a class="absolute-link" href="/brands/vkuslandia.html"></a>
-                    <picture>
-                        <source
-                                srcset="./img/brands-descr-logo-5.png 1x, ./img/brands-descr-logo-5@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-descr-logo-5.png"
-                                alt="Декоративная картинка"
-                                width="137"
-                                class="brands-descr__list-img"
-                        />
-                    </picture>
-                    <h2 class="brands-descr__list-title vkuslandia-text">Вкусландия</h2>
-                    <p class="brands-descr__list-subtitle vkuslandia-text">Мороженое бренда Вкусландия - это специально разработанная линейка сложных вкусов по мотивам самых знаменитых десертов, выпущенная в лотках семейного формата.</p>
-                    <p class="brands-descr__list-subtitle vkuslandia-text">Безупречно подобранное сочетание натурального пломбира с изысканными ингредиентами не оставит равнодушным всех ценителей идеального вкуса.</p>
-                    <button class="brands-descr__list-button button">Перейти</button>
-                    <picture>
-                        <source
-                                srcset="./img/brands-list-decor-5.png 1x, ./img/brands-list-decor-5@2x.png 2x"
-                        />
-                        <img
-                                src="./img/brands-list-decor-5.png"
-                                alt="Декоративная картинка"
-                                width="246"
-                                class="brands-descr__list-decor"
-                        />
-                    </picture>
-                </li>
-            </ul>
+            <div class="brands-descr__swiper swiper js-brands-descr-slider">
+                <ul class="brands-descr__list swiper-wrapper">
+                    <li class="brands-descr__list-item brands-descr__list-item_filevskoe filevskoe-bg swiper-slide">
+                        <a class="absolute-link" href="/brands/filevskoe.html"></a>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-descr-logo-1.png 1x, ./img/brands-descr-logo-1@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-descr-logo-1.png"
+                                    alt="Декоративная картинка"
+                                    width="137"
+                                    class="brands-descr__list-img"
+                            />
+                        </picture>
+                        <h2 class="brands-descr__list-title filevskoe-text">Филевское</h2>
+                        <p class="brands-descr__list-subtitle filevskoe-text">Один из старейших брендов мороженого.
+                            Мороженое этой торговой
+                            марки производится по&nbsp;историческим рецептурам, строго по ГОСТу и&nbsp;на&nbsp;основе
+                            натуральных
+                            ингредиентов: свежее молоко, сливочное масло и сгущенное молоко.</p>
+                        <button class="brands-descr__list-button button">Перейти</button>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-list-decor-1.png 1x, ./img/brands-list-decor-1@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-list-decor-1.png"
+                                    alt="Декоративная картинка"
+                                    width="231"
+                                    class="brands-descr__list-decor"
+                            />
+                        </picture>
+                    </li>
+                    <li class="brands-descr__list-item brands-descr__list-item_vologodskiy-plombir vologodskiy-plombir-bg swiper-slide">
+                        <a class="absolute-link" href="/brands/vologodskiy-plombir.html"></a>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-descr-logo-2.png 1x, ./img/brands-descr-logo-2@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-descr-logo-2.png"
+                                    alt="Декоративная картинка"
+                                    width="81"
+                                    class="brands-descr__list-img"
+                            />
+                        </picture>
+                        <h2 class="brands-descr__list-title">Вологодский пломбир</h2>
+                        <p class="brands-descr__list-subtitle">Настоящий вологодский продукт, произведенный в&nbsp;Вологде,
+                            в регионе с легендарными традициями производства молочной продукции. Насыщенный пломбир
+                            высокой жирности имеет особенный ярко выраженный вкус молока, который получен благодаря
+                            использованию в рецептуре настоящего вологодского сливочного масла и свежего молока.
+                            Вологодский пломбир абсолютно натурален!</p>
+                        <button class="brands-descr__list-button button">Перейти</button>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-list-decor-2.png 1x, ./img/brands-list-decor-2@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-list-decor-2.png"
+                                    alt="Декоративная картинка"
+                                    width="149"
+                                    class="brands-descr__list-decor"
+                            />
+                        </picture>
+                    </li>
+                    <li class="brands-descr__list-item brands-descr__list-item_jemchujina-rossii jemchujina-rossii-bg swiper-slide">
+                        <a class="absolute-link" href="/brands/jemchujina-rossii.html"></a>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-descr-logo-3.png 1x, ./img/brands-descr-logo-3@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-descr-logo-3.png"
+                                    alt="Декоративная картинка"
+                                    width="180"
+                                    class="brands-descr__list-img"
+                            />
+                        </picture>
+                        <h2 class="brands-descr__list-title">Жемчужина России</h2>
+                        <p class="brands-descr__list-subtitle">Настоящая «жемчужина» натурального мороженого, созданная
+                            специально для&nbsp;настоящих ценителей этого десерта. Все&nbsp;мороженое этого бренда
+                            производится по ГОСТу: из свежего молока, сливочного масла, с отборными орехами и&nbsp;специально&nbsp;разработанной
+                            молочно- шоколадной глазурью. Роскошный вкус&nbsp;для настоящих гурманов!</p>
+                        <button class="brands-descr__list-button button">Перейти</button>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-list-decor-3.png 1x, ./img/brands-list-decor-3@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-list-decor-3.png"
+                                    alt="Декоративная картинка"
+                                    width="200"
+                                    class="brands-descr__list-decor"
+                            />
+                        </picture>
+                    </li>
+                    <li class="brands-descr__list-item brands-descr__list-item_ot-deda-moroza ot-deda-moroza-bg swiper-slide">
+                        <a class="absolute-link" href="/brands/ot-deda-moroza.html"></a>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-descr-logo-4.png 1x, ./img/brands-descr-logo-4@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-descr-logo-4.png"
+                                    alt="Декоративная картинка"
+                                    width="60"
+                                    class="brands-descr__list-img"
+                            />
+                        </picture>
+                        <h2 class="brands-descr__list-title">От Деда Мороза</h2>
+                        <p class="brands-descr__list-subtitle">Невероятно вкусное и недорогое мороженое, которое
+                            получается благодаря высокотехнологичному и масштабному производству в&nbsp;сочетании с
+                            высококачественным сырьем и многолетними традициями качества. </p>
+                        <button class="brands-descr__list-button button">Перейти</button>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-list-decor-4.png 1x, ./img/brands-list-decor-4@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-list-decor-4.png"
+                                    alt="Декоративная картинка"
+                                    width="239"
+                                    class="brands-descr__list-decor"
+                            />
+                        </picture>
+                    </li>
+                    <li class="brands-descr__list-item brands-descr__list-item_vkuslandia vkuslandia-bg swiper-slide">
+                        <a class="absolute-link" href="/brands/vkuslandia.html"></a>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-descr-logo-5.png 1x, ./img/brands-descr-logo-5@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-descr-logo-5.png"
+                                    alt="Декоративная картинка"
+                                    width="137"
+                                    class="brands-descr__list-img"
+                            />
+                        </picture>
+                        <h2 class="brands-descr__list-title vkuslandia-text">Вкусландия</h2>
+                        <p class="brands-descr__list-subtitle vkuslandia-text">Мороженое бренда Вкусландия - это
+                            специально разработанная линейка сложных вкусов по&nbsp;мотивам самых знаменитых десертов,
+                            выпущенная в лотках семейного формата.</p>
+                        <p class="brands-descr__list-subtitle vkuslandia-text">Безупречно подобранное сочетание
+                            натурального пломбира с изысканными ингредиентами не оставит равнодушным всех ценителей
+                            идеального вкуса.</p>
+                        <button class="brands-descr__list-button button">Перейти</button>
+                        <picture>
+                            <source
+                                    srcset="./img/brands-list-decor-5.png 1x, ./img/brands-list-decor-5@2x.png 2x"
+                            />
+                            <img
+                                    src="./img/brands-list-decor-5.png"
+                                    alt="Декоративная картинка"
+                                    width="246"
+                                    class="brands-descr__list-decor"
+                            />
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+            <div class="brands-descr__slider-arrows slider-arrows slider-arrows_mobile">
+                <div class="brands-descr__slider-prev swiper-button-prev"></div>
+                <div class="brands-descr__slider-next swiper-button-next"></div>
+            </div>
+            <picture>
+                <source
+                        srcset="./img/brands-descr-decor.png 1x, ./img/brands-descr-decor@2x.png 2x"
+                />
+                <img
+                        src="./img/brands-descr-decor.png"
+                        alt="Декоративная картинка"
+                        width="503"
+                        class="brands-descr__decor"
+                />
+            </picture>
         </div>
-        <picture>
-            <source
-                    srcset="./img/brands-descr-decor.png 1x, ./img/brands-descr-decor@2x.png 2x"
-            />
-            <img
-                    src="./img/brands-descr-decor.png"
-                    alt="Декоративная картинка"
-                    width="503"
-                    class="brands-descr__decor"
-            />
-        </picture>
     </section>
 </main>
 @@include("../blocks/modules/footer/footer.html")

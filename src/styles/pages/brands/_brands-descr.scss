@@ -1,11 +1,19 @@
 @import "../../helpers/variables";
 
 .brands-descr {
+  
+  &__container {
+    position: relative;
+  }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 18px;
+
+    @media (max-width: $tablet) {
+      flex-wrap: initial;
+    }
 
     &-item {
       border-radius: 30px;
@@ -20,12 +28,21 @@
       justify-content: flex-start;
       transition: 0.2s linear;
 
-      .brands__list-item:hover {
+      @media (max-width: $tablet) {
+        flex: auto;
+      }
+
+      &:hover {
         scale: 1.05;
       }
 
       &:not(:nth-child(3n)) {
         margin-right: 20px;
+
+        @media (max-width: $tablet) {
+          margin-right: initial;
+          margin-bottom: initial;
+        }
       }
 
       &_filevskoe {
@@ -74,6 +91,15 @@
       &_vkuslandia {
         padding: 33px 33px 24px;
 
+        & .brands-descr__list-title {
+          margin: 19px 0 12px;
+        }
+
+        & .brands-descr__list-subtitle:last-of-type {
+          max-width: 300px;
+          width: 100%;
+        }
+
         & .brands-descr__list-decor {
           bottom: -34px;
           right: -9px;
@@ -90,14 +116,24 @@
       margin: 14px 0 12px;
       max-width: 251px;
       width: 100%;
-      color: #FFFFFF;
+
+      &:not(.vkuslandia-text):not(.filevskoe-text) {
+        color: #FFFFFF;
+      }
     }
 
     &-subtitle {
       font-size: 14px;
       font-weight: 400;
       line-height: 14px;
-      color: #FFFFFF;
+
+      &:not(.vkuslandia-text):not(.filevskoe-text) {
+        color: #FFFFFF;
+      }
+
+      &:not(:only-child) {
+        margin-bottom: 13px;
+      }
     }
 
     &-button {
@@ -113,7 +149,7 @@
 
   &__decor {
     position: absolute;
-    right: -13px;
+    right: -63px;
     bottom: -70px;
   }
 }
