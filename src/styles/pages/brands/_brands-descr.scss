@@ -5,37 +5,79 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 18px;
 
     &-item {
       border-radius: 30px;
       min-height: 380px;
-      flex:0 1 420px;
+      flex: 0 1 420px;
       overflow: hidden;
       margin-bottom: 22px;
       position: relative;
+      padding: 28px 33px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: 0.2s linear;
+
+      .brands__list-item:hover {
+        scale: 1.05;
+      }
 
       &:not(:nth-child(3n)) {
         margin-right: 20px;
       }
 
       &_filevskoe {
-        background-color: #FFBD22;
+
+        & .brands-descr__list-decor {
+          bottom: -48px;
+          right: 20px
+        }
       }
 
       &_vologodskiy-plombir {
-        background-color: #8CBD1B;
+
+        & .brands-descr__list-decor {
+          bottom: -47px;
+          right: 0px;
+        }
       }
 
       &_jemchujina-rossii {
-        background-color: #0B3672;
+        padding: 35px 33px 24px;
+
+        & .brands-descr__list-subtitle {
+          max-width: 295px;
+          width: 100%;
+        }
+
+        & .brands-descr__list-decor {
+          bottom: -47px;
+          right: -22px;
+        }
       }
 
       &_ot-deda-moroza {
-        background-color: #58BEFA;
+
+        & .brands-descr__list-subtitle {
+          max-width: 244px;
+          width: 100%;
+        }
+
+        & .brands-descr__list-decor {
+          bottom: -104px;
+          right: -17px;
+        }
       }
 
       &_vkuslandia {
-        background-color: #FFF2DE;
+        padding: 33px 33px 24px;
+
+        & .brands-descr__list-decor {
+          bottom: -34px;
+          right: -9px;
+        }
       }
     }
 
@@ -45,17 +87,34 @@
       font-weight: 700;
       line-height: 30.8px;
       text-transform: uppercase;
+      margin: 14px 0 12px;
+      max-width: 251px;
+      width: 100%;
+      color: #FFFFFF;
     }
 
     &-subtitle {
       font-size: 14px;
       font-weight: 400;
       line-height: 14px;
+      color: #FFFFFF;
+    }
+
+    &-button {
+      max-width: 145px;
+      padding: 7px;
+      margin-top: auto;
     }
 
     &-decor {
       position: absolute;
     }
+  }
+
+  &__decor {
+    position: absolute;
+    right: -13px;
+    bottom: -70px;
   }
 }
 

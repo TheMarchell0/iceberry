@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 slidesPerView: 1.07,
             },
             767: {
-                slidesPerView: 5,
+                slidesPerView: 4.85,
             }
         }
     });

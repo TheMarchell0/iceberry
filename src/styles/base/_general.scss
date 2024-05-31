@@ -39,6 +39,7 @@ p {
     width: 100%;
     height: 100%;
     z-index: 2;
+    border-radius: inherit;
 }
 
 .main-title {
@@ -116,4 +117,32 @@ a {
 
 .hidden {
     display: none;
+}
+
+.filevskoe-text {
+    color: $mainColor;
+}
+
+.vkuslandia-text {
+    color: $black;
+}
+
+.filevskoe-bg {
+    background-color: #FFBD22;
+}
+
+.vologodskiy-plombir-bg {
+    background-color: #8CBD1B;
+}
+
+.jemchujina-rossii-bg {
+    background-color: #0B3672;
+}
+
+.ot-deda-moroza-bg {
+    background-color: #58BEFA;
+}
+
+.vkuslandia-bg {
+    background-color: #FFF2DE;
 }
