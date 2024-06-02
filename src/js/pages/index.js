@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const awardsParent = document.querySelector('.js-awards-parent'),
         buyParent = document.querySelector('.js-buy-parent'),
-        awardsContent = document.querySelector('.js-awards-content'),
-        buyContent = document.querySelector('.js-buy-content'),
+        awardsContent = awardsParent.querySelector('.js-awards-content'),
+        buyContent = buyParent.querySelector('.js-buy-content'),
+        awardsSliderBlock = awardsParent.querySelector('.js-awards-slider'),
+        buySliderBlock = buyParent.querySelector('.js-buy-slider'),
         awardsContentItems = awardsContent.querySelectorAll('.swiper-slide').length,
         buyContentItems = buyContent.querySelectorAll('.swiper-slide').length,
         screenWidth = window.innerWidth;
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         awardsParent.classList.add('active');
+        awardsSliderBlock.classList.add('swiper-overflow-hidden');
         awardsContent.classList.add('active');
     }
 
@@ -81,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         buyParent.classList.add('active');
+        buySliderBlock.classList.add('swiper-overflow-hidden');
         buyContent.classList.add('active');
     }
 });

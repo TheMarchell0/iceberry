@@ -1,7 +1,7 @@
 @import "../../helpers/variables";
 
 .hero {
-  margin-bottom: -17px;
+  margin-bottom: 25px;
   
   &__container {
     position: relative;
@@ -14,15 +14,35 @@
       background-size: cover;
       display: flex;
       background-position: 0 100%;
+      min-height: 777px;
+      position: relative;
 
       &_vologodskiy-plombir {
         background-image: url('/img/brands-hero-bg-1.svg');
-        min-height: 777px;
+
+        & .hero__list-img {
+          top: 204px;
+          left: 14px;
+        }
+
+        & .hero__list-info {
+          top: 229px;
+          right: 229px;
+        }
       }
 
       &_filevskoe {
         background-image: url('/img/brands-hero-bg-2.svg');
-        min-height: 654px;
+
+        & .hero__list-img {
+          top: 114px;
+          left: 0px;
+        }
+
+        & .hero__list-info {
+          top: 223px;
+          right: 229px;
+        }
 
         & .hero__list-info-title,
         & .hero__list-info-descr {
@@ -32,26 +52,67 @@
 
       &_jemchujina-rossii {
         background-image: url('/img/brands-hero-bg-3.svg');
-        min-height: 722px;
+
+        & .hero__list-img {
+          top: -67px;
+          left: -173px;
+        }
+
+        & .hero__list-info {
+          top: 222px;
+          right: 230px;
+        }
       }
 
       &_ot-deda-moroza {
         background-image: url('/img/brands-hero-bg-4.svg');
-        min-height: 695px;
+
+        & .hero__list-img {
+          top: 97px;
+          left: -81px;
+        }
+
+        & .hero__list-info {
+          top: 223px;
+          right: 229px;
+        }
       }
 
       &_vkuslandia {
         background-image: url('/img/brands-hero-bg-5.svg');
-        min-height: 722px;
+
+        & .hero__list-img {
+          top: 85px;
+          left: -133px;
+        }
+
+        & .hero__list-info {
+          top: 223px;
+          right: 229px;
+        }
 
         & .hero__list-info-title,
         & .hero__list-info-descr {
           color: $black;
         }
       }
+
+      &-wrapper {
+        position: relative;
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    &-img {
+      position: absolute;
     }
 
     &-info {
+      position: absolute;
+      max-width: 480px;
+      width: 100%;
 
       &-title,
       &-descr {
@@ -80,7 +141,7 @@
   &__pagination {
     transition: 0.2s linear;
     top: initial;
-    bottom: 131px!important;
+    bottom: 88px!important;
     left: 49vw!important;
 
     & .swiper-pagination-bullet {
@@ -114,7 +175,7 @@
 
   &__decor {
     position: absolute;
-    bottom: -74px;
+    bottom: -117px;
     right: 66px;
     z-index: 1;
   }

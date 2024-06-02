@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
         effect: 'fade',
         slidesPerView: 1,
         allowTouchMove: false,
+        speed: 800,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
     });
 
     heroSlider.on('slideChange', function () {
@@ -36,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: ".brands__slider-next",
             prevEl: ".brands__slider-prev",
         },
-        spaceBetween: 10,
+        spaceBetween: 80,
         breakpoints: {
             320: {
                 slidesPerView: 1.07,
             },
             767: {
-                slidesPerView: 4.85,
+                slidesPerView: 5.1,
             }
         }
     });

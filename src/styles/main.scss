@@ -66,6 +66,12 @@
   overflow: visible!important;
 }
 
+.swiper-overflow-hidden {
+  @media (min-width: $tablet) {
+    overflow: hidden!important;
+  }
+}
+
 .swiper-button-next {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -85,4 +91,12 @@
     opacity:initial!important;
     transition: 0.1s linear;
   }
+}
+
+.swiper-fade .swiper-slide {
+  opacity: 0 !important;
+}
+
+.swiper-fade .swiper-slide-active {
+  opacity: 1!important;
 }
