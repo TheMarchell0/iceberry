@@ -6,16 +6,75 @@
     <title>Айсберри</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/swiper-bundle.css">
+    <link rel="stylesheet" href="/styles/brands-general-styles.css">
+    <link rel="stylesheet" href="/styles/pages/brands-filevskoe.css">
 </head>
 <body>
 @@include("../../blocks/modules/header/header.html")
 <main>
-    <h1>филевское</h1>
+    <section class="hero">
+        <div class="hero__container container">
+
+        </div>
+    </section>
+    <section class="info">
+        <div class="info__container container">
+            <div class="info__content">
+                <p class="info__content-title">Филевское</p>
+                <p class="info__content-descr">Один из старейших брендов мороженого. Мороженое этой торговой марки
+                    производится по историческим рецептурам 70-х годов, строго по ГОСТу и на основе натуральных
+                    ингредиентов: свежее молоко, сливочное масло и сгущенное молоко.</p>
+                <ul class="info__content-list">
+                    <li class="info__content-list-item">
+                        <img
+                                src="./img/brands-info-logo-1.svg"
+                                alt="Логотип"
+                                width="61"
+                                class="info__content-img"
+                        />
+                    </li>
+                    <li class="info__content-list-item">
+                        <img
+                                src="./img/brands-info-logo-2.svg"
+                                alt="Логотип"
+                                width="61"
+                                class="info__content-img"
+                        />
+                    </li>
+                    <li class="info__content-list-item">
+                        <img
+                                src="./img/brands-info-logo-3.svg"
+                                alt="Логотип"
+                                width="61"
+                                class="info__content-img"
+                        />
+                    </li>
+                    <li class="info__content-list-item">
+                        <img
+                                src="./img/brands-info-logo-4.svg"
+                                alt="Логотип"
+                                width="61"
+                                class="info__content-img"
+                        />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="assortment">
+        <div class="assortment__container container">
+
+        </div>
+    </section>
 </main>
 @@include("../../blocks/modules/footer/footer.html")
-<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/brands-general-scripts.js"></script>
 </body>
 </html>
