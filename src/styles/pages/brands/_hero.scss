@@ -2,7 +2,7 @@
 
 .hero {
   margin-bottom: 25px;
-  
+
   &__container {
     position: relative;
   }
@@ -17,31 +17,112 @@
       min-height: 777px;
       position: relative;
 
+      @media (max-width: $mobile) {
+        min-height: 820px;
+      }
+
       &_vologodskiy-plombir {
         background-image: url('/img/brands-hero-bg-1.svg');
+
+        @media (max-width: $mobile) {
+          background-image: url('/img/brands-hero-bg-1-mobile.svg');
+        }
 
         & .hero__list-img {
           top: 204px;
           left: 14px;
+
+          @media (min-width: $tablet) and (max-width: $laptop) {
+            left: 0vw;
+            width: 52vw;
+          }
+
+          @media (max-width: $tablet) {
+            width: 65vw;
+            top: initial;
+            bottom: 83px;
+            left: -114px;
+          }
+
+          @media (max-width: $mobile) {
+            width: 446px;
+            bottom: 171px;
+            left: 50%;
+            transform: translateX(-259px);
+          }
+
+          @media (max-width: $mobileSmall) {
+            width: 119vw;
+          }
         }
 
         & .hero__list-info {
           top: 229px;
           right: 229px;
+
+          @media (min-width: $tablet) and (max-width: $laptop) {
+            right: 0vw;
+          }
+
+          @media (max-width: $tablet) {
+            right: -7vw;
+          }
+
+          @media (max-width: $mobile) {
+            right: initial;
+            left: 5vw;
+            top: 189px;
+          }
         }
       }
 
       &_filevskoe {
         background-image: url('/img/brands-hero-bg-2.svg');
 
+        @media (max-width: $mobile) {
+          background-image: url('/img/brands-hero-bg-2-mobile.svg');
+        }
+
         & .hero__list-img {
           top: 114px;
           left: 0px;
+
+          @media (max-width: $tablet) {
+            top: initial;
+            bottom: 45px;
+            width: 67vw;
+            left: -73px;
+          }
+
+          @media (max-width: $mobile) {
+            width: 375px;
+            bottom: 135px;
+            left: 50%;
+            transform: translateX(-187px);
+          }
+
+          @media (max-width: $mobileSmall) {
+            width: 100vw;
+          }
         }
 
         & .hero__list-info {
           top: 223px;
           right: 229px;
+
+          @media (min-width: $tablet) and (max-width: $laptop) {
+            right: 0vw;
+          }
+
+          @media (max-width: $tablet) {
+            right: -7vw;
+          }
+
+          @media (max-width: $mobile) {
+            right: initial;
+            left: 5vw;
+            top: 189px;
+          }
         }
 
         & .hero__list-info-title,
@@ -53,47 +134,170 @@
       &_jemchujina-rossii {
         background-image: url('/img/brands-hero-bg-3.svg');
 
+        @media (max-width: $mobile) {
+          background-image: url('/img/brands-hero-bg-3-mobile.svg');
+        }
+
         & .hero__list-img {
           top: -67px;
           left: -173px;
+
+          @media (min-width: $tablet) and (max-width: $laptop) {
+            left: -11vw;
+            width: 70vw;
+            top: 1vw;
+          }
+
+          @media (max-width: $tablet) {
+            top: initial;
+            bottom: -100px;
+            left: -151px;
+            width: 78vw;
+          }
+
+          @media (max-width: $mobile) {
+            width: 439px;
+            bottom: 75px;
+            left: 50%;
+            transform: translateX(-219px);
+          }
+
+          @media (max-width: $mobileSmall) {
+            width: 116vw;
+          }
         }
 
         & .hero__list-info {
           top: 222px;
           right: 230px;
+
+          @media (min-width: $tablet) and (max-width: $laptop) {
+            right: 0vw;
+          }
+
+          @media (max-width: $tablet) {
+            right: -7vw;
+          }
+
+          @media (max-width: $mobile) {
+            right: initial;
+            left: 5vw;
+            top: 189px;
+            max-width: 245px;
+            width: 100%;
+          }
         }
       }
 
       &_ot-deda-moroza {
         background-image: url('/img/brands-hero-bg-4.svg');
 
+        @media (max-width: $mobile) {
+          background-image: url('/img/brands-hero-bg-4-mobile.svg');
+        }
+
         & .hero__list-img {
           top: 97px;
           left: -81px;
+
+          @media (min-width: $tablet) and (max-width: $laptop) {
+            width: 60vw;
+            top: 10vw;
+            left: -5vw;
+          }
+
+          @media (max-width: $tablet) {
+            top: initial;
+            bottom: 10px;
+            width: 70vw;
+            left: -125px;
+          }
+
+          @media (max-width: $mobile) {
+            width: 375px;
+            bottom: 190px;
+            left: 50%;
+            transform: translateX(-186px);
+          }
+
+          @media (max-width: $mobileSmall) {
+            width: 100vw;
+          }
         }
 
         & .hero__list-info {
           top: 223px;
           right: 229px;
+
+          @media (min-width: $mobile) and (max-width: $laptop) {
+            right: 0vw;
+          }
+
+          @media (max-width: $mobile) {
+            right: initial;
+            left: 5vw;
+            top: 189px;
+          }
+        }
+
+        & .hero__list-info-descr {
+          @media (min-width: $mobileSmall) and (max-width: $mobile) {
+            max-width: initial;
+          }
         }
       }
 
       &_vkuslandia {
         background-image: url('/img/brands-hero-bg-5.svg');
 
+        @media (max-width: $mobile) {
+          background-image: url('/img/brands-hero-bg-5-mobile.svg');
+        }
+
         & .hero__list-img {
           top: 85px;
           left: -133px;
+
+          @media (max-width: $tablet) {
+            top: initial;
+            bottom: 71px;
+            width: 66vw;
+          }
+
+          @media (max-width: $mobile) {
+            width: 440px;
+            bottom: 130px;
+            left: 50%;
+            transform: translateX(-255px);
+          }
+
+          @media (max-width: $mobileSmall) {
+            width: 125vw;
+          }
         }
 
         & .hero__list-info {
           top: 223px;
           right: 229px;
+
+          @media (min-width: $mobile) and (max-width: $laptop) {
+            right: 0vw;
+          }
+
+          @media (max-width: $mobile) {
+            right: initial;
+            left: 5vw;
+            top: 189px;
+          }
         }
 
         & .hero__list-info-title,
         & .hero__list-info-descr {
           color: $black;
+
+          @media (max-width: $mobile) {
+            max-width: initial;
+          }
         }
       }
 
@@ -114,6 +318,10 @@
       max-width: 480px;
       width: 100%;
 
+      @media (max-width: $mobile) {
+        max-width: 375px;
+      }
+
       &-title,
       &-descr {
         color: #FFFFFF;
@@ -126,6 +334,18 @@
         line-height: 66px;
         text-transform: uppercase;
         margin-bottom: 14px;
+
+        @media (min-width: $mobile) and (max-width: $laptop) {
+          font-size: 50px;
+          line-height: 56px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: $mobile) {
+          font-size: 28px;
+          line-height: 30.8px;
+          margin-bottom: 20px;
+        }
       }
 
       &-descr {
@@ -134,6 +354,12 @@
         line-height: 28.6px;
         max-width: 441px;
         width: 100%;
+
+        @media (max-width: $mobile) {
+          font-size: 20px;
+          line-height: 22px;
+          max-width: 245px;
+        }
       }
     }
   }
@@ -141,8 +367,19 @@
   &__pagination {
     transition: 0.2s linear;
     top: initial;
-    bottom: 88px!important;
-    left: 49vw!important;
+    bottom: 88px !important;
+    left: 49vw !important;
+
+    @media (min-width: 1920px) {
+      bottom: 268px !important;
+      left: 50.5vw !important;
+    }
+
+    @media (max-width: $mobile) {
+      bottom: 105px !important;
+      left: 50% !important;
+      transform: translateX(-50%);
+    }
 
     & .swiper-pagination-bullet {
       background-color: #FFFFFF;
@@ -178,5 +415,16 @@
     bottom: -117px;
     right: 66px;
     z-index: 1;
+
+    @media (max-width: $tablet) {
+      width: 20.5vw;
+      bottom: -6vw;
+    }
+
+    @media (max-width: $mobile) {
+      width: 157px;
+      bottom: 0px;
+      right: 0px;
+    }
   }
 }

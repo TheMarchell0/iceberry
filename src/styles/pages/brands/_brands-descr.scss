@@ -1,6 +1,11 @@
 @import "../../helpers/variables";
 
 .brands-descr {
+  margin-bottom: 18px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 28px;
+  }
   
   &__container {
     position: relative;
@@ -9,35 +14,62 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 18px;
 
     @media (max-width: $tablet) {
       flex-wrap: initial;
     }
 
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      z-index: 1;
+      position: relative;
+    }
+
     &-item {
       border-radius: 30px;
       min-height: 380px;
-      flex: 0 1 420px;
+      height: auto;
+      max-width: 420px;
+      width: 100%;
       overflow: hidden;
       margin-bottom: 22px;
       position: relative;
       padding: 28px 33px 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
       transition: 0.2s linear;
 
-      @media (max-width: $tablet) {
-        flex: auto;
+      @media (min-width: $tablet) and (max-width: $laptop) {
+        max-width: 48%;
       }
 
-      &:hover {
-        scale: 1.05;
+      @media (max-width: $tablet) {
+        max-width: 100%;
+        min-height: 460px;
+      }
+
+      @media (max-width: $mobile) {
+        padding: 20px 18px 20px;
+      }
+
+      @media (min-width: $tablet) {
+        &:hover {
+          scale: 1.05;
+        }
+      }
+
+      &:nth-child(odd) {
+        @media (min-width: $tablet) and (max-width: $laptop) {
+          margin-right: 20px;
+        }
       }
 
       &:not(:nth-child(3n)) {
-        margin-right: 20px;
+
+        @media (min-width: $laptop) {
+          margin-right: 20px;
+        }
 
         @media (max-width: $tablet) {
           margin-right: initial;
@@ -47,22 +79,58 @@
 
       &_filevskoe {
 
+        & .brands-descr__list-subtitle {
+          @media (max-width: $mobile) {
+            max-width: 220px;
+            width: 100%;
+          }
+        }
+
         & .brands-descr__list-decor {
           bottom: -48px;
-          right: 20px
+          right: 20px;
+
+          @media (max-width: $mobile) {
+            bottom: -45px;
+            right: -5px;
+            width: 199px;
+          }
         }
       }
 
       &_vologodskiy-plombir {
 
+        & .brands-descr__list-subtitle {
+          @media (max-width: $mobile) {
+            max-width: 250px;
+            width: 100%;
+          }
+        }
+
         & .brands-descr__list-decor {
           bottom: -47px;
           right: 0px;
+
+          @media (max-width: $mobile) {
+            bottom: -10px;
+            right: 0px;
+            width: 132px;
+          }
         }
       }
 
       &_jemchujina-rossii {
         padding: 35px 33px 24px;
+
+        @media (max-width: $mobile) {
+          padding: 26px 17px 24px 23px;
+        }
+
+        & .brands-descr__list-title {
+          @media (max-width: $mobile) {
+            margin: 15px 0 12px;
+          }
+        }
 
         & .brands-descr__list-subtitle {
           max-width: 295px;
@@ -70,8 +138,12 @@
         }
 
         & .brands-descr__list-decor {
-          bottom: -47px;
-          right: -22px;
+          bottom: 0px;
+          right: 0px;
+
+          @media (max-width: $mobile) {
+            width: 176px;
+          }
         }
       }
 
@@ -85,6 +157,12 @@
         & .brands-descr__list-decor {
           bottom: -104px;
           right: -17px;
+
+          @media (max-width: $mobile) {
+            bottom: -32px;
+            right: -7px;
+            width: 147px;
+          }
         }
       }
 
@@ -103,6 +181,12 @@
         & .brands-descr__list-decor {
           bottom: -34px;
           right: -9px;
+
+          @media (max-width: $mobile) {
+            bottom: -10px;
+            right: 0px;
+            width: 240px;
+          }
         }
       }
     }
@@ -119,6 +203,10 @@
 
       &:not(.vkuslandia-text):not(.filevskoe-text) {
         color: #FFFFFF;
+      }
+
+      @media (max-width: $mobile) {
+        margin: 5px 0 12px;
       }
     }
 
@@ -151,6 +239,14 @@
     position: absolute;
     right: -63px;
     bottom: -70px;
+
+    @media (max-width: $laptop) {
+      right: 21px;
+    }
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 }
 

@@ -62,24 +62,26 @@
           font-size: 14px;
         }
 
-        .header.vologodskiy-plombir & {
-          color: #FFFFFF;
-        }
+        @media (min-width: $mobile) {
+          .header.vologodskiy-plombir & {
+            color: #FFFFFF;
+          }
 
-        .header.filevskoe & {
-          color: $mainColor;
-        }
+          .header.filevskoe & {
+            color: $mainColor;
+          }
 
-        .header.jemchujina-rossii & {
-          color: #FFFFFF;
-        }
+          .header.jemchujina-rossii & {
+            color: #FFFFFF;
+          }
 
-        .header.ot-deda-moroza & {
-          color: #FFFFFF;
-        }
+          .header.ot-deda-moroza & {
+            color: #FFFFFF;
+          }
 
-        .header.vkuslandia & {
-          color: $mainColor;
+          .header.vkuslandia & {
+            color: $mainColor;
+          }
         }
       }
     }
@@ -133,6 +135,28 @@
   -o-transition: transform 0.3s ease, width 0.1s ease;
   transition: transform 0.3s ease, width 0.1s ease;
   transition: transform 0.3s ease, width 0.1s ease, -webkit-transform 0.3s ease;
+
+  @media (max-width: $mobile) {
+    .header.vologodskiy-plombir & {
+      background-color: #FFFFFF;
+    }
+
+    .header.filevskoe & {
+      background-color: $mainColor;
+    }
+
+    .header.jemchujina-rossii & {
+      background-color: #FFFFFF;
+    }
+
+    .header.ot-deda-moroza & {
+      background-color: #FFFFFF;
+    }
+
+    .header.vkuslandia & {
+      background-color: $mainColor;
+    }
+  }
 }
 
 .header__mobile-menu-button::before {

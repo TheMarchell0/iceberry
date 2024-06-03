@@ -41,13 +41,21 @@ document.addEventListener('DOMContentLoaded', function () {
             nextEl: ".brands__slider-next",
             prevEl: ".brands__slider-prev",
         },
-        spaceBetween: 80,
         breakpoints: {
             320: {
-                slidesPerView: 1.07,
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            350: {
+                slidesPerView: 2.03,
+                spaceBetween: 10,
             },
             767: {
+                slidesPerView: 3,
+            },
+            1400: {
                 slidesPerView: 5.1,
+                spaceBetween: 80,
             }
         }
     });
@@ -63,9 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
             spaceBetween: 20,
             breakpoints: {
                 320: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1,
                 },
-                767: {
+                350: {
+                    slidesPerView: 1.112,
+                },
+                700: {
                     slidesPerView: 2,
                 }
             }
