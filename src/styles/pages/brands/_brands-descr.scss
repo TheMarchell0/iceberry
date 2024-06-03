@@ -17,6 +17,7 @@
 
     @media (max-width: $tablet) {
       flex-wrap: initial;
+      margin-bottom: 20px;
     }
 
     &-content {
@@ -46,7 +47,7 @@
 
       @media (max-width: $tablet) {
         max-width: 100%;
-        min-height: 460px;
+        min-height: 439px;
       }
 
       @media (max-width: $mobile) {
