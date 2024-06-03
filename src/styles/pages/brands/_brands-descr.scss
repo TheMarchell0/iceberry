@@ -31,8 +31,7 @@
 
     &-item {
       border-radius: 30px;
-      min-height: 380px;
-      height: auto;
+      height: 380px;
       max-width: 420px;
       width: 100%;
       overflow: hidden;
@@ -47,7 +46,7 @@
 
       @media (max-width: $tablet) {
         max-width: 100%;
-        min-height: 439px;
+        height: 439px;
       }
 
       @media (max-width: $mobile) {
@@ -82,7 +81,7 @@
 
         & .brands-descr__list-subtitle {
           @media (max-width: $mobile) {
-            max-width: 220px;
+            max-width: 59vw;
             width: 100%;
           }
         }
@@ -103,7 +102,7 @@
 
         & .brands-descr__list-subtitle {
           @media (max-width: $mobile) {
-            max-width: 250px;
+            max-width: 66.4vw;
             width: 100%;
           }
         }
@@ -134,8 +133,10 @@
         }
 
         & .brands-descr__list-subtitle {
-          max-width: 295px;
-          width: 100%;
+          @media (min-width: $laptop) {
+            max-width: 295px;
+            width: 100%;
+          }
         }
 
         & .brands-descr__list-decor {
@@ -151,8 +152,10 @@
       &_ot-deda-moroza {
 
         & .brands-descr__list-subtitle {
-          max-width: 244px;
-          width: 100%;
+          @media (min-width: $laptop) {
+            max-width: 244px;
+            width: 100%;
+          }
         }
 
         & .brands-descr__list-decor {
@@ -175,8 +178,10 @@
         }
 
         & .brands-descr__list-subtitle:last-of-type {
-          max-width: 300px;
-          width: 100%;
+          @media (min-width: $laptop) {
+            max-width: 300px;
+            width: 100%;
+          }
         }
 
         & .brands-descr__list-decor {
