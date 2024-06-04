@@ -12,63 +12,263 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/swiper-bundle.css">
     <link rel="stylesheet" href="/styles/brands-general-styles.css">
-    <link rel="stylesheet" href="/styles/pages/brands-filevskoe.css">
+    <link rel="stylesheet" href="/styles/pages/brands-single.css">
 </head>
-<body>
+<body class="brand-single" data-brand-theme="filevskoe">
 @@include("../../blocks/modules/header/header.html")
 <main>
     <section class="hero">
-        <div class="hero__container container">
-
+        <div class="hero__brand brand brand_filevskoe">
+            <div class="hero__brand-wrapper brand__wrapper">
+                <picture>
+                    <source
+                            srcset="/img/filevskoe-main-img.png 1x, /img/filevskoe-main-img@2x.png 2x"
+                    />
+                    <img
+                            src="/img/filevskoe-main-img.png"
+                            alt="Декоративная картинка"
+                            width="600"
+                            class="hero__brand-img brand__img"
+                    />
+                </picture>
+                <div class="hero__brand-text brand__text">
+                    <p class="hero__brand-text-title brand__text-title">Филевское</p>
+                    <p class="hero__brand-text-descr brand__text-descr">По историческим рецептурам!</p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="info">
         <div class="info__container container">
             <div class="info__content">
                 <p class="info__content-title">Филевское</p>
-                <p class="info__content-descr">Один из старейших брендов мороженого. Мороженое этой торговой марки
-                    производится по историческим рецептурам 70-х годов, строго по ГОСТу и на основе натуральных
+                <p class="info__content-descr">Один из старейших брендов мороженого. Мороженое&nbsp;этой торговой марки
+                    производится по&nbsp;историческим рецептурам 70-х годов, строго по&nbsp;ГОСТу и на основе натуральных
                     ингредиентов: свежее молоко, сливочное масло и сгущенное молоко.</p>
                 <ul class="info__content-list">
                     <li class="info__content-list-item">
-                        <img
-                                src="./img/brands-info-logo-1.svg"
-                                alt="Логотип"
-                                width="61"
-                                class="info__content-img"
-                        />
+                        <picture>
+                            <source
+                                    srcset="/img/brand-info-filevskoe-award-1.png 1x, /img/brand-info-filevskoe-award-1@2x.png 2x"
+                            />
+                            <img
+                                    src="/img/brand-info-filevskoe-award-1.png"
+                                    alt="Декоративная картинка"
+                                    width="61"
+                                    class="info__content-list-img"
+                            />
+                        </picture>
                     </li>
                     <li class="info__content-list-item">
-                        <img
-                                src="./img/brands-info-logo-2.svg"
-                                alt="Логотип"
-                                width="61"
-                                class="info__content-img"
-                        />
+                        <picture>
+                            <source
+                                    srcset="/img/brand-info-filevskoe-award-2.png 1x, /img/brand-info-filevskoe-award-2@2x.png 2x"
+                            />
+                            <img
+                                    src="/img/brand-info-filevskoe-award-2.png"
+                                    alt="Декоративная картинка"
+                                    width="61"
+                                    class="info__content-list-img"
+                            />
+                        </picture>
                     </li>
                     <li class="info__content-list-item">
-                        <img
-                                src="./img/brands-info-logo-3.svg"
-                                alt="Логотип"
-                                width="61"
-                                class="info__content-img"
-                        />
+                        <picture>
+                            <source
+                                    srcset="/img/brand-info-filevskoe-award-3.png 1x, /img/brand-info-filevskoe-award-3@2x.png 2x"
+                            />
+                            <img
+                                    src="/img/brand-info-filevskoe-award-3.png"
+                                    alt="Декоративная картинка"
+                                    width="61"
+                                    class="info__content-list-img"
+                            />
+                        </picture>
                     </li>
                     <li class="info__content-list-item">
-                        <img
-                                src="./img/brands-info-logo-4.svg"
-                                alt="Логотип"
-                                width="61"
-                                class="info__content-img"
-                        />
+                        <picture>
+                            <source
+                                    srcset="/img/brand-info-filevskoe-award-4.png 1x, /img/brand-info-filevskoe-award-4@2x.png 2x"
+                            />
+                            <img
+                                    src="/img/brand-info-filevskoe-award-4.png"
+                                    alt="Декоративная картинка"
+                                    width="61"
+                                    class="info__content-list-img"
+                            />
+                        </picture>
                     </li>
                 </ul>
+                <picture>
+                    <source
+                            srcset="/img/brand-info-content-decor_filevskoe.png 1x, /img/brand-info-content-decor_filevskoe@2x.png 2x"
+                    />
+                    <img
+                            src="/img/brand-info-content-decor_filevskoe.png"
+                            alt="Декоративная картинка"
+                            width="550"
+                            class="info__content-decor info__content-decor_filevskoe"
+                    />
+                </picture>
             </div>
         </div>
     </section>
     <section class="assortment">
         <div class="assortment__container container">
-
+            <h2 class="assortment__title section-title">Ассортимент</h2>
+            <ul class="assortment__list">
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Лакомка</p>
+                    <p class="assortment__list-descr">3 вида</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-1_filevskoe.png 1x, /img/brands-assortment-1_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-1_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Вафельный стаканчик</p>
+                    <p class="assortment__list-descr">5 видов</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-2_filevskoe.png 1x, /img/brands-assortment-2_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-2_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Эскимо</p>
+                    <p class="assortment__list-descr">2 вида</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-3_filevskoe.png 1x, /img/brands-assortment-3_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-3_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Рожок</p>
+                    <p class="assortment__list-descr">3 вида</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-4_filevskoe.png 1x, /img/brands-assortment-4_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-4_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Брикет на&nbsp;вафлях</p>
+                    <p class="assortment__list-descr">1 вид</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-5_filevskoe.png 1x, /img/brands-assortment-5_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-5_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Бумажный пакет</p>
+                    <p class="assortment__list-descr">1 вид</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-6_filevskoe.png 1x, /img/brands-assortment-6_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-6_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Пластиковый стаканчик</p>
+                    <p class="assortment__list-descr">2 вида</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-7_filevskoe.png 1x, /img/brands-assortment-7_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-7_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Ведро</p>
+                    <p class="assortment__list-descr">4 вида</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-8_filevskoe.png 1x, /img/brands-assortment-8_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-8_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Колбаса</p>
+                    <p class="assortment__list-descr">2 вида</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-9_filevskoe.png 1x, /img/brands-assortment-9_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-9_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Брикет</p>
+                    <p class="assortment__list-descr">2 вида</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-10_filevskoe.png 1x, /img/brands-assortment-10_filevskoe@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-10_filevskoe.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+            </ul>
+            <picture>
+                <source
+                        srcset="/img/brand-assortment-decor_filevskoe.png 1x, /img/brand-assortment-decor_filevskoe@2x.png 2x"
+                />
+                <img
+                        src="/img/brand-assortment-decor_filevskoe.png"
+                        alt="Декоративная картинка"
+                        width="626"
+                        class="assortment__decor assortment__decor_top"
+                />
+            </picture>
         </div>
     </section>
 </main>

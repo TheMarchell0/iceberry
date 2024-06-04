@@ -100,3 +100,19 @@
 .swiper-fade .swiper-slide-active {
   opacity: 1!important;
 }
+
+body[data-brand-theme="vologodskiy-plombir"] .swiper-pagination-bullet {
+  background-color: #FFFFFF;
+}
+body[data-brand-theme="filevskoe"] .swiper-pagination-bullet {
+  background-color: $mainColor;
+}
+body[data-brand-theme="jemchujina-rossii"] .swiper-pagination-bullet {
+  background-color: #FFFFFF;
+}
+body[data-brand-theme="ot-deda-moroza"] .swiper-pagination-bullet {
+  background-color: #FFFFFF;
+}
+body[data-brand-theme="vkuslandia"] .swiper-pagination-bullet {
+  background-color: $black;
+}

@@ -1,0 +1,13 @@
+@import "../../helpers/variables";
+
+.hero {
+  body[data-brand-theme="ot-deda-moroza"] &__brand-text {
+    max-width: 540px;
+    right: 170px;
+
+    @media (min-width: $tablet) and (max-width: $laptop) {
+      right: initial;
+      left: 54vw;
+    }
+  }
+}

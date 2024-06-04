@@ -6,16 +6,105 @@
     <title>Айсберри</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/swiper-bundle.css">
+    <link rel="stylesheet" href="/styles/brands-general-styles.css">
+    <link rel="stylesheet" href="/styles/pages/brands-single.css">
 </head>
-<body>
+<body class="brand-single" data-brand-theme="vkuslandia">
 @@include("../../blocks/modules/header/header.html")
 <main>
-    <h1>тест</h1>
+    <section class="hero">
+        <div class="hero__brand brand brand_vkuslandia">
+            <div class="hero__brand-wrapper brand__wrapper">
+                <picture>
+                    <source
+                            srcset="/img/vkuslandia-main-img.png 1x, /img/vkuslandia-main-img@2x.png 2x"
+                    />
+                    <img
+                            src="/img/vkuslandia-main-img.png"
+                            alt="Декоративная картинка"
+                            width="732"
+                            class="hero__brand-img brand__img"
+                    />
+                </picture>
+                <div class="hero__brand-text brand__text">
+                    <p class="hero__brand-text-title brand__text-title">Вкусландия</p>
+                    <p class="hero__brand-text-descr brand__text-descr">Идеальное сочетание вкусов<br/>по мотивам знаменитых десертов! </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+        <div class="info__container container">
+            <picture>
+                <source
+                        srcset="/img/brands-hero-decor.png 1x, /img/brands-hero-decor@2x.png 2x"
+                />
+                <img
+                        src="/img/brands-hero-decor.png"
+                        alt="Декоративная картинка"
+                        width="285"
+                        class="info__decor"
+                />
+            </picture>
+            <div class="info__content">
+                <p class="info__content-title">Вкусландия</p>
+                <p class="info__content-descr">Мороженое бренда Вкусландия - это специально разработанная линейка сложных вкусов по мотивам самых знаменитых десертов, выпущенная в лотках семейного формата.</p>
+                <p class="info__content-descr">Безупречно подобранное сочетание натурального пломбира с&nbsp;изысканными ингредиентами не оставит равнодушным всех ценителей идеального вкуса.</p>
+                <picture>
+                    <source
+                            srcset="/img/brand-info-content-decor_vkuslandia.png 1x, /img/brand-info-content-decor_vkuslandia@2x.png 2x"
+                    />
+                    <img
+                            src="/img/brand-info-content-decor_vkuslandia.png"
+                            alt="Декоративная картинка"
+                            width="637"
+                            class="info__content-decor info__content-decor_vkuslandia"
+                    />
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section class="assortment">
+        <div class="assortment__container container">
+            <h2 class="assortment__title section-title">Ассортимент</h2>
+            <ul class="assortment__list">
+                <li class="assortment__list-item">
+                    <p class="assortment__list-title">Лоток</p>
+                    <p class="assortment__list-descr">7 видов</p>
+                    <picture>
+                        <source
+                                srcset="/img/brands-assortment-1_vkuslandia.png 1x, /img/brands-assortment-1_vkuslandia@2x.png 2x"
+                        />
+                        <img
+                                src="/img/brands-assortment-1_vkuslandia.png"
+                                alt="Декоративная картинка"
+                                class="assortment__list-item-bg"
+                        />
+                    </picture>
+                </li>
+            </ul>
+            <picture>
+                <source
+                        srcset="/img/brand-assortment-decor_vkuslandia.png 1x, /img/brand-assortment-decor_vkuslandia@2x.png 2x"
+                />
+                <img
+                        src="/img/brand-assortment-decor_vkuslandia.png"
+                        alt="Декоративная картинка"
+                        width="630"
+                        class="assortment__decor"
+                />
+            </picture>
+        </div>
+    </section>
 </main>
 @@include("../../blocks/modules/footer/footer.html")
-<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/brands-general-scripts.js"></script>
 </body>
 </html>
