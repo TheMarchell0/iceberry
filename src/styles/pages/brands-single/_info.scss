@@ -4,18 +4,34 @@
 
   body[data-brand-theme="filevskoe"] & {
     margin-top: 64px;
+
+    @media (max-width: $mobile) {
+      margin-top: 10px;
+    }
   }
 
   body[data-brand-theme="vologodskiy-plombir"] & {
     margin-top: 41px;
+
+    @media (max-width: $mobile) {
+      margin-top: 10px;
+    }
   }
 
   body[data-brand-theme="jemchujina-rossii"] & {
     margin-top: 60px;
+
+    @media (max-width: $mobile) {
+      margin-top: 15px;
+    }
   }
 
   body[data-brand-theme="ot-deda-moroza"] & {
     margin-top: 87px;
+
+    @media (max-width: $mobile) {
+      margin-top: 10px;
+    }
   }
 
   body[data-brand-theme="vkuslandia"] & {
@@ -30,6 +46,10 @@
     position: absolute;
     top: -343px;
     right: -13px;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
 
@@ -43,22 +63,45 @@
 
     body[data-brand-theme="filevskoe"] & {
       padding: 122px 45px;
+
+      @media (max-width: $mobile) {
+        padding: 29px 21px;
+      }
     }
 
     body[data-brand-theme="vologodskiy-plombir"] & {
       padding: 57px 53px;
+
+      @media (max-width: $tablet) {
+        padding: 30px 23px;
+        min-height: 835px;
+      }
     }
 
     body[data-brand-theme="jemchujina-rossii"] & {
       padding: 151px 35px 60px;
+
+      @media (max-width: $tablet) {
+        padding: 29px 23px 60px;
+      }
     }
 
     body[data-brand-theme="ot-deda-moroza"] & {
       padding: 167px 50px 60px;
+
+      @media (max-width: $tablet) {
+        padding: 29px 20px 60px;
+        min-height: 474px;
+      }
     }
 
     body[data-brand-theme="vkuslandia"] & {
       padding: 164px 49px 60px;
+
+      @media (max-width: $tablet) {
+        padding: 29px 22px 60px;
+        min-height: 495px;
+      }
     }
 
 
@@ -83,6 +126,11 @@
       font-weight: 700;
       line-height: 66px;
       text-transform: uppercase;
+
+      @media (max-width: $mobile) {
+        font-size: 28px;
+        line-height: 30.8px;
+      }
     }
 
     &-descr {
@@ -90,6 +138,12 @@
       font-weight: 400;
       line-height: 22px;
       margin: 34px 0 29px;
+
+      @media (max-width: $mobile) {
+        font-size: 16px;
+        line-height: 17.6px;
+        margin: 22px 0;
+      }
 
       body[data-brand-theme="jemchujina-rossii"] & {
         margin: 23px 0 0 0;
@@ -105,8 +159,16 @@
         line-height: 17.6px;
         margin: 0;
 
+        @media (max-width: $mobile) {
+          max-width: 286px;
+        }
+
         &:not(:last-of-type) {
           margin: 23px 0 20px;
+
+          @media (max-width: $mobile) {
+            margin: 11px 0 20px;
+          }
         }
       }
     }
@@ -116,12 +178,41 @@
       width: 100%;
       justify-content: space-between;
 
+      @media (max-width: $mobile) {
+        flex-wrap: wrap;
+        justify-content: initial;
+      }
+
       body[data-brand-theme="filevskoe"] & {
         max-width: 303px;
+
+        @media (max-width: $mobile) {
+          max-width: 230px;
+        }
       }
 
       body[data-brand-theme="vologodskiy-plombir"] & {
         max-width: 546px;
+
+        @media (max-width: $mobile) {
+          max-width: 270px;
+        }
+      }
+
+      &-item {
+        @media (max-width: $mobile) {
+          margin-bottom: 6px;
+
+          &:not(:nth-child(4n)):not(:last-child) {
+            margin-right: 9px;
+          }
+        }
+      }
+
+      &-img {
+        @media (max-width: $mobile) {
+          width: 50px;
+        }
       }
     }
 
@@ -129,11 +220,26 @@
       position: absolute;
 
       body[data-brand-theme="filevskoe"] & {
-        right: 0;
-        bottom: 0;
+        width: 377px;
+        transform: rotate(-56deg);
+        right: 61px;
+        bottom: -74px;
 
         @media (min-width: $tablet) and (max-width: $laptop) {
-          width: 400px;
+          width: 27vw;
+          top: initial;
+          right: 44px;
+          bottom: -91px;
+        }
+
+        @media (max-width: $tablet) {
+          width: 188px;
+          right: 39px;
+          bottom: -94px;
+        }
+
+        @media (max-width: $mobile) {
+          bottom: -38px;
         }
       }
 
@@ -146,6 +252,17 @@
           top: initial;
           right: 0px;
           bottom: -10px;
+        }
+
+        @media (max-width: $tablet) {
+          right: -15px;
+          top: initial;
+          width: 356px;
+          bottom: -3px;
+        }
+
+        @media (max-width: 365px) {
+          width: 265px;
         }
       }
 
@@ -160,6 +277,18 @@
           right: -176px;
           bottom: 36px;
         }
+
+        @media (max-width: $tablet) {
+          top: initial;
+          right: -71px;
+          width: 395px;
+          bottom: -4px;
+          transform: initial;
+        }
+
+        @media (max-width: $mobile) {
+          bottom: 27px;
+        }
       }
 
       body[data-brand-theme="ot-deda-moroza"] & {
@@ -172,6 +301,17 @@
           bottom: 0;
           right: 0;
         }
+
+        @media (max-width: $tablet) {
+          top: initial;
+          bottom: 0;
+          width: 330px;
+          right: 0px;
+        }
+
+        @media (max-width: $mobileSmall) {
+          width: 265px;
+        }
       }
 
       body[data-brand-theme="vkuslandia"] & {
@@ -183,6 +323,17 @@
           top: initial;
           bottom: 0;
           right: 10px;
+        }
+
+        @media (max-width: $tablet) {
+          width: 330px;
+          top: initial;
+          bottom: 0;
+          right: 5px;
+        }
+
+        @media (max-width: $mobileSmall) {
+          width: 247px;
         }
       }
     }
@@ -267,7 +418,7 @@
           background-image: url('/img/brand-info-content-bg_vkuslandia@2x.png');
         }
         @media (max-width: 430px) {
-          background-image: url('/img/brand-info-content-bg_ot-vkuslandia@mobile@2x.png');
+          background-image: url('/img/brand-info-content-bg_vkuslandia@mobile@2x.png');
         }
       }
     }

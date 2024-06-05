@@ -11,18 +11,38 @@
     &-item {
       min-height: 777px;
 
-      &.brand_filevskoe .hero__list-img {
-        top: 114px;
+      @media (max-width: $mobile) {
+        min-height: 820px;
+      }
 
-        @media (max-width: $tablet) {
-          width: 67vw;
-          left: -73px;
+      &.brand_filevskoe .brand__img {
+        @media (max-width: $mobile) {
+          bottom: 135px;
         }
       }
 
-      &.brand_vologodskiy-plombir .hero__list-img {
-        top: 204px;
-        left: 14px;
+      &.brand_vologodskiy-plombir .brand__img {
+        @media (max-width: $mobile) {
+          bottom: 171px;
+        }
+      }
+
+      &.brand_jemchujina-rossii .brand__img {
+        @media (max-width: $mobile) {
+          bottom: 75px;
+        }
+      }
+
+      &.brand_ot-deda-moroza .brand__img {
+        @media (max-width: $mobile) {
+          bottom: 190px;
+        }
+      }
+
+      &.brand_vkuslandia .brand__img {
+        @media (max-width: $mobile) {
+          bottom: 130px;
+        }
       }
     }
   }

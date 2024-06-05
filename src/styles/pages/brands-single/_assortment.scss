@@ -3,8 +3,38 @@
 .assortment {
   margin-top: 55px;
 
+  @media (max-width: $tablet) {
+    margin-top: 48px;
+
+    body[data-brand-theme="filevskoe"] & {
+      margin-bottom: 275px;
+    }
+
+    body[data-brand-theme="vologodskiy-plombir"] & {
+      margin-bottom: 132px;
+    }
+
+    body[data-brand-theme="jemchujina-rossii"] & {
+      margin-bottom: 231px;
+    }
+
+    body[data-brand-theme="ot-deda-moroza"] & {
+      margin-bottom: 129px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    body[data-brand-theme="vkuslandia"] & {
+      margin-bottom: 332px;
+    }
+  }
+
   body[data-brand-theme="ot-deda-moroza"] & {
     overflow: hidden;
+
+    @media (max-width: $tablet) {
+      overflow: initial;
+    }
   }
 
 
@@ -16,6 +46,11 @@
     margin: 35px 0 40px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: $tablet) {
+      flex-wrap: nowrap;
+      margin: 23px 0 20px;
+    }
 
     body:not([data-brand-theme="vkuslandia"]) & {
       @media (min-width: $tablet) and (max-width: $laptop) {
@@ -31,10 +66,12 @@
       overflow: hidden;
       position: relative;
       min-height: 350px;
-      flex: 0 1 310px;
+      max-width: 310px;
+      width: 100%;
       margin-bottom: 20px;
       padding: 23px 20px;
       z-index: 1;
+
 
       &:not(:nth-child(4n)) {
         @media (min-width: $laptop) {
@@ -44,6 +81,11 @@
 
       @media (min-width: $tablet) and (max-width: $laptop) {
         margin-bottom: 30px;
+      }
+
+      @media (max-width: $tablet) {
+        margin-right: 10px;
+        margin-bottom: 0;
       }
 
       &-bg {
@@ -88,32 +130,65 @@
     body[data-brand-theme="filevskoe"] & {
       bottom: -91px;
       right: -100px;
+
+      @media (max-width: $tablet) {
+        width: 381px;
+        bottom: -340px;
+        right: -27px;
+      }
     }
 
     body[data-brand-theme="vologodskiy-plombir"] & {
       right: -33px;
       bottom: -160px;
+
+      @media (max-width: $tablet) {
+        width: 340px;
+        right: -1px;
+        bottom: -199px;
+      }
     }
 
     body[data-brand-theme="jemchujina-rossii"] & {
       right: -148px;
       bottom: -211px;
+
+      @media (max-width: $tablet) {
+        right: -65px;
+        bottom: -339px;
+        width: 520px;
+      }
     }
 
     body[data-brand-theme="ot-deda-moroza"] & {
       bottom: -243px;
       right: -202px;
+
+      @media (max-width: $tablet) {
+        width: 429px;
+        right: -50px;
+      }
     }
 
     body[data-brand-theme="vkuslandia"] & {
       bottom: -110px;
       right: -104px;
+
+      @media (max-width: $mobile) {
+        width: 375px;
+        right: -25px;
+        bottom: -330px;
+      }
     }
 
     &_top {
       body[data-brand-theme="vologodskiy-plombir"] & {
         top: -61px;
         right: -127px;
+
+        @media (max-width: $tablet) {
+          display: none;
+        }
       }
     }
   }

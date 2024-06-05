@@ -8,7 +8,7 @@
   position: relative;
 
   @media (max-width: $mobile) {
-    min-height: 820px;
+    min-height: 725px;
   }
 
   &__wrapper {
@@ -98,7 +98,7 @@
 
       @media (max-width: $mobile) {
         width: 446px;
-        bottom: 171px;
+        bottom: 77px;
         left: 50%;
         transform: translateX(-259px);
       }
@@ -148,7 +148,7 @@
 
       @media (max-width: $mobile) {
         width: 375px;
-        bottom: 135px;
+        bottom: 40px;
         left: 50%;
         transform: translateX(-187px);
       }
@@ -210,7 +210,7 @@
 
       @media (max-width: $mobile) {
         width: 439px;
-        bottom: 75px;
+        bottom: -17px;
         left: 50%;
         transform: translateX(-219px);
       }
@@ -269,7 +269,7 @@
 
       @media (max-width: $mobile) {
         width: 375px;
-        bottom: 190px;
+        bottom: 95px;
         left: 50%;
         transform: translateX(-186px);
       }
@@ -321,7 +321,7 @@
 
       @media (max-width: $mobile) {
         width: 440px;
-        bottom: 130px;
+        bottom: 36px;
         left: 50%;
         transform: translateX(-255px);
       }

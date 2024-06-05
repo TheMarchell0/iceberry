@@ -9,5 +9,9 @@
       right: initial;
       left: 54vw;
     }
+
+    @media (min-width: $mobile) and (max-width: $tablet) {
+      right: -64px;
+    }
   }
 }
