@@ -10,13 +10,208 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.css">
+    <link rel="stylesheet" href="styles/pages/career.css">
 </head>
 <body>
 @@include("../blocks/modules/header/header.html")
 <main>
-    <h1>Карьера</h1>
+    <section class="hero">
+        <div class="hero__container container">
+            <div class="hero__swiper swiper js-hero-slider">
+                <ul class="hero__list swiper-wrapper">
+                    <li data-brand-theme="vologodskiy-plombir"
+                        class="hero__list-item swiper-slide brand brand_vologodskiy-plombir js-brands-slide">
+                            <picture>
+                                <source
+                                        srcset="./img/vologodskiy-plombir-main-img.png 1x, ./img/vologodskiy-plombir-main-img@2x.png 2x"
+                                />
+                                <img
+                                        src="./img/vologodskiy-plombir-main-img.png"
+                                        alt="Декоративная картинка"
+                                        width="695"
+                                        class="hero__list-img brand__img"
+                                />
+                            </picture>
+                    </li>
+                </ul>
+                <div class="hero__pagination swiper-pagination js-hero-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="team__container container">
+            <h2 class="team__title section-title">Мы - команда</h2>
+            <ul class="team__list">
+                <li class="team__list-item">
+                    <picture>
+                        <source
+                                srcset="./img/career-team-list-img-1.png 1x, ./img/career-team-list-img-1@2x.png 2x"
+                        />
+                        <img
+                                src="./img/career-team-list-img-1.png"
+                                alt="Декоративная картинка"
+                                width="200"
+                                class="team__list-img"
+                        />
+                    </picture>
+                    <p class="team__list-text">Более 20 лет на рынке</p>
+                </li>
+                <li class="team__list-item">
+                    <picture>
+                        <source
+                                srcset="./img/career-team-list-img-2.png 1x, ./img/career-team-list-img-2@2x.png 2x"
+                        />
+                        <img
+                                src="./img/career-team-list-img-2.png"
+                                alt="Декоративная картинка"
+                                width="200"
+                                class="team__list-img"
+                        />
+                    </picture>
+                    <p class="team__list-text">35 филиалов</p>
+                </li>
+                <li class="team__list-item">
+                    <picture>
+                        <source
+                                srcset="./img/career-team-list-img-3.png 1x, ./img/career-team-list-img-3@2x.png 2x"
+                        />
+                        <img
+                                src="./img/career-team-list-img-3.png"
+                                alt="Декоративная картинка"
+                                width="200"
+                                class="team__list-img"
+                        />
+                    </picture>
+                    <p class="team__list-text">Более 4000 сотрудников</p>
+                </li>
+                <li class="team__list-item">
+                    <picture>
+                        <source
+                                srcset="./img/career-team-list-img-4.png 1x, ./img/career-team-list-img-4@2x.png 2x"
+                        />
+                        <img
+                                src="./img/career-team-list-img-4.png"
+                                alt="Декоративная картинка"
+                                width="200"
+                                class="team__list-img"
+                        />
+                    </picture>
+                    <p class="team__list-text">Годовые и месячные премии</p>
+                </li>
+                <li class="team__list-item">
+                    <picture>
+                        <source
+                                srcset="./img/career-team-list-img-5.png 1x, ./img/career-team-list-img-5@2x.png 2x"
+                        />
+                        <img
+                                src="./img/career-team-list-img-5.png"
+                                alt="Декоративная картинка"
+                                width="200"
+                                class="team__list-img"
+                        />
+                    </picture>
+                    <p class="team__list-text">Оплата обучения и ДМС</p>
+                </li>
+            </ul>
+            <picture>
+                <source
+                        srcset="./img/career-team-decor.png 1x, ./img/career-team-decor@2x.png 2x"
+                />
+                <img
+                        src="./img/career-team-decor.png"
+                        alt="Декоративная картинка"
+                        width="554"
+                        class="team__decor"
+                />
+            </picture>
+        </div>
+    </section>
+    <section class="employed">
+        <div class="employed__container container">
+            <h2 class="team__title section-title">Как устроиться на работу?</h2>
+            <ul class="employed__list">
+                <li class="employed__list-item">
+                    <p class="employed__list-title">Заполните анкету и дождитесь звонка</p>
+                    <p class="employed__list-descr">Мы свяжемся с вами и пригласим на собеседование</p>
+                </li>
+                <li class="employed__list-item">
+                    <p class="employed__list-title">Пройдите собеседование</p>
+                    <p class="employed__list-descr">Познакомьтесь с руководителем и узнайте подробнее о вакансии</p>
+                </li>
+                <li class="employed__list-item">
+                    <p class="employed__list-title">Приступайте к работе</p>
+                    <p class="employed__list-descr">Подготовьте документы для оформления и начните работать</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="vacancies">
+        <div class="vacancies__container container">
+            <h2 class="team__title section-title">Вакансии в твоем городе</h2>
+            <select class="select">
+                <option value="Материал">Материал</option>
+                <option value="Древесина">Древесина</option>
+                <option value="Металл">Металл</option>
+                <option value="Камень">Камень</option>
+                <option value="Пластик">Пластик</option>
+                <option value="Композитный">Композитный</option>
+                <option value="Гипс">Гипс</option>
+            </select>
+            <div class="vacancies__swiper swiper js-vacancies-slider">
+                <ul class="vacancies__list swiper-wrapper">
+                    <li class="vacancies__list-item swiper-slide">
+                        <p class="vacancies__list-title">Мерчендайзер</p>
+                        <p class="vacancies__list-descr">Условия</p>
+                        <ul class="vacancies__list-conditions">
+                            <li class="vacancies__list-conditions-text">График работы: 5/2,<br/>с 9:00 до 18:00;</li>
+                            <li class="vacancies__list-conditions-text">Заработная плата – от 35 000 руб; </li>
+                            <li class="vacancies__list-conditions-text">Оплата проезда, мобильной связи; </li>
+                            <li class="vacancies__list-conditions-text">Посещение офиса один раз в неделю;</li>
+                            <li class="vacancies__list-conditions-text">Вакантные территории уточняйте по телефону.</li>
+                        </ul>
+                        <button class="vacancies__list-button button">Узнать подробнее</button>
+                    </li>
+                    <li class="vacancies__list-item swiper-slide">
+                        <p class="vacancies__list-title">Водитель-экспедитор</p>
+                        <p class="vacancies__list-descr">Условия</p>
+                        <ul class="vacancies__list-conditions">
+                            <li class="vacancies__list-conditions-text">График работы: 5/2,<br/>с 9:00 до 18:00;</li>
+                            <li class="vacancies__list-conditions-text">Заработная плата – от 35 000 руб; </li>
+                            <li class="vacancies__list-conditions-text">Оплата проезда, мобильной связи; </li>
+                            <li class="vacancies__list-conditions-text">Посещение офиса один раз в неделю;</li>
+                            <li class="vacancies__list-conditions-text">Вакантные территории уточняйте по телефону.</li>
+                        </ul>
+                        <button class="vacancies__list-button button">Узнать подробнее</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="vacancies__slider-arrows slider-arrows slider-arrows_mobile">
+                <div class="vacancies__slider-prev swiper-button-prev"></div>
+                <div class="vacancies__slider-next swiper-button-next"></div>
+            </div>
+            <picture>
+                <source
+                        srcset="./img/career-vacancies-decor.png 1x, ./img/career-vacancies-decor@2x.png 2x"
+                />
+                <img
+                        src="./img/career-vacancies-decor.png"
+                        alt="Декоративная картинка"
+                        width="530"
+                        class="vacancies__decor"
+                />
+            </picture>
+        </div>
+    </section>
+    <section class="form">
+        <div class="form__container container">
+
+        </div>
+    </section>
 </main>
 @@include("../blocks/modules/footer/footer.html")
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/pages/career.js"></script>
 </body>
 </html>

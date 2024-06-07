@@ -33,6 +33,10 @@
         max-width: 50px;
       }
     }
+
+    & img {
+      pointer-events: initial;
+    }
   }
 
   &__nav-list {

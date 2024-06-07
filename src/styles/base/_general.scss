@@ -115,6 +115,10 @@ a {
     overflow: hidden !important;
 }
 
+img {
+    pointer-events: none;
+}
+
 .hidden {
     display: none;
 }
