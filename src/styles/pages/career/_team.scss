@@ -1,5 +1,41 @@
 @import "../../helpers/variables";
 
 .team {
+  margin-top: 151px;
+  
+  &__container {
+    position: relative;
+  }
 
+  &__list {
+    display: flex;
+    margin-top: 67px;
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 75px;
+      }
+
+      &:nth-child(even) {
+        transform: translateY(80px);
+      }
+    }
+
+    &-text {
+      font-family: 'Intro Bold';
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 19.8px;
+      text-align: center;
+      max-width: 195px;
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: -277px;
+    right: -146px;
+  }
 }

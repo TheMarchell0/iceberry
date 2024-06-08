@@ -1,5 +1,68 @@
 @import "../../helpers/variables";
 
 .employed {
+  margin-top: 216px;
 
+  &__list {
+    display: flex;
+    margin-top: 44px;
+    counter-reset: employed-counter;
+
+    &-item {
+      background-color: #FFF2DE;
+      flex: 0 1 420px;
+      border-radius: 28px;
+      min-height: 230px;
+      position: relative;
+      padding: 61px 20px 10px 130px;
+
+      &::before {
+        content: counter(employed-counter);
+        counter-increment: employed-counter;
+        font-family: 'Intro Bold';
+        color: #FFDDC1;
+        font-size: 202px;
+        position: absolute;
+        top: 118px;
+        left: 10px;
+        line-height: 0;
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &:first-of-type {
+        padding: 61px 20px 10px 117px;
+      }
+
+      &:last-of-type {
+        background-color: #FFDDC1;
+        padding: 50px 20px 10px 135px;
+
+        &::before {
+          color: #FFF2DE;
+        }
+      }
+    }
+
+    &-title,
+    &-descr {
+      max-width: 267px;
+    }
+
+    &-title {
+      font-family: 'Intro Bold';
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 24.2px;
+      margin-bottom: 20px;
+    }
+
+    &-descr {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 18.7px;
+    }
+  }
 }
