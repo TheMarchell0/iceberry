@@ -3,13 +3,59 @@
 .work {
   margin-top: 16px;
 
+  &__title {
+    @media (max-width: $mobile) {
+      max-width: 250px;
+      width: 100%;
+    }
+  }
+
   &__content {
     display: flex;
     margin: 75px 0 131px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      margin: 75px 0 50px;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 20px 0 26px;
+    }
   }
 
   &__img-wrapper {
     flex: 0 1 769px;
+
+    @media (min-width: $tablet) and (max-width: $laptop) {
+      flex: 0 1 45%;
+      margin-right: 50px;
+    }
+
+    @media (max-width: $tablet) {
+      flex: 0 1 100%;
+      margin: 50px auto 0;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 20px 0 0;
+    }
+
+    & img {
+      @media (max-width: $laptop) {
+        width: 100%;
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 640px;
+      }
+
+      @media (max-width: $mobile) {
+        max-width: 88vw;
+        height: 55vw;
+        object-fit: cover;
+      }
+    }
   }
 
   &__decor {
@@ -25,10 +71,18 @@
 
       &:not(:last-of-type):not(.work__form-item_file) {
         margin-bottom: 18px;
+
+        @media (max-width: $mobile) {
+          margin-bottom: 28px;
+        }
       }
 
       &_file {
         margin: 18px 0 21px;
+
+        @media (max-width: $mobile) {
+          margin: 32px 0 31px;
+        }
       }
     }
 
@@ -39,6 +93,11 @@
       line-height: 20px;
       color: $black;
       width: fit-content;
+
+      @media (max-width: $mobile) {
+        font-size: 18px;
+        line-height: 19.8px;
+      }
 
       &.required {
         position: relative;
@@ -124,6 +183,10 @@
     &-footer {
       display: flex;
 
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
+
       &-text {
         font-size: 14px;
         font-weight: 400;
@@ -131,6 +194,11 @@
         max-width: 290px;
         width: 100%;
         margin-left: 42px;
+
+        @media (max-width: $mobile) {
+          margin-left: initial;
+          margin-top: 19px;
+        }
       }
     }
   }

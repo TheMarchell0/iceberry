@@ -3,10 +3,26 @@
 .employed {
   margin-top: 216px;
 
+  @media (max-width: $laptop) {
+    margin-top: 120px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 57px;
+  }
+
   &__list {
     display: flex;
     margin-top: 44px;
     counter-reset: employed-counter;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 21px;
+    }
 
     &-item {
       background-color: #FFF2DE;
@@ -15,6 +31,22 @@
       min-height: 230px;
       position: relative;
       padding: 61px 20px 10px 130px;
+
+      @media (max-width: $mobile) {
+        min-height: 155px;
+      }
+
+      @media (min-width: $mobile) and (max-width: $laptop) {
+        padding: 61px 20px 10px 100px;
+      }
+
+      @media (max-width: $tablet) {
+        flex: 0 1 100%;
+      }
+
+      @media (max-width: $mobile) {
+        padding: 19px 20px 22px 97px;
+      }
 
       &::before {
         content: counter(employed-counter);
@@ -26,19 +58,50 @@
         top: 118px;
         left: 10px;
         line-height: 0;
+
+        @media (min-width: $mobile) and (max-width: $laptop) {
+          font-size: 111px;
+        }
+
+        @media (max-width: $mobile) {
+          font-size: 128px;
+          top: 79px;
+          left: 14px;
+        }
       }
 
       &:not(:last-child) {
         margin-right: 20px;
+
+        @media (max-width: $tablet) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
 
       &:first-of-type {
         padding: 61px 20px 10px 117px;
+
+        @media (min-width: $mobile) and (max-width: $laptop) {
+          padding: 61px 20px 10px 80px;
+        }
+
+        @media (max-width: $mobile) {
+          padding: 19px 20px 10px 89px;
+        }
       }
 
       &:last-of-type {
         background-color: #FFDDC1;
         padding: 50px 20px 10px 135px;
+
+        @media (min-width: $mobile) and (max-width: $laptop) {
+          padding: 50px 20px 10px 100px;
+        }
+
+        @media (max-width: $mobile) {
+          padding: 21px 20px 20px 101px;
+        }
 
         &::before {
           color: #FFF2DE;
@@ -57,12 +120,26 @@
       font-weight: 700;
       line-height: 24.2px;
       margin-bottom: 20px;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        font-size: 19px;
+        line-height: 21.2px;
+      }
     }
 
     &-descr {
       font-size: 17px;
       font-weight: 400;
       line-height: 18.7px;
+
+      @media (max-width: $mobileSmall) {
+        font-size: 15px;
+        line-height: 16.7px;
+      }
     }
   }
 }

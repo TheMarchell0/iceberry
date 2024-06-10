@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const parent = document.querySelector('.js-vacancies-parent'),
+        parentContainer = parent.querySelector('.js-vacancies-container'),
         screenWidth = window.innerWidth,
+        vacanciesSliderBlock = parent.querySelector('.js-vacancies-slider'),
         vacancies = parent.querySelector('.js-vacancies-content'),
-        vacanciesLength = vacancies.querySelectorAll('.js-vacancies-child').length;
+        vacanciesLength = vacancies.querySelectorAll('.swiper-slide').length;
     let dropdowns;
 
     checkDropdowns();
@@ -25,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
             clickable: true,
         },
         effect: 'fade',
-        slidesPerView: 1,
         allowTouchMove: false,
         speed: 800,
         autoplay: {
@@ -34,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    if (vacanciesLength > 2) {
+
+    if (screenWidth <= 1024 && vacanciesLength > 3 || vacanciesLength > 3) {
         vacancies.classList.add('active');
 
         const vacanciesSlider = new Swiper(".js-vacancies-slider", {
@@ -43,8 +45,43 @@ document.addEventListener('DOMContentLoaded', function () {
                 nextEl: ".vacancies__slider-next",
                 prevEl: ".vacancies__slider-prev",
             },
-            slidesPerView: 'auto',
+            spaceBetween: 20,
+            breakpoints: {
+                320: {
+                    slidesPerView: '1',
+                },
+                600: {
+                    slidesPerView: '2',
+                },
+                1024: {
+                    slidesPerView: '3',
+                },
+                1400: {
+                    slidesPerView: '3.575',
+                }
+            },
+            on: {
+                reachEnd: function () {
+                    if (screenWidth > 1400) {
+                        parentContainer.classList.add('decor-left');
+                        parentContainer.classList.remove('decor-right');
+                    }
+                },
+                fromEdge: function () {
+                    if (!vacanciesSlider.isEnd && screenWidth > 1400) {
+                        parentContainer.classList.remove('decor-left');
+                        parentContainer.classList.add('decor-right');
+                    }
+                },
+            },
         });
+
+        parent.classList.add('active');
+        vacanciesSliderBlock.classList.add('swiper-overflow-hidden');
+        vacancies.classList.add('active');
+        if (screenWidth > 1400) {
+            parentContainer.classList.add('decor', 'decor-right');
+        }
     }
 
     const element = parent.querySelector('.js-vacancies-select');
@@ -59,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const fileWrapper = document.querySelector('.js-file-wrapper'),
         fileInput = fileWrapper.querySelector('.js-file-input'),
         fileLabel = fileWrapper.querySelector('.js-file-label');
-
-    console.log(fileWrapper)
 
     fileInput.addEventListener('change', function() {
         if (fileInput.files.length > 0) {

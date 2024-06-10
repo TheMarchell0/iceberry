@@ -7,16 +7,33 @@
 
   &__container {
     padding: 137px 0 106px;
+
+    @media (max-width: $mobile) {
+      padding: 150px 0 114px;
+    }
   }
 
   &__swiper {
     margin: 0 auto;
     max-width: 800px;
+
+    @media (max-width: $tablet) {
+      max-width: 78.19vw;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 87.96vw;
+    }
   }
 
   &__list {
+
     &-img {
       border-radius: 20px;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
     }
   }
 
@@ -26,9 +43,19 @@
     left: 50%!important;
     bottom: -27px!important;
 
+    @media (max-width: $mobile) {
+      max-width: 53px;
+      bottom: -22px !important;
+    }
+
     & .swiper-pagination-bullet {
       background-color: $mainColor;
       opacity: 0.5!important;
+
+      @media (max-width: $mobile) {
+        width: 6px!important;
+        height: 6px!important;
+      }
 
       &-active {
         opacity: 1!important;
