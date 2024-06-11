@@ -1,3 +1,6 @@
-@import "src/styles/pages/brands-single/hero";
-@import "src/styles/pages/brands-single/info";
-@import "src/styles/pages/brands-single/assortment";
+@import "../base/swiper-styles-reset";
+
+/*Блоки*/
+@import "brands-single/hero";
+@import "brands-single/info";
+@import "brands-single/assortment";

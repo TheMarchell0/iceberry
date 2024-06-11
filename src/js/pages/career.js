@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
             for (let dropdown of dropdowns) {
                 console.log(dropdown.innerHTML)
             }
-        } else {setTimeout(checkDropdowns, 200)}
+        } else {
+            setTimeout(checkDropdowns, 200)
+        }
     }
 
     const heroSlider = new Swiper(".js-hero-slider", {
@@ -35,8 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-
-    if (screenWidth <= 1024 && vacanciesLength > 3 || vacanciesLength > 3) {
+    if ((screenWidth <= 1024 && vacanciesLength > 3) || vacanciesLength > 3) {
         vacancies.classList.add('active');
 
         const vacanciesSlider = new Swiper(".js-vacancies-slider", {
@@ -97,10 +98,74 @@ document.addEventListener('DOMContentLoaded', function () {
         fileInput = fileWrapper.querySelector('.js-file-input'),
         fileLabel = fileWrapper.querySelector('.js-file-label');
 
-    fileInput.addEventListener('change', function() {
+    fileInput.addEventListener('change', function () {
         if (fileInput.files.length > 0) {
             fileWrapper.classList.add('complete');
             fileLabel.innerHTML = fileInput.files[0].name;
         }
+    });
+
+    const body = document.body,
+        modal = document.querySelector('.js-modal'),
+        triggerButtons = document.querySelectorAll('.js-modal-trigger'),
+        openModal = () => {
+            modal.classList.add('active', 'modal-anim-open');
+            lockScroll();
+            modal.classList.remove('modal-anim-close');
+        };
+
+    const submitButtons = document.querySelectorAll('.js-form-submit');
+
+    for (let submitButton of submitButtons) {
+        submitButton.addEventListener('click', (e)=> {
+            e.preventDefault();
+            alert('Функционал отправки формы находится в разработке.')
+        })
+    }
+
+        const closeButtons = modal.querySelectorAll('.js-close-modal');
+
+        closeButtons.forEach(closeButton => {
+            closeButton.addEventListener('click', () => closeModal());
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        window.addEventListener('keydown', (event) => {
+            console.log(event.key === 'Escape' && modal.classList.contains('active'))
+            if (event.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+    function closeModal() {
+        if (modal) {
+            modal.classList.replace('modal-anim-open', 'modal-anim-close');
+            modal.addEventListener('animationend', () => {
+                modal.classList.remove('active', 'modal-anim-close');
+                unlockScroll();
+            }, {once: true});
+        }
+    }
+
+    function lockScroll() {
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        body.style.paddingRight = `${scrollbarWidth}px`;
+        body.classList.add('no-scroll');
+    }
+
+    function unlockScroll() {
+        body.style.paddingRight = '';
+        body.classList.remove('no-scroll');
+    }
+
+    triggerButtons.forEach(triggerButton => {
+        triggerButton.addEventListener('click', () => {
+            openModal(modal);
+        });
     });
 });

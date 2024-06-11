@@ -3,6 +3,12 @@
 .work {
   margin-top: 16px;
 
+  .vacancies:not(.active) + & {
+    @media (max-width: $mobile) {
+      margin-top: -75px;
+    }
+  }
+
   &__title {
     @media (max-width: $mobile) {
       max-width: 250px;

@@ -16,9 +16,9 @@
   }
 
   @media (max-width: $mobile) {
-    background-position: -296px 0;
-    margin-top: 18px;
-    padding-bottom: 0;
+    background-position: -431px 0;
+    margin-top: 9px;
+    padding-bottom: 168px;
   }
 
   &::after,
@@ -48,7 +48,7 @@
     position: relative;
 
     @media (max-width: $mobile) {
-      padding-top: 77px;
+      padding-top: 84px;
     }
 
     &.decor {
@@ -86,6 +86,14 @@
     }
   }
 
+  &__select-wrapper {
+    height: 85px;
+
+    @media (max-width: $mobile) {
+      height: 48px;
+    }
+  }
+
   &__list {
     margin-top: 2px;
 
@@ -93,8 +101,10 @@
       margin-bottom: 25px;
     }
 
-    @media (max-width: $tablet) {
-      flex-wrap: wrap;
+    &:not(.active) {
+      @media (max-width: $tablet) {
+        flex-wrap: wrap;
+      }
     }
 
     @media (max-width: $mobile) {
@@ -117,6 +127,11 @@
 
         @media (max-width: $mobile) {
           flex: 0 1 90%;
+          min-height: 335px;
+        }
+
+        @media (max-width: $mobileSmall) {
+          flex: 0 1 100%;
         }
 
         &:not(:last-of-type) {
@@ -152,7 +167,7 @@
       margin: 19px 0 6px;
 
       @media (max-width: $mobile) {
-        margin: 19px 0 11px;
+        margin: 23px 0 9px;
       }
     }
 
