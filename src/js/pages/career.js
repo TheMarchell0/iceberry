@@ -93,17 +93,19 @@ document.addEventListener('DOMContentLoaded', function () {
         openState: 'is-open',
     });
 
+    const fileWrappers = document.querySelectorAll('.js-files-wrapper');
 
-    const fileWrapper = document.querySelector('.js-file-wrapper'),
-        fileInput = fileWrapper.querySelector('.js-file-input'),
-        fileLabel = fileWrapper.querySelector('.js-file-label');
+    for (let fileWrapper of fileWrappers) {
+        const fileInput = fileWrapper.querySelector('.js-file-input'),
+            fileLabel = fileWrapper.querySelector('.js-file-label');
 
-    fileInput.addEventListener('change', function () {
-        if (fileInput.files.length > 0) {
-            fileWrapper.classList.add('complete');
-            fileLabel.innerHTML = fileInput.files[0].name;
-        }
-    });
+        fileInput.addEventListener('change', function () {
+            if (fileInput.files.length > 0) {
+                fileWrapper.classList.add('complete');
+                fileLabel.innerHTML = fileInput.files[0].name;
+            }
+        });
+    }
 
     const body = document.body,
         modal = document.querySelector('.js-modal'),
@@ -117,30 +119,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitButtons = document.querySelectorAll('.js-form-submit');
 
     for (let submitButton of submitButtons) {
-        submitButton.addEventListener('click', (e)=> {
+        submitButton.addEventListener('click', (e) => {
             e.preventDefault();
             alert('Функционал отправки формы находится в разработке.')
         })
     }
 
-        const closeButtons = modal.querySelectorAll('.js-close-modal');
+    const closeButtons = modal.querySelectorAll('.js-close-modal');
 
-        closeButtons.forEach(closeButton => {
-            closeButton.addEventListener('click', () => closeModal());
-        });
+    closeButtons.forEach(closeButton => {
+        closeButton.addEventListener('click', () => closeModal());
+    });
 
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
 
-        window.addEventListener('keydown', (event) => {
-            console.log(event.key === 'Escape' && modal.classList.contains('active'))
-            if (event.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
-            }
-        });
+    window.addEventListener('keydown', (event) => {
+        console.log(event.key === 'Escape' && modal.classList.contains('active'))
+        if (event.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 
     function closeModal() {
         if (modal) {
