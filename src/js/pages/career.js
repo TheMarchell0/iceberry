@@ -63,13 +63,13 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             on: {
                 reachEnd: function () {
-                    if (screenWidth > 1400) {
+                    if (screenWidth >= 1400) {
                         parentContainer.classList.add('decor-left');
                         parentContainer.classList.remove('decor-right');
                     }
                 },
                 fromEdge: function () {
-                    if (!vacanciesSlider.isEnd && screenWidth > 1400) {
+                    if (!vacanciesSlider.isEnd && screenWidth >= 1400) {
                         parentContainer.classList.remove('decor-left');
                         parentContainer.classList.add('decor-right');
                     }
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         parent.classList.add('active');
         vacanciesSliderBlock.classList.add('swiper-overflow-hidden');
         vacancies.classList.add('active');
-        if (screenWidth > 1400) {
+        if (screenWidth >= 1400) {
             parentContainer.classList.add('decor', 'decor-right');
         }
     }

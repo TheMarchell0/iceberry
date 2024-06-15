@@ -213,6 +213,7 @@
         line-height: 16px;
         color: $black;
         display: block;
+        width: fit-content;
 
         &:not(:last-of-type) {
           margin-bottom: 10px;
@@ -290,7 +291,7 @@
 
         @media (max-width: $tablet) {
           width: 48vw;
-          bottom: -874px;
+          bottom: -814px;
           left: -25px;
         }
 

@@ -22,12 +22,25 @@
 <main>
     <section class="hero">
         <div class="hero__container container">
-            <h1 class="visually-hidden">Карьера в Айсберри</h1>
+            <h1 class="visually-hidden">Контакты / Обратная связь / Вопросы по качеству продуктов</h1>
+            <p class="hero__title">Группа компаний</p>
+            <p class="hero__subtitle">Айсберри в&nbsp;Вашем регионе</p>
+            <picture>
+                <source
+                        srcset="./img/contacts-hero-img.png 1x, ./img/contacts-hero-img@2x.png 2x"
+                />
+                <img
+                        src="./img/contacts-hero-img.png"
+                        alt="Декоративная картинка"
+                        width="730"
+                        class="hero__img"
+                />
+            </picture>
         </div>
     </section>
     <section class="info js-info-parent">
-        <div class="info__container container js-info-container">
-            <h2 class="info__title section-title">Вакансии в&nbsp;твоем городе</h2>
+        <div class="info__container container js-info-container decor-right">
+            <h2 class="info__title section-title">Айсберри в Вашем регионе</h2>
             <div class="info__select-wrapper">
                 <select class="info__select js-info-select">
                     <option value="Москва">Москва</option>
@@ -43,34 +56,50 @@
             <div class="info__swiper swiper js-info-slider">
                 <ul class="info__list swiper-wrapper js-info-content">
                     <li class="info__list-item swiper-slide">
-                        <p class="info__list-title">Мерчендайзер</p>
-                        <p class="info__list-descr">Условия:</p>
-                        <ul class="info__list-conditions">
-                            <li class="info__list-conditions-text">График работы: 5/2,<br/>с 9:00 до 18:00;</li>
-                            <li class="info__list-conditions-text">Заработная плата –
-                                от&nbsp;35&nbsp;000&nbsp;руб;
-                            </li>
-                            <li class="info__list-conditions-text">Оплата проезда, мобильной связи;</li>
-                            <li class="info__list-conditions-text">Посещение офиса<br/>один раз в неделю;</li>
-                            <li class="info__list-conditions-text">Вакантные территории<br/>уточняйте по телефону.
-                            </li>
-                        </ul>
-                        <button class="info__list-button button js-modal-trigger">Узнать подробнее</button>
+                        <p class="info__list-position">Директор<br/>по&nbsp;продажам</p>
+                        <p class="info__list-name">Беседин<br/>Денис Александрович</p>
+                        <a href="mailto:Denis.Besedin@iceberry.ru" class="info__list-link">Denis.Besedin@iceberry.ru</a>
+                        <button class="info__list-button button">Связаться</button>
+                    </li>
+                    <li class="info__list-item swiper-slide">
+                        <p class="info__list-position">Начальник<br/>управления<br/>продаж Москвы</p>
+                        <p class="info__list-name">Сидорков<br/>Николай Александрович</p>
+                        <a href="tel:+79163431887" class="info__list-link">+7 (916) 343-18-87</a>
+                        <a href="mailto:Nikolay.Sidorkov@iceberry.ru" class="info__list-link">Nikolay.Sidorkov@iceberry.ru</a>
+                        <button class="info__list-button button">Связаться</button>
+                    </li>
+                    <li class="info__list-item swiper-slide">
+                        <p class="info__list-position">Начальник<br/>управления<br/>продаж МО</p>
+                        <p class="info__list-name">Бычкин<br/>Матвей Вячеславович</p>
+                        <a href="tel:+79161059159" class="info__list-link">+7 (916) 105-91-59</a>
+                        <a href="mailto:Matvey.Bychkin@iceberry.ru" class="info__list-link">Matvey.Bychkin@iceberry.ru</a>
+                        <button class="info__list-button button">Связаться</button>
+                    </li>
+                    <li class="info__list-item swiper-slide">
+                        <p class="info__list-position">Call-центр для заказа<br/>мороженого<br/>в&nbsp;Москве и&nbsp;МО</p>
+                        <a href="tel:+79150426740" class="info__list-link">+7 (915) 042-67-40</a>
+                        <button class="info__list-button button">Связаться</button>
+                    </li>
+                    <li class="info__list-item swiper-slide">
+                        <p class="info__list-position">Директор<br/>по продажам</p>
+                        <p class="info__list-name">Беседин<br/>Денис Александрович</p>
+                        <a href="mailto:Denis.Besedin@iceberry.ru" class="info__list-link">Denis.Besedin@iceberry.ru</a>
+                        <button class="info__list-button button">Связаться</button>
                     </li>
                 </ul>
             </div>
-            <div class="info__slider-arrows slider-arrows slider-arrows_mobile">
+            <div class="info__slider-arrows slider-arrows">
                 <div class="info__slider-prev swiper-button-prev"></div>
                 <div class="info__slider-next swiper-button-next"></div>
             </div>
             <picture>
                 <source
-                        srcset="./img/career-info-decor.png 1x, ./img/career-info-decor@2x.png 2x"
+                        srcset="/img/contacts-info-decor.png 1x, /img/contacts-info-decor@2x.png 2x"
                 />
                 <img
-                        src="./img/career-info-decor.png"
+                        src="/img/contacts-info-decor.png"
                         alt="Декоративная картинка"
-                        width="530"
+                        width="206"
                         class="info__decor"
                 />
             </picture>
@@ -80,19 +109,6 @@
         <div class="work__container container">
             <h2 class="work__title section-title">Заполнить анкету</h2>
             <div class="work__content">
-                <div class="work__img-wrapper">
-                    <picture>
-                        <source
-                                srcset="./img/career-work-decor.png 1x, ./img/career-work-decor@2x.png 2x"
-                        />
-                        <img
-                                src="./img/career-work-decor.png"
-                                alt="Декоративная картинка"
-                                width="640"
-                                class="work__decor"
-                        />
-                    </picture>
-                </div>
                 <div class="work__form">
                     <form class="work__form-content">
                         <div class="work__form-item career-form-item">

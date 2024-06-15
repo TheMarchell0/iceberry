@@ -1,5 +1,96 @@
 @import "../../helpers/variables";
 
 .info {
+  margin-top: 19px;
 
+  &__title {
+    color: $black;
+    margin-bottom: 44px;
+  }
+
+  &__container {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 213px;
+      z-index: 1;
+      background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 63.54%, rgba(255, 255, 255, 0) 100%);
+      width: 411px;
+      height: 309px;
+    }
+
+    &.decor-left::after {
+      left: -50px;
+      transform: rotate(180deg);
+
+      @media (min-width: 1441px) {
+        left: 18px;
+      }
+    }
+
+    &.decor-right::after {
+      right: -50px;
+
+      @media (min-width: 1441px) {
+        right: 18px;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 61px;
+
+    &-item {
+      min-height: 289px;
+      border: 1px solid $black;
+      border-radius: 28px;
+      padding: 29px 19px;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-position {
+      font-family: 'Intro Bold';
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 24.2px;
+      margin-bottom: 17px;
+      min-height: 72px;
+    }
+
+    &-name,
+    &-link {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 18.7px;
+    }
+
+    &-name {
+      margin-bottom: 6px;
+    }
+
+    &-name~&-link {
+      margin: initial;
+    }
+
+    &-link {
+      color: $black;
+      text-decoration: none;
+      margin: auto 0;
+    }
+
+    &-button {
+      margin-top: auto;
+    }
+  }
+  
+  &__decor {
+    position: absolute;
+    top: 148px;
+    right: 289px;
+  }
 }

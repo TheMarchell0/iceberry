@@ -1,5 +1,40 @@
 @import "../../helpers/variables";
 
 .hero {
+  background: url('/img/contacts-hero-bg.svg') no-repeat center;
+  background-size: cover;
+  padding-top: 226px;
+  padding-bottom: 339px;
+  background-position: 0 100%;
 
+  &__container {
+    position: relative;
+  }
+
+  &__title,
+  &__subtitle {
+    font-family: 'Intro Bold';
+    color: $mainColor;
+    font-weight: 700;
+  }
+
+  &__title {
+    font-size: 29px;
+    line-height: 31.9px;
+    margin-bottom: 7px;
+  }
+
+  &__subtitle {
+    font-size: 60px;
+    line-height: 66px;
+    text-transform: uppercase;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &__img {
+    position: absolute;
+    top: -92px;
+    right: -77px;
+  }
 }
