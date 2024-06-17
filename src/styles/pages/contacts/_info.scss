@@ -41,7 +41,7 @@
   }
 
   &__list {
-    margin-top: 61px;
+    margin: 61px 0 20px;
 
     &-item {
       min-height: 289px;
@@ -86,6 +86,10 @@
     &-button {
       margin-top: auto;
     }
+  }
+
+  &__slider-arrows {
+    display: flex;
   }
   
   &__decor {

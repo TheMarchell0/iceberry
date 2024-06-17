@@ -86,11 +86,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const element = parent.querySelector('.js-vacancies-select');
+    const specificType = element.getAttribute('data-select-type');
     const choices = new Choices(element, {
         searchEnabled: false,
         position: 'bottom',
         itemSelectText: '',
         openState: 'is-open',
+        classNames: {
+            containerOuter: `choices choices_${specificType}`,
+        }
     });
 
     const fileWrappers = document.querySelectorAll('.js-files-wrapper');

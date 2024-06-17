@@ -2,14 +2,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const parent = document.querySelector('.js-info-parent'),
         parentContainer = parent.querySelector('.js-info-container'),
         infoSliderBlock = parent.querySelector('.js-info-slider'),
-        element = parent.querySelector('.js-info-select'),
+        elements = document.querySelectorAll('.js-choices-select'),
         screenWidth = window.innerWidth,
+        tabs = document.querySelectorAll('.js-tab'),
+        tabForms = document.querySelectorAll('.js-tab-form')
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const activeTab = tab.getAttribute('data-tab');
+            const activeForm = document.querySelector(`.js-${activeTab}-form`);
+
+            tabForms.forEach(form => form.classList.remove('active'));
+            tabs.forEach(item => item.classList.remove('active'));
+
+            activeForm.classList.add('active');
+            tab.classList.add('active');
+        });
+    });
+
+    for (let element of elements) {
+        const specificType = element.getAttribute('data-select-type');
         choices = new Choices(element, {
             searchEnabled: false,
             position: 'bottom',
             itemSelectText: '',
             openState: 'is-open',
+            classNames: {
+                containerOuter: `choices choices_${specificType}`,
+            }
         });
+    }
 
     const infoSlider = new Swiper(infoSliderBlock, {
         loop: false,

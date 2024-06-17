@@ -1,5 +1,144 @@
 @import "../../helpers/variables";
 
 .tabs {
+  margin: 81px 0 39px;
 
+  &__container {
+    position: relative;
+  }
+
+  &__head {
+    display: flex;
+
+    &-item {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 99px;
+      cursor: pointer;
+      padding: 21px 31px;
+      flex: 0 1 560px;
+      transform: translateX(-83px);
+
+      &_questions {
+        background-image: url('/img/contacts-tabs-bg-1.svg');
+        padding: 21px 31px 21px 31px;
+      }
+
+      &_feedback {
+        background-image: url('/img/contacts-tabs-bg-2.svg');
+        padding: 21px 31px 21px 94px;
+
+        &.active {
+          padding: 21px 31px 21px 30px;
+        }
+      }
+
+      &.active {
+        order: -1;
+        z-index: 1;
+        flex: 0 1 451px;
+        transform: none;
+
+        & .tabs__head-title {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-title {
+      font-family: 'Intro Bold';
+      font-size: 29px;
+      font-weight: 700;
+      line-height: 31.9px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+  }
+
+  &__form {
+    border-radius: 0px 30px 30px 30px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    &_questions {
+      background-color: #FFF2DE;
+      padding: 1px 149px 40px 31px;
+
+      & .tabs__form-item {
+        flex: 0 1 492px;
+
+        &:nth-child(-n+4) {
+          margin-bottom: 46px;
+        }
+      }
+    }
+
+    &_feedback {
+      background-color: #FFDDC1;
+      padding: 50px 205px 40px 31px;
+
+      & .tabs__form-item {
+        flex: 0 1 310px;
+
+        &:nth-child(-n+6) {
+          margin-bottom: 25px;
+        }
+
+        &_big {
+          flex: 0 1 64.5%;
+        }
+      }
+    }
+
+    &-select-wrapper {
+      margin: -19px 0 47px;
+      z-index: 1;
+      position: relative;
+      max-width: 274px;
+    }
+
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &-notification,
+    &-textarea {
+      flex: 0 1 100%;
+    }
+
+    &-notification {
+      margin-bottom: 17px;
+    }
+
+    &-textarea {
+      padding: 19px;
+      margin: 27px 0 20px;
+    }
+
+    &-input {
+      background-color: transparent;
+    }
+
+    &-file-list {
+      margin-top: 13px;
+    }
+
+    &-footer {
+      align-items: flex-start;
+      flex: 0 1 490px;
+      justify-content: space-between;
+      margin-top: 12px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 233px;
+    right: -106px;
+  }
 }

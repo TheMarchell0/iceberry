@@ -86,16 +86,11 @@
     }
   }
 
-  &__select-wrapper {
-    height: 85px;
-
-    @media (max-width: $mobile) {
-      height: 48px;
-    }
+  &__swiper {
+    margin-top: 27px;
   }
 
   &__list {
-    margin-top: 2px;
 
     &.active {
       margin-bottom: 25px;

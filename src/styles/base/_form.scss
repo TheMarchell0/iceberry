@@ -31,13 +31,81 @@
     }
   }
 
-  &__input {
+  &__input,
+  &__textarea {
     appearance: none;
     outline: none;
     border: none;
-    border-bottom: 1px solid $black;
     color: $black;
+    background-color: transparent;
+
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $black;
+    }
+
+    &::-moz-placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $black;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $black;
+    }
+
+    &::-ms-input-placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $black;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $black;
+    }
+
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $black;
+    }
+
+    &::-moz-placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $black;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $black;
+    }
+  }
+
+  &__input {
+    border-bottom: 1px solid $black;
     padding: 9px 0;
+  }
+
+  &__textarea {
+    border: 1px solid $black;
+    border-radius: 11px;
+    resize: none;
+    height: 200px;
   }
 
   &__notification {

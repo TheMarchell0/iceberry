@@ -41,8 +41,8 @@
     <section class="info js-info-parent">
         <div class="info__container container js-info-container decor-right">
             <h2 class="info__title section-title">Айсберри в Вашем регионе</h2>
-            <div class="info__select-wrapper">
-                <select class="info__select js-info-select">
+            <div class="info__select-wrapper choices-wrapper">
+                <select class="info__select js-choices-select" data-select-type="big">
                     <option value="Москва">Москва</option>
                     <option value="Город 1">Город 1</option>
                     <option value="Город 2">Город 2</option>
@@ -105,44 +105,150 @@
             </picture>
         </div>
     </section>
-    <section class="work">
-        <div class="work__container container">
-            <h2 class="work__title section-title">Заполнить анкету</h2>
-            <div class="work__content">
-                <div class="work__form">
-                    <form class="work__form-content">
-                        <div class="work__form-item career-form-item">
-                            <label for="name" class="work__form-label required">ФИО</label>
-                            <input type="text" id="name" class="work__form-input form-input">
+    <section class="tabs">
+        <div class="tabs__container container">
+            <div class="tabs__content">
+                <div class="tabs__head">
+                    <div class="tabs__head-item tabs__head-item_questions active js-tab" data-tab="questions">
+                        <p class="tabs__head-title">Обратная связь</p>
+                    </div>
+                    <div class="tabs__head-item tabs__head-item_feedback js-tab" data-tab="feedback">
+                        <p class="tabs__head-title">Вопросы<br/>по&nbsp;качеству продуктов</p>
+                    </div>
+                </div>
+                <div class="tabs__form-wrapper">
+                    <div class="tabs__form active tabs__form_questions js-tab-form js-questions-form">
+                        <div class="tabs__form-select-wrapper">
+                            <select class="info__select js-choices-select" data-select-type="small">
+                                <option value="Москва">Потребитель</option>
+                                <option value="Lorem Ipsum1">Lorem Ipsum</option>
+                                <option value="Lorem Ipsum2">Lorem Ipsum</option>
+                                <option value="Lorem Ipsum3">Lorem Ipsum</option>
+                                <option value="Lorem Ipsum4">Lorem Ipsum</option>
+                            </select>
                         </div>
-                        <div class="work__form-item career-form-item">
-                            <label for="city" class="work__form-label required">Город</label>
-                            <input type="text" id="city" class="work__form-input form-input">
-                        </div>
-                        <div class="work__form-item career-form-item">
-                            <label for="phone" class="work__form-label required">Контактный телефон</label>
-                            <input type="text" id="phone" class="work__form-input form-input">
-                        </div>
-                        <div class="work__form-item career-form-item">
-                            <label for="position" class="work__form-label required">Желаемая должность</label>
-                            <input type="text" id="position" class="work__form-input form-input">
-                        </div>
-                        <p class="work__form-notification">* Поля, обязательные для заполнения.</p>
-                        <div class="work__form-item career-form-item career-form-item_file">
-                            <p class="work__form-label required">Прикрепить резюме</p>
-                            <div class="work__form-file js-file-wrapper" data-max-files="2">
-                                <input type="file" id="file" class="work__form-file-input js-file-input">
-                                <label for="file" class="work__form-file-text js-file-label">Добавить</label>
+                        <form class="tabs__form-content">
+                            <div class="tabs__form-item form__item">
+                                <label for="questions-form_name" class="tabs__form-label form__label required">Имя</label>
+                                <input type="text" id="questions-form_name" class="tabs__form-input form__input">
                             </div>
-                        </div>
-                        <div class="work__form-footer">
-                            <button class="work__form-footer-button button js-form-submit">Отправить анкету</button>
-                            <p class="work__form-footer-text">Нажимая на кнопку «Отправить анкету», вы даете согласие на
-                                обработку персональных данных.</p>
-                        </div>
-                    </form>
+                            <div class="tabs__form-item form__item">
+                                <label for="questions-form_surname" class="tabs__form-label form__label required">Фамилия</label>
+                                <input type="text" id="questions-form_surname" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="questions-form_email" class="tabs__form-label form__label required">Электронная почта</label>
+                                <input type="text" id="questions-form_email" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="questions-form_phone" class="tabs__form-label form__label required">Контактный телефон</label>
+                                <input type="text" id="questions-form_phone" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="questions-form_city" class="tabs__form-label form__label required">Город</label>
+                                <input type="text" id="questions-form_city" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="questions-form_communication-method" class="tabs__form-label form__label required">Предпочтительный способ связи</label>
+                                <input type="text" id="questions-form_communication-method" class="tabs__form-input form__input">
+                            </div>
+                            <textarea class="tabs__form-textarea form__textarea" placeholder="Ваше сообщение..."></textarea>
+                            <p class="tabs__form-notification form__notification">* Поля, обязательные для заполнения.</p>
+                            <div class="tabs__form-item form__item">
+                                <p class="tabs__form-label form__label required">Прикрепить файл</p>
+                                <ul class="tabs__form-file-list form__files" data-max-files="4">
+                                    <li class="tabs__form-file-list-item form__files-item js-files-wrapper">
+                                        <input type="file" id="questions-form_file"
+                                               class="tabs__form-file-list-input form__files-input js-file-input">
+                                        <label for="questions-form_file" class="tabs__form-file-text form__files-text js-file-label">Добавить</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tabs__form-footer form__footer">
+                                <button class="tabs__form-footer-button button js-form-submit">Отправить</button>
+                                <p class="tabs__form-footer-text form__footer-text">Нажимая на кнопку «Узнать больше», вы&nbsp;даете согласие на &nbsp;обработку персональных данных.</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tabs__form tabs__form_feedback js-tab-form js-feedback-form">
+                        <form class="tabs__form-content">
+                            <div class="tabs__form-item form__item">
+                                <label for="feedback-form_name" class="tabs__form-label form__label required">Имя и фамилия</label>
+                                <input type="text" id="feedback-form_name" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="feedback-form_phone" class="tabs__form-label form__label required">Контактный телефон</label>
+                                <input type="text" id="feedback-form_phone" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="feedback-form_email" class="tabs__form-label form__label required">Электронная почта</label>
+                                <input type="text" id="feedback-form_email" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="feedback-form_category" class="tabs__form-label form__label required">Категория продукта</label>
+                                <select id="feedback-form_category" class="info__select js-choices-select" data-select-type="input">
+                                    <option value="Москва">Вафельные стаканчики</option>
+                                    <option value="Наименование1">Наименование</option>
+                                    <option value="Наименование2">Наименование</option>
+                                    <option value="Наименование3">Наименование</option>
+                                    <option value="Наименование4">Наименование</option>
+                                    <option value="Наименование5">Наименование</option>
+                                </select>
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="feedback-form_brand" class="tabs__form-label form__label required">Бренд</label>
+                                <select id="feedback-form_brand" class="info__select js-choices-select" data-select-type="input">
+                                    <option value="Вологодский пломбир">Вологодский пломбир</option>
+                                    <option value="Наименование1">Наименование</option>
+                                    <option value="Наименование2">Наименование</option>
+                                    <option value="Наименование3">Наименование</option>
+                                    <option value="Наименование4">Наименование</option>
+                                    <option value="Наименование5">Наименование</option>
+                                </select>
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="feedback-form_flavor" class="tabs__form-label form__label required">Вкус</label>
+                                <input type="text" id="feedback-form_flavor" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item">
+                                <label for="feedback-form_date" class="tabs__form-label form__label required">Дата производства</label>
+                                <input type="text" id="feedback-form_date" class="tabs__form-input form__input">
+                            </div>
+                            <div class="tabs__form-item form__item tabs__form-item_big">
+                                <label for="feedback-form_purchase-place" class="tabs__form-label form__label required">Где приобретали товар</label>
+                                <input type="text" id="feedback-form_purchase-place" class="tabs__form-input form__input">
+                            </div>
+                            <textarea class="tabs__form-textarea form__textarea" placeholder="Ваше сообщение..."></textarea>
+                            <p class="tabs__form-notification form__notification">* Поля, обязательные для заполнения.</p>
+                            <div class="tabs__form-item form__item">
+                                <p class="tabs__form-label form__label required">Прикрепить файл</p>
+                                <ul class="tabs__form-file-list form__files" data-max-files="4">
+                                    <li class="tabs__form-file-list-item form__files-item js-files-wrapper">
+                                        <input type="file" id="feedback-form_file"
+                                               class="tabs__form-file-list-input form__files-input js-file-input">
+                                        <label for="feedback-form_file" class="tabs__form-file-text form__files-text js-file-label">Добавить</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tabs__form-footer form__footer">
+                                <button class="tabs__form-footer-button button js-form-submit">Отправить</button>
+                                <p class="tabs__form-footer-text form__footer-text">Нажимая на кнопку «Узнать больше», вы&nbsp;даете согласие на &nbsp;обработку персональных данных.</p>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+            <picture>
+                <source
+                        srcset="/img/contacts-tabs-decor.png 1x, /img/contacts-tabs-decor@2x.png 2x"
+                />
+                <img
+                        src="/img/contacts-tabs-decor.png"
+                        alt="Декоративная картинка"
+                        width="220"
+                        class="tabs__decor"
+                />
+            </picture>
         </div>
     </section>
 </main>
