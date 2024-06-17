@@ -9,6 +9,8 @@
 
   &__head {
     display: flex;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
 
     &-item {
       background-repeat: no-repeat;
@@ -19,9 +21,19 @@
       flex: 0 1 560px;
       transform: translateX(-83px);
 
+      @media (max-width: $laptop) {
+        background-position: -16px 0;
+      }
+
       &_questions {
-        background-image: url('/img/contacts-tabs-bg-1.svg');
-        padding: 21px 31px 21px 31px;
+        background-image: url('/img/contacts-tabs-bg-1_no-active.svg');
+        padding: 21px 31px 21px 86px;
+
+        &.active {
+          background-image: url('/img/contacts-tabs-bg-1.svg');
+          transform: none;
+          padding: 21px 31px 21px 31px;
+        }
       }
 
       &_feedback {
@@ -29,7 +41,12 @@
         padding: 21px 31px 21px 94px;
 
         &.active {
-          padding: 21px 31px 21px 30px;
+          padding: 21px 29px 21px 30px;
+          background-position: -110px 0px;
+
+          @media (max-width: $laptop) {
+            background-position: -120px 0px;
+          }
         }
       }
 
@@ -52,6 +69,11 @@
       line-height: 31.9px;
       text-transform: uppercase;
       opacity: 0.5;
+
+      @media (max-width: $laptop) {
+        font-size: 24px;
+        line-height: 27.9px;
+      }
     }
   }
 
@@ -67,8 +89,16 @@
       background-color: #FFF2DE;
       padding: 1px 149px 40px 31px;
 
+      @media (max-width: $laptop) {
+        padding: 1px 90px 40px 31px;
+      }
+
       & .tabs__form-item {
         flex: 0 1 492px;
+
+        @media (max-width: $laptop) {
+          flex: 0 1 48%;
+        }
 
         &:nth-child(-n+4) {
           margin-bottom: 46px;
@@ -80,8 +110,16 @@
       background-color: #FFDDC1;
       padding: 50px 205px 40px 31px;
 
+      @media (max-width: $laptop) {
+        padding: 50px 90px 40px 31px;
+      }
+
       & .tabs__form-item {
         flex: 0 1 310px;
+
+        @media (max-width: $laptop) {
+          flex: 0 1 48%;
+        }
 
         &:nth-child(-n+6) {
           margin-bottom: 25px;
@@ -133,6 +171,15 @@
       flex: 0 1 490px;
       justify-content: space-between;
       margin-top: 12px;
+
+      @media (max-width: $laptop) {
+        justify-content: initial;
+        flex: 0 1 52%;
+      }
+
+      &-text {
+        margin-left: 16px;
+      }
     }
   }
 

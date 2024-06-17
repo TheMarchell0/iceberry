@@ -175,10 +175,11 @@
       background-color: transparent;
       border: none;
       border-bottom: 1px solid $black!important;
-      padding: 7px 0 !important;
+      padding: 7px 0 0!important;
       border-radius: initial;
       position: relative;
       margin-bottom: 1px;
+      min-height: 39px;
 
       &::after {
         content: '';

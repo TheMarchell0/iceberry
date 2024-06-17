@@ -36,5 +36,10 @@
     position: absolute;
     top: -92px;
     right: -77px;
+
+    @media (max-width: $laptop) {
+      width: 47vw;
+      top: 73px;
+    }
   }
 }
