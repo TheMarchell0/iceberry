@@ -3,9 +3,26 @@
 .info {
   margin-top: 19px;
 
+  @media (max-width: $mobile) {
+    margin-top: -24px;
+  }
+
   &__title {
     color: $black;
     margin-bottom: 44px;
+
+    @media (max-width: $tablet) {
+      font-size: 50px;
+      line-height: 56px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 28px;
+      line-height: 30.8px;
+      max-width: 280px;
+      width: 100%;
+      margin-bottom: 21px;
+    }
   }
 
   &__container {
@@ -20,6 +37,10 @@
       background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 63.54%, rgba(255, 255, 255, 0) 100%);
       width: 411px;
       height: 309px;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
     }
 
     &.decor-left::after {
@@ -42,6 +63,10 @@
 
   &__list {
     margin: 61px 0 20px;
+
+    @media (max-width: $mobile) {
+      margin: 21px 0 20px;
+    }
 
     &-item {
       min-height: 289px;
@@ -96,5 +121,13 @@
     position: absolute;
     top: 148px;
     right: 289px;
+
+    @media (max-width: $tablet) {
+      right: 25px;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }

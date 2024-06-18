@@ -7,6 +7,12 @@
   padding-bottom: 339px;
   background-position: 0 100%;
 
+  @media (max-width: $mobile) {
+    padding-top: 169px;
+    padding-bottom: 442px;
+    background-position: -470px 100%;
+  }
+
   &__container {
     position: relative;
   }
@@ -22,6 +28,11 @@
     font-size: 29px;
     line-height: 31.9px;
     margin-bottom: 7px;
+
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   &__subtitle {
@@ -30,6 +41,11 @@
     text-transform: uppercase;
     max-width: 600px;
     width: 100%;
+
+    @media (max-width: $tablet) {
+      font-size: 50px;
+      line-height: 55px;
+    }
   }
 
   &__img {
@@ -40,6 +56,18 @@
     @media (max-width: $laptop) {
       width: 47vw;
       top: 73px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 467px;
+      top: 133px;
+      right: 3px;
+    }
+
+    @media (max-width: $mobile) {
+      width: 375px;
+      top: 266px;
+      right: -14px;
     }
   }
 }
