@@ -3,7 +3,7 @@
 .choices {
   z-index: 100;
   width: 100%;
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 
   &_big {
     max-width: 440px;
@@ -108,7 +108,7 @@
 
     & .choices__inner {
       background-color: transparent;
-      border: 1px solid $black!important;
+      border: 1px solid $black !important;
       border-radius: inherit;
       padding: 10px 22px !important;
       position: relative;
@@ -136,7 +136,7 @@
 
     & .choices__list--dropdown {
       border: 1px solid $black !important;
-      background-color: #FFF2DE!important;
+      background-color: #FFF2DE !important;
 
       @media (max-width: $mobile) {
         padding-bottom: 4px;
@@ -180,8 +180,8 @@
     & .choices__inner {
       background-color: transparent;
       border: none;
-      border-bottom: 1px solid $black!important;
-      padding: 7px 0 0!important;
+      border-bottom: 1px solid $black !important;
+      padding: 7px 0 0 !important;
       border-radius: initial;
       position: relative;
       margin-bottom: 1px;
@@ -216,8 +216,8 @@
     }
 
     & .choices__list--dropdown {
-      border: none!important;
-      background-color: #FFDDC1!important;
+      border: none !important;
+      background-color: #FFDDC1 !important;
       padding-top: 19px;
 
       & .choices__item {
@@ -235,6 +235,8 @@
   }
 
   &.is-open {
+    z-index: 101;
+
     & .choices__inner::after,
     & .choices__item::after {
       transform: translateY(-50%) rotate(180deg);
