@@ -120,7 +120,11 @@
       &_3-1 {
         left: 50%;
         transform: translateX(-50%);
-        bottom: -2px;
+        bottom: 28px;
+
+        @media (min-width: $tablet) and (max-width: $laptop) {
+          width: 90%;
+        }
 
         @media (max-width: 660px) {
           bottom: 23px;

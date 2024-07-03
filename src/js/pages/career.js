@@ -1,3 +1,8 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
+import Choices from "choices.js";
+import 'choices.js/public/assets/styles/choices.min.css';
+
 document.addEventListener('DOMContentLoaded', function () {
     const parent = document.querySelector('.js-vacancies-parent'),
         parentContainer = parent.querySelector('.js-vacancies-container'),

@@ -44,7 +44,7 @@
 
   &__decor {
     position: absolute;
-    top: -343px;
+    top: -281px;
     right: -13px;
 
     @media (max-width: $tablet) {
@@ -184,7 +184,7 @@
       }
 
       body[data-brand-theme="filevskoe"] & {
-        max-width: 303px;
+        max-width: 223px;
 
         @media (max-width: $mobile) {
           max-width: 230px;
@@ -192,7 +192,7 @@
       }
 
       body[data-brand-theme="vologodskiy-plombir"] & {
-        max-width: 546px;
+        max-width: 464px;
 
         @media (max-width: $mobile) {
           max-width: 270px;

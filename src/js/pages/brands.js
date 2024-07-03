@@ -1,3 +1,6 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
+
 document.addEventListener('DOMContentLoaded', function () {
     const parent = document.querySelector('.js-slider-parent'),
         body = document.body,

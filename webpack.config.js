@@ -40,7 +40,11 @@ module.exports = merge({
                         ]
                     }
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
         ]
     },
 

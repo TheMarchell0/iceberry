@@ -77,15 +77,30 @@
 
   &__decor {
     position: absolute;
-    right: -271px;
-    top: -46px;
+    right: -152px;
+    top: 22px;
+
+    &_desktop {
+      @media (max-width: $laptop) {
+        right: -242px;
+      }
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &_mobile {;
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
 
     @media (max-width: $mobile) {
       left: 50%;
-      transform: translateX(-47%) rotate(92deg);
+      transform: translateX(-50%);
       top: initial;
-      bottom: -160px;
-      width: 482px;
+      bottom: -31px;
     }
   }
 }

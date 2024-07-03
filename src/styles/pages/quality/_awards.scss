@@ -51,7 +51,7 @@
     }
 
     &-item {
-      display: flex;
+      display: flex!important;
       flex-direction: column;
       align-items: center;
       max-width: 190px;
@@ -69,10 +69,10 @@
       }
 
       &:not(:last-child) {
-        margin-right: 31px;
+        margin-right: 86px;
 
         @media (min-width: $tablet) and (max-width: $laptop) {
-          margin-bottom: 31px;
+          margin-bottom: 86px;
         }
       }
 
@@ -113,30 +113,15 @@
 
   &__decor {
     position: absolute;
-    right: -50px;
-    top: -147px;
+    right: 20px;
+    top: -137px;
 
     @media (max-width: $tablet) {
-      transform: translateX(-47%) rotate(92deg);
+      transform: translateX(-50%);
       left: 50%;
-      bottom: -311px;
       top: initial;
-    }
-
-    @media (max-width: $mobile) {
-      bottom: -290px;
-    }
-
-    &_desktop {
-      @media (max-width: $tablet) {
-        display: none;
-      }
-    }
-
-    &_mobile {
-      @media (min-width: $tablet) {
-        display: none;
-      }
+      bottom: -169px;
+      width: 191px;
     }
   }
 }

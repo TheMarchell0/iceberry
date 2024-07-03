@@ -10,12 +10,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/swiper-bundle.css">
     <link rel="stylesheet" href="styles/pages/contacts.css">
-    <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
-    />
 </head>
 <body>
 @@include("../blocks/modules/header/header.html")
@@ -39,7 +34,7 @@
         </div>
     </section>
     <section class="info js-info-parent">
-        <div class="info__container container js-info-container decor-right">
+        <div class="info__container container">
             <h2 class="info__title section-title">Айсберри в&nbsp;Вашем регионе</h2>
             <div class="info__select-wrapper choices-wrapper">
                 <select class="info__select js-choices-select" data-select-type="big">
@@ -53,7 +48,7 @@
                     <option value="Город 2">Город 7</option>
                 </select>
             </div>
-            <div class="info__swiper swiper js-info-slider">
+            <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
                 <ul class="info__list swiper-wrapper js-info-content">
                     <li class="info__list-item swiper-slide">
                         <p class="info__list-position">Директор<br/>по&nbsp;продажам</p>
@@ -94,17 +89,6 @@
                 <div class="info__slider-prev swiper-button-prev"></div>
                 <div class="info__slider-next swiper-button-next"></div>
             </div>
-            <picture>
-                <source
-                        srcset="/img/contacts-info-decor.png 1x, /img/contacts-info-decor@2x.png 2x"
-                />
-                <img
-                        src="/img/contacts-info-decor.png"
-                        alt="Декоративная картинка"
-                        width="206"
-                        class="info__decor"
-                />
-            </picture>
         </div>
     </section>
     <section class="tabs">
@@ -255,23 +239,11 @@
                     </form>
                 </div>
             </div>
-            <picture>
-                <source
-                        srcset="/img/contacts-tabs-decor.png 1x, /img/contacts-tabs-decor@2x.png 2x"
-                />
-                <img
-                        src="/img/contacts-tabs-decor.png"
-                        alt="Декоративная картинка"
-                        width="220"
-                        class="tabs__decor"
-                />
-            </picture>
         </div>
     </section>
 </main>
 @@include("../blocks/modules/footer/footer.html")
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 <script src="js/pages/contacts.js"></script>
 </body>

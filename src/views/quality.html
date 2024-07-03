@@ -10,7 +10,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/swiper-bundle.css">
     <link rel="stylesheet" href="styles/pages/quality.css">
 </head>
 <body>
@@ -125,20 +124,6 @@
                     <li class="awards__list-item swiper-slide">
                         <picture>
                             <source
-                                    srcset="./img/awards-img-5.png 1x, ./img/awards-img-5@2x.png 2x"
-                            />
-                            <img
-                                    src="./img/awards-img-5.png"
-                                    alt="Декоративная картинка"
-                                    width="100"
-                                    class="awards__list-img"
-                            />
-                        </picture>
-                        <p class="awards__list-text">ЭКО продукт</p>
-                    </li>
-                    <li class="awards__list-item swiper-slide">
-                        <picture>
-                            <source
                                     srcset="./img/awards-img-6.png 1x, ./img/awards-img-6@2x.png 2x"
                             />
                             <img
@@ -163,26 +148,15 @@
                 <img
                         src="./img/quality-awards-decor.png"
                         alt="Декоративная картинка"
-                        width="270"
-                        class="awards__decor awards__decor_desktop"
-                />
-            </picture>
-            <picture>
-                <source
-                        srcset="./img/iceberry-today-icon-info-decor.png 1x, ./img/iceberry-today-icon-info-decor@2x.png 2x"
-                />
-                <img
-                        src="./img/iceberry-today-icon-info-decor.png"
-                        alt="Декоративная картинка"
-                        width="423"
-                        class="awards__decor awards__decor_mobile"
+                        width="300"
+                        class="awards__decor"
                 />
             </picture>
         </div>
     </section>
 </main>
 @@include("../blocks/modules/footer/footer.html")
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 <script src="js/pages/quality.js"></script>
 </body>

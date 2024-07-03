@@ -219,13 +219,13 @@
 
   &__decor {
     position: absolute;
-    right: 21px;
-    top: 337px;
+    right: 46px;
+    top: 445px;
 
     @media (min-width: $mobile) and (max-width: $laptop) {
-      right: -157px;
+      right: 8px;
       top: initial;
-      bottom: -318px;
+      bottom: -242px;
     }
 
     &:not(.active) {

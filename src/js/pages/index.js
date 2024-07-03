@@ -1,3 +1,6 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
+
 document.addEventListener('DOMContentLoaded', function () {
     const awardsParent = document.querySelector('.js-awards-parent'),
         buyParent = document.querySelector('.js-buy-parent'),
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    if (screenWidth <= 1024 || awardsContentItems > 6) {
+    if (screenWidth <= 1400 || awardsContentItems > 5) {
         const awardsSlider = new Swiper(".js-awards-slider", {
             loop: false,
             navigation: {
@@ -50,7 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     spaceBetween: 10,
                 },
                 1024: {
-                    slidesPerView: 6,
+                    slidesPerView: 4,
+                },
+                1400: {
+                    slidesPerView: 5,
+                    spaceBetween: 87,
                 }
             }
         });

@@ -61,7 +61,7 @@
     @media (max-width: $mobile) {
       bottom: 105px !important;
       left: 50% !important;
-      transform: translateX(-50%);
+      transform: translateX(-50%)!important;
     }
 
     & .swiper-pagination-bullet {
@@ -75,19 +75,19 @@
 
   &__decor {
     position: absolute;
-    bottom: -117px;
-    right: 66px;
+    bottom: -78px;
+    right: -9px;
     z-index: 1;
 
     @media (max-width: $tablet) {
-      width: 20.5vw;
+      width: 29.5vw;
       bottom: -6vw;
     }
 
     @media (max-width: $mobile) {
-      width: 157px;
-      bottom: 0px;
-      right: 0px;
+      width: 130px;
+      bottom: 2px;
+      right: 8px;
     }
   }
 }

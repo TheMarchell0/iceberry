@@ -3,7 +3,7 @@
 .brand {
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
+  display: flex!important;
   background-position: 0 100%;
   position: relative;
 
@@ -137,7 +137,7 @@
     }
 
     & .brand__img {
-      top: 77px;
+      top: 157px;
       left: 0px;
 
       @media (max-width: $tablet) {
@@ -311,12 +311,12 @@
 
     & .brand__img {
       top: 85px;
-      left: -133px;
+      left: -1px;
 
       @media (max-width: $tablet) {
         top: initial;
         bottom: 71px;
-        width: 66vw;
+        width: 56vw;
       }
 
       @media (max-width: $mobile) {
@@ -337,12 +337,14 @@
 
       @media (min-width: $mobile) and (max-width: $laptop) {
         right: 0vw;
+        top: 158px;
       }
 
       @media (max-width: $mobile) {
         right: initial;
-        left: 5vw;
+        left: 2vw;
         top: 189px;
+        max-width: 317px;
       }
     }
 

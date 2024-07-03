@@ -3,11 +3,15 @@
 .hero {
   background-color: $white;
   color: $mainColor;
-  padding-bottom: 41px;
+  padding-bottom: 171px;
   background-position: 0 100%;
 
   @media (min-width: $tablet) and (max-width: $laptop) {
-    padding-bottom: 100px;
+    padding-bottom: 208px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 88px;
   }
 
   &__content {
@@ -21,15 +25,15 @@
 
   &__img {
     width: 450px;
-    transform: translate(0px, 32px);
+    transform: translate(0px, 110px);
 
     @media (min-width: $laptop) {
       width: auto;
-      transform: translate(-70px, 32px);
+      transform: translate(-70px, 176px);
     }
 
     @media (max-width: $tablet) {
-      transform: translate(1px, -40px);
+      transform: translate(1px, 15px);
     }
 
     &_mobile {
@@ -49,11 +53,11 @@
 
   &__info {
     font-family: 'Intro Bold';
-    margin-top: 66px;
+    margin-top: 197px;
     font-weight: 700;
 
     @media (min-width: $laptop) {
-      transform: translateX(-96px);
+      transform: translateX(13px);
     }
 
     @media (min-width: $tablet) and (max-width: $laptop) {

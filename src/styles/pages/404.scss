@@ -63,25 +63,4 @@ main {
   &__button {
     max-width: 188px;
   }
-
-  &__decor {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -362px;
-
-    @media (max-width: $tablet) {
-      bottom: -37vw;
-      width: 74vw;
-    }
-
-    @media (max-width: $mobile) {
-      bottom: -378px;
-      width: 100vw;
-    }
-
-    @media (max-width: 500px) {
-      bottom: -328px;
-    }
-  }
 }
