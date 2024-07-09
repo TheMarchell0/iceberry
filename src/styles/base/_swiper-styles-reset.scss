@@ -34,6 +34,10 @@
   overflow: visible!important;
 }
 
+.swiper-slide {
+  transition: 0.2s linear!important;
+}
+
 .swiper-overflow-hidden {
   @media (min-width: $tablet) {
     overflow: hidden!important;

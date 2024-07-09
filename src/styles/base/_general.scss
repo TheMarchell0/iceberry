@@ -175,6 +175,17 @@ img {
   display: flex;
 }
 
+.menu-item {
+
+  &.active {
+    pointer-events: none;
+
+    &.header-menu-item {
+      font-weight: 700;
+    }
+  }
+}
+
 body[data-brand-theme="vologodskiy-plombir"] .swiper-pagination-bullet {
   background-color: #FFFFFF;
 }

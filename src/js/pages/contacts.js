@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
             openState: 'is-open',
             classNames: {
                 containerOuter: `choices choices_${specificType}`,
-            }
+            },
+            shouldSort: false,
         });
     }
 

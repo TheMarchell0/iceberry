@@ -177,6 +177,12 @@
     }
   }
 
+  &__button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
   &__decor {
     position: absolute;
     bottom: -170px;
