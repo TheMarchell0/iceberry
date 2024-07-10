@@ -25,12 +25,13 @@ const requireDir = require("require-dir"),
             ]
         },
         scripts: {
-            src: ["./src/js/main.js", "./src/js/pages/**/*.js"],
+            src: ["./src/js/main.js", "./src/js/pages/**/*.js", "./src/js/helpers/**/*.js"],
             dist: "./dist/js/",
             watch: [
                 "./src/blocks/**/*.js",
                 "./src/js/main.js",
-                "./src/js/pages/**/*.js"
+                "./src/js/pages/**/*.js",
+                "./src/js/helpers/**/*.js",
             ]
         },
         images: {

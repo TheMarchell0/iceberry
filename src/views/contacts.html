@@ -162,12 +162,13 @@
                         <p class="tabs__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="tabs__form-item form__item">
                             <p class="tabs__form-label tabs__form-label_file form__label required">Прикрепить файл</p>
-                            <ul class="tabs__form-file-list form__files" data-max-files="4">
-                                <li class="tabs__form-file-list-item form__files-item js-files-wrapper">
-                                    <input type="file" id="questions-form_file"
-                                           class="tabs__form-file-list-input form__files-input js-file-input">
-                                    <label for="questions-form_file"
-                                           class="tabs__form-file-text form__files-text js-file-label">Добавить</label>
+                            <ul id="feedback-form" class="tabs__form-file-list form__files js-form-files" data-max-files="4">
+                                <li class="form__files-item js-files-list-item">
+                                    <input type="file" id="feedback-form_file-1"
+                                           class="tabs__form-file-list-input form__files-input js-files-input">
+                                    <label for="feedback-form_file-1"
+                                           class="form__files-text js-files-label">Добавить</label>
+                                    <span class="form__files-delete js-files-delete">X</span>
                                 </li>
                             </ul>
                         </div>
@@ -227,7 +228,7 @@
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_date" class="tabs__form-label form__label required">Дата
                                 производства</label>
-                            <input type="text" id="feedback-form_date" class="tabs__form-input form__input">
+                            <input type="text" id="feedback-form_date" class="tabs__form-input form__input js-date-input">
                         </div>
                         <div class="tabs__form-item form__item tabs__form-item_big">
                             <label for="feedback-form_purchase-place" class="tabs__form-label form__label required">Где
@@ -238,12 +239,13 @@
                         <p class="tabs__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="tabs__form-item form__item">
                             <p class="tabs__form-label form__label required">Прикрепить файл</p>
-                            <ul class="tabs__form-file-list form__files" data-max-files="4">
-                                <li class="tabs__form-file-list-item form__files-item js-files-wrapper">
-                                    <input type="file" id="feedback-form_file"
-                                           class="tabs__form-file-list-input form__files-input js-file-input">
-                                    <label for="feedback-form_file"
-                                           class="tabs__form-file-text form__files-text js-file-label">Добавить</label>
+                            <ul id="questions-form" class="tabs__form-file-list form__files js-form-files" data-max-files="4">
+                                <li class="tabs__form-file-list-item form__files-item js-files-list-item">
+                                    <input type="file" id="questions-form_file-1"
+                                           class="tabs__form-file-list-input form__files-input js-files-input">
+                                    <label for="questions-form_file-1"
+                                           class="tabs__form-file-text form__files-text js-files-label">Добавить</label>
+                                    <span class="tabs__form-file-delete form__files-delete js-files-delete">X</span>
                                 </li>
                             </ul>
                         </div>

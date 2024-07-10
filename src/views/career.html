@@ -294,11 +294,12 @@
                         <p class="work__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="work__form-item career-form-item career-form-item_file form__item">
                             <p class="work__form-label form__label career-form-label required">Прикрепить резюме</p>
-                            <ul class="work__form-file-list form__files" data-max-files="2">
-                                <li class="work__form-file-list-item form__files-item js-files-wrapper">
-                                    <input type="file" id="file"
-                                           class="work__form-file-list-input form__files-input js-file-input">
-                                    <label for="file" class="work__form-file-text form__files-text js-file-label">Добавить</label>
+                            <ul id="work-form" class="work__form-file-list form__files js-form-files" data-max-files="2">
+                                <li class="form__files-item js-files-list-item">
+                                    <input type="file" id="work-form_file-1"
+                                           class="form__files-input js-files-input">
+                                    <label for="work-form_file-1" class="form__files-text js-files-label">Добавить</label>
+                                    <span class="form__files-delete js-files-delete">X</span>
                                 </li>
                             </ul>
                         </div>
@@ -389,11 +390,12 @@
                     <p class="career-modal__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                     <div class="career-modal__form-item career-modal__form-item_file career-form-item_file form__item">
                         <p class="career-modal__form-label career-form-label form__label required">Прикрепить резюме</p>
-                        <ul class="career-modal__form-file-list form__files" data-max-files="2">
-                            <li class="career-modal__form-file-list-item form__files-item js-files-wrapper">
-                                <input type="file" id="modal-file"
-                                       class="career-modal__form-file-list-input form__files-input js-file-input">
-                                <label for="modal-file" class="career-modal__form-file-text form__files-text js-file-label">Добавить</label>
+                        <ul id="work-modal-form" class="career-modal__form-file-list form__files js-form-files" data-max-files="2">
+                            <li class="form__files-item js-files-list-item">
+                                <input type="file" id="work-modal-form_file-1"
+                                       class="form__files-input js-files-input">
+                                <label for="work-modal-form_file-1" class="form__files-text js-files-label">Добавить</label>
+                                <span class="form__files-delete js-files-delete">X</span>
                             </li>
                         </ul>
                     </div>

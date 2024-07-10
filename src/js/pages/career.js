@@ -2,6 +2,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 import Choices from "choices.js";
 import 'choices.js/public/assets/styles/choices.min.css';
+import {fileInputInitialization} from "../helpers/fileInputInitialization";
 
 document.addEventListener('DOMContentLoaded', function () {
     const parent = document.querySelector('.js-vacancies-parent'),
@@ -13,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let dropdowns;
 
     checkDropdowns();
+
+    fileInputInitialization();
 
     function checkDropdowns() {
         dropdowns = parent.querySelectorAll('.choices__list--dropdown .choices__item');
@@ -102,19 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const fileWrappers = document.querySelectorAll('.js-files-wrapper');
 
-    for (let fileWrapper of fileWrappers) {
-        const fileInput = fileWrapper.querySelector('.js-file-input'),
-            fileLabel = fileWrapper.querySelector('.js-file-label');
-
-        fileInput.addEventListener('change', function () {
-            if (fileInput.files.length > 0) {
-                fileWrapper.classList.add('complete');
-                fileLabel.innerHTML = fileInput.files[0].name;
-            }
-        });
-    }
 
     const body = document.body,
         modal = document.querySelector('.js-modal'),
