@@ -14,32 +14,29 @@ export function fileInputInitialization() {
             fileDelete = fileListItem.querySelector('.js-files-delete'),
             maxLength = fileList.getAttribute('data-max-files'),
             inputId = uuidv4().substring(0, 6);
-        console.log('stalo: '+maxLength+' '+fileList.children.length)
 
         fileDelete.addEventListener('click', () => {
-            if (fileList.children.length > 1 && fileList.children.length <= maxLength) {
-                console.log('bolwe 1 i menshe 4')
-                fileListItem.remove();
-            }
-            else if (maxLength == fileList.children.length) {
-                console.log('4')
-            }
-            else {
-                console.log('1')
-                fileListItem.classList.remove('complete');
-                fileLabel.textContent = 'Добавить'
-                fileInput.value = '';
+            const completeChildren = Array.from(fileList.children).filter(child => child.classList.contains('complete'));
+            fileListItem.remove();
+
+            if (completeChildren.length == maxLength) {
+                createNewItem()
             }
         });
 
         fileInput.addEventListener('change', function () {
-            console.log('bilo: '+maxLength+' '+fileList.children.length)
             if (fileInput.files.length > 0) {
                 fileListItem.classList.add('complete');
                 fileLabel.textContent = fileInput.files[0].name;
                 if (maxLength > fileList.children.length) {
-                    const fileTemplate =
-                        `<li class="form__files-item js-files-list-item">
+                    createNewItem()
+                }
+            }
+        });
+
+        function createNewItem() {
+            const fileTemplate =
+                `<li class="form__files-item js-files-list-item">
                         <input type="file" id="${fileList.id}-file_${inputId}"
                                class="form__files-input js-files-input">
                             <label for="${fileList.id}-file_${inputId}"
@@ -47,10 +44,8 @@ export function fileInputInitialization() {
                             <span class="form__files-delete js-files-delete">X</span>
                     </li>`;
 
-                    fileList.insertAdjacentHTML('beforeend', fileTemplate);
-                    createFileInputFunctional(fileList);
-                }
-            }
-        });
+            fileList.insertAdjacentHTML('beforeend', fileTemplate);
+            createFileInputFunctional(fileList);
+        }
     }
 }
