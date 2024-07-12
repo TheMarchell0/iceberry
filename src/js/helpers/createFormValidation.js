@@ -126,7 +126,7 @@ export function createFormValidation(forms) {
             if (checkAllFieldsValid()) {
                 /*successMessage.classList.remove('hidden');
                 formContent.classList.add('hidden');*/
-                alert('Типа отправлено брат');
+                alert('Функционал отправки формы находится в разработке.');
                 clearFormFields();
             }
         });

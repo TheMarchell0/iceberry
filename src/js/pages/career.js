@@ -121,15 +121,6 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.classList.remove('modal-anim-close');
         };
 
-    const submitButtons = document.querySelectorAll('.js-form-submit');
-
-    for (let submitButton of submitButtons) {
-        submitButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('Функционал отправки формы находится в разработке.')
-        })
-    }
-
     const closeButtons = modal.querySelectorAll('.js-close-modal');
 
     closeButtons.forEach(closeButton => {
