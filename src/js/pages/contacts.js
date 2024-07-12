@@ -3,6 +3,8 @@ import 'swiper/swiper-bundle.css';
 import Choices from "choices.js";
 import 'choices.js/public/assets/styles/choices.min.css';
 import {fileInputInitialization} from "../helpers/fileInputInitialization";
+import {phoneMaskInitialization} from "../helpers/phoneMaskInitialization";
+import createFormValidation from "../helpers/createFormValidation";
 
 document.addEventListener('DOMContentLoaded', function () {
     const parent = document.querySelector('.js-info-parent'),
@@ -12,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
         tabForms = document.querySelectorAll('.js-tab-form');
 
     fileInputInitialization();
+    phoneMaskInitialization();
+
+    const forms = document.querySelectorAll('.js-form');
+
+    createFormValidation(forms)
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {

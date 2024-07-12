@@ -3,6 +3,8 @@ import 'swiper/swiper-bundle.css';
 import Choices from "choices.js";
 import 'choices.js/public/assets/styles/choices.min.css';
 import {fileInputInitialization} from "../helpers/fileInputInitialization";
+import {phoneMaskInitialization} from "../helpers/phoneMaskInitialization";
+import createFormValidation from "../helpers/createFormValidation";
 
 document.addEventListener('DOMContentLoaded', function () {
     const parent = document.querySelector('.js-vacancies-parent'),
@@ -14,8 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let dropdowns;
 
     checkDropdowns();
-
     fileInputInitialization();
+    phoneMaskInitialization();
+
+    const forms = document.querySelectorAll('.js-form');
+
+    createFormValidation(forms)
 
     function checkDropdowns() {
         dropdowns = parent.querySelectorAll('.choices__list--dropdown .choices__item');
@@ -106,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-
     const body = document.body,
         modal = document.querySelector('.js-modal'),
         triggerButtons = document.querySelectorAll('.js-modal-trigger'),
@@ -138,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     window.addEventListener('keydown', (event) => {
-        console.log(event.key === 'Escape' && modal.classList.contains('active'))
         if (event.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }

@@ -26,10 +26,18 @@ export function fileInputInitialization() {
 
         fileInput.addEventListener('change', function () {
             if (fileInput.files.length > 0) {
-                fileListItem.classList.add('complete');
-                fileLabel.textContent = fileInput.files[0].name;
-                if (maxLength > fileList.children.length) {
-                    createNewItem()
+                if (!fileListItem.classList.contains('complete')) {
+                    fileListItem.classList.add('complete');
+                    fileLabel.textContent = fileInput.files[0].name;
+                    if (maxLength > fileList.children.length) {
+                        createNewItem();
+                    }
+                } else {
+                    fileLabel.textContent = fileInput.files[0].name;
+                }
+
+                if (fileInput.classList.contains('error')) {
+                    fileInput.classList.remove('error');
                 }
             }
         });
@@ -38,7 +46,7 @@ export function fileInputInitialization() {
             const fileTemplate =
                 `<li class="form__files-item js-files-list-item">
                         <input type="file" id="${fileList.id}-file_${inputId}"
-                               class="form__files-input js-files-input">
+                               class="form__files-input js-files-input js-form-input">
                             <label for="${fileList.id}-file_${inputId}"
                                    class="form__files-text js-files-label">Добавить</label>
                             <span class="form__files-delete js-files-delete">X</span>

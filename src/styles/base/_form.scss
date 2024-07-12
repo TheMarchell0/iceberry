@@ -13,6 +13,10 @@
     color: $black;
     width: fit-content;
 
+    &.error {
+      color: $mainColor;
+    }
+
     @media (max-width: $mobile) {
       font-size: 18px;
       line-height: 19.8px;
@@ -96,9 +100,18 @@
     }
   }
 
+  &__input,
+  &__textarea {
+    &.error {
+      background-color: rgba(246, 120, 120, 0.15);
+      color: $mainColor;
+    }
+  }
+
   &__input {
     border-bottom: 1px solid $black;
-    padding: 9px 0;
+    padding: 9px 10px;
+    transition: 0.1s linear;
   }
 
   &__textarea {
@@ -166,6 +179,10 @@
       height: 100%;
       opacity: 0;
       cursor: pointer;
+
+      &.error + .form__files-text {
+        color: $mainColor;
+      }
     }
 
     &-text {

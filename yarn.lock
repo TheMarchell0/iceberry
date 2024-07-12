@@ -2572,6 +2572,7 @@ __metadata:
     imagemin-mozjpeg: "npm:^9.0.0"
     imagemin-pngquant: "npm:^9.0.0"
     imagemin-zopfli: "npm:^7.0.0"
+    inputmask: "npm:^5.0.9"
     lint-staged: "npm:^12.3.5"
     postcss: "npm:^8.4.8"
     postcss-scss: "npm:^4.0.3"
@@ -8831,6 +8832,13 @@ bem-tools-create@bem-tools/bem-tools-create:
     node-gyp: "npm:latest"
   checksum: 10c0/8415dbb54cd3ab8232951cdf1d91b1f0ca3c5925617a47d985e650ff3a038efb265acfff0f4f826db1ef1f2f484f516e3e7874d47d059015957818149d9d932e
   conditions: os=linux
+  languageName: node
+  linkType: hard
+
+"inputmask@npm:^5.0.9":
+  version: 5.0.9
+  resolution: "inputmask@npm:5.0.9"
+  checksum: 10c0/12a8c350df5c9af101864a916fe12f997b103c4ae04037150564c9f8df31324460d775fe920d19d624a5df6e6cb1cdb43ecc24a6d07505d1f31b9fba6c7ec89d
   languageName: node
   linkType: hard
 
