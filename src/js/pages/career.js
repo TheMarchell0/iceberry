@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.body,
         modal = document.querySelector('.js-modal'),
         triggerButtons = document.querySelectorAll('.js-modal-trigger'),
-        openModal = () => {
+        openModal = (modal) => {
             modal.classList.add('active', 'modal-anim-open');
             lockScroll();
             modal.classList.remove('modal-anim-close');
@@ -127,33 +127,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const submitButtons = document.querySelectorAll('.js-form-submit');
 
-    for (let submitButton of submitButtons) {
-        submitButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('Функционал отправки формы находится в разработке.')
-        })
-    }
+    // for (let submitButton of submitButtons) {
+    //     submitButton.addEventListener('click', (e) => {
+    //         e.preventDefault();
+            
+    //     })
+    // }
 
     const closeButtons = modal.querySelectorAll('.js-close-modal');
 
     closeButtons.forEach(closeButton => {
-        closeButton.addEventListener('click', () => closeModal());
+        closeButton.addEventListener('click', () => closeModal(modal));
     });
 
     modal.addEventListener('click', (event) => {
         if (event.target === modal) {
-            closeModal();
+            closeModal(modal);
         }
     });
 
     window.addEventListener('keydown', (event) => {
         console.log(event.key === 'Escape' && modal.classList.contains('active'))
         if (event.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
+            closeModal(modal);
         }
     });
 
-    function closeModal() {
+    const submitModal = document.querySelector('.js-submit-modal')
+
+    for (let submitButton of submitButtons) {
+        submitButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeModal(modal);
+            openModal(submitModal);
+        })
+    }
+
+    const closeSubmitButton = submitModal.querySelector('.js-close-submit-modal');
+
+    closeSubmitButton.addEventListener('click', () => closeModal(submitModal));
+
+    function closeModal(modal) {
         if (modal) {
             modal.classList.replace('modal-anim-open', 'modal-anim-close');
             modal.addEventListener('animationend', () => {
