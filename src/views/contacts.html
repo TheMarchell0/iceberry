@@ -146,7 +146,7 @@
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_phone" class="tabs__form-label form__label required">Контактный
                                 телефон</label>
-                            <input type="text" id="questions-form_phone" class="tabs__form-input form__input js-phone-input js-form-input">
+                            <input type="text" id="questions-form_phone" inputmode="numeric" class="tabs__form-input form__input js-phone-input js-form-input">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_city" class="tabs__form-label form__label required">Город</label>
@@ -173,7 +173,7 @@
                             </ul>
                         </div>
                         <div class="tabs__form-footer form__footer">
-                            <button class="tabs__form-footer-button button js-submit-button">Отправить</button>
+                            <button class="tabs__form-footer-button button js-submit-button js-modal-trigger">Отправить</button>
                             <p class="tabs__form-footer-text form__footer-text">Нажимая на кнопку «Узнать больше», вы&nbsp;даете
                                 согласие на &nbsp;обработку персональных данных.</p>
                         </div>
@@ -189,7 +189,7 @@
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_phone" class="tabs__form-label form__label required">Контактный
                                 телефон</label>
-                            <input type="text" id="feedback-form_phone" class="tabs__form-input form__input js-phone-input js-form-input">
+                            <input type="text" id="feedback-form_phone" inputmode="numeric" class="tabs__form-input form__input js-phone-input js-form-input">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_email" class="tabs__form-label form__label required">Электронная
@@ -228,7 +228,7 @@
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_date" class="tabs__form-label form__label required">Дата
                                 производства</label>
-                            <input type="text" id="feedback-form_date" class="tabs__form-input form__input js-date-input js-form-input">
+                            <input type="text" id="feedback-form_date" inputmode="numeric" class="tabs__form-input form__input js-date-input js-form-input">
                         </div>
                         <div class="tabs__form-item form__item tabs__form-item_big">
                             <label for="feedback-form_purchase-place" class="tabs__form-label form__label required">Где
@@ -250,7 +250,7 @@
                             </ul>
                         </div>
                         <div class="tabs__form-footer form__footer">
-                            <button class="tabs__form-footer-button button js-submit-button">Отправить</button>
+                            <button class="tabs__form-footer-button button js-submit-button js-modal-trigger">Отправить</button>
                             <p class="tabs__form-footer-text form__footer-text">Нажимая на кнопку «Узнать больше», вы&nbsp;даете
                                 согласие на &nbsp;обработку персональных данных.</p>
                         </div>
@@ -261,6 +261,14 @@
     </section>
 </main>
 @@include("../blocks/modules/footer/footer.html")
+<div class="career-modal modal js-modal">
+    <div class="career-modal__success modal__success js-modal-success disable">
+        <img class="career-modal__close modal__close js-close-modal" src="/img/close-icon.svg" alt="Закрыть">
+        <p class="modal__success-title">Ваше сообщение отправлено!</p>
+        <p class="modal__success-descr">В ближайшее время с&nbsp;вами с&nbsp;радостью свяжется наш менеджер!</p>
+        <button class="modal__success-close js-close-modal button">Отлично!</button>
+    </div>
+</div>
 <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 <script src="js/pages/contacts.js"></script>

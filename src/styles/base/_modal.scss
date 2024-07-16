@@ -19,20 +19,84 @@
     visibility: visible;
   }
 
-  &__wrapper {
+  &__wrapper,
+  &__success {
     border-radius: 30px;
     background: #FFFFFF;
-    max-width: 1080px;
     width: 100%;
     position: relative;
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: 100vh;
     -webkit-overflow-scrolling: touch;
 
     @media (max-width: $tablet) {
       border-radius: 20px;
       max-width: 88%;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1080px;
+    max-height: 100vh;
+
+    &.disable {
+      display: none;
+    }
+  }
+
+  &__success {
+    max-width: 640px;
+    text-align: center;
+    border: 1px solid $black;
+    padding: 105px 20px 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.disable {
+      display: none;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 67px 20px 17px;
+    }
+
+    &-title {
+      color: $mainColor;
+      text-transform: uppercase;
+      font-family: 'Intro Bold';
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 55px;
+
+      @media (max-width: $mobile) {
+        font-size: 28px;
+        line-height: 30.8px;
+      }
+    }
+
+    &-descr {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 18.7px;
+      max-width: 327px;
+      width: 100%;
+      margin: 27px 0;
+
+      @media (max-width: $mobile) {
+        max-width: 76%;
+        margin: 18px 0;
+      }
+    }
+
+    & .modal__close {
+      top: 29px;
+      right: 29px;
+
+      @media (max-width: $mobile) {
+        top: 21px;
+        right: 19px;
+      }
     }
   }
 

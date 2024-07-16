@@ -5,6 +5,7 @@ import 'choices.js/public/assets/styles/choices.min.css';
 import {fileInputInitialization} from "../helpers/fileInputInitialization";
 import {phoneMaskInitialization} from "../helpers/phoneMaskInitialization";
 import createFormValidation from "../helpers/createFormValidation";
+import {openModalFunctional} from "../helpers/openModalFunctional";
 
 document.addEventListener('DOMContentLoaded', function () {
     const parent = document.querySelector('.js-vacancies-parent'),
@@ -12,16 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
         screenWidth = window.innerWidth,
         vacanciesSliderBlock = parent.querySelector('.js-vacancies-slider'),
         vacancies = parent.querySelector('.js-vacancies-content'),
-        vacanciesLength = vacancies.querySelectorAll('.swiper-slide').length;
+        vacanciesLength = vacancies.querySelectorAll('.swiper-slide').length,
+        forms = document.querySelectorAll('.js-form');
     let dropdowns;
 
     checkDropdowns();
-    fileInputInitialization();
+    fileInputInitialization(forms);
     phoneMaskInitialization();
-
-    const forms = document.querySelectorAll('.js-form');
-
-    createFormValidation(forms)
+    openModalFunctional();
+    createFormValidation(forms);
 
     function checkDropdowns() {
         dropdowns = parent.querySelectorAll('.choices__list--dropdown .choices__item');
@@ -109,60 +109,5 @@ document.addEventListener('DOMContentLoaded', function () {
         classNames: {
             containerOuter: `choices choices_${specificType}`,
         }
-    });
-
-
-    const body = document.body,
-        modal = document.querySelector('.js-modal'),
-        triggerButtons = document.querySelectorAll('.js-modal-trigger'),
-        openModal = () => {
-            modal.classList.add('active', 'modal-anim-open');
-            lockScroll();
-            modal.classList.remove('modal-anim-close');
-        };
-
-    const closeButtons = modal.querySelectorAll('.js-close-modal');
-
-    closeButtons.forEach(closeButton => {
-        closeButton.addEventListener('click', () => closeModal());
-    });
-
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            closeModal();
-        }
-    });
-
-    window.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-
-    function closeModal() {
-        if (modal) {
-            modal.classList.replace('modal-anim-open', 'modal-anim-close');
-            modal.addEventListener('animationend', () => {
-                modal.classList.remove('active', 'modal-anim-close');
-                unlockScroll();
-            }, {once: true});
-        }
-    }
-
-    function lockScroll() {
-        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-        body.style.paddingRight = `${scrollbarWidth}px`;
-        body.classList.add('no-scroll');
-    }
-
-    function unlockScroll() {
-        body.style.paddingRight = '';
-        body.classList.remove('no-scroll');
-    }
-
-    triggerButtons.forEach(triggerButton => {
-        triggerButton.addEventListener('click', () => {
-            openModal(modal);
-        });
     });
 });
