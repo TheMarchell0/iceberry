@@ -40,7 +40,6 @@ export function createFormValidation(forms) {
         }
 
         function validateFile(fileInput) {
-            console.log(fileInput)
             const fileInputLength = Array.from(inputs).filter(input => input.classList.contains('js-files-input')).length;
             const validate = fileInputLength === 1 && fileInput.files.length === 0;
             return validate;
@@ -84,15 +83,17 @@ export function createFormValidation(forms) {
             });
 
             if (allValid) {
-                // Объект для отправки данных
-                /*var formData = {};
+                let formData = new FormData();
                 inputs.forEach((input) => {
-                    const field = input.querySelector('.modal__form-input');
-                    formData[field.name] = field.value;
+                    if (input.type === 'file') {
+                        formData.append(input.name, input.files[0]);
+                    } else {
+                        formData.append(input.name, input.value);
+                    }
                 });
                 fetch('https://script.google.com/macros/s/AKfycbzWtnv7MOYlXeUUGwSiv06WfFLTfmo-0N0IAowCCKn8kSWaqx_cS6YIzwhneQ4YhqX5/exec', {
                     method: 'POST',
-                    body: new URLSearchParams(formData).toString(),
+                    body: formData,
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
@@ -100,14 +101,17 @@ export function createFormValidation(forms) {
                 })
                     .then(response => response.text())
                     .then(result => {
-                        successMessage.classList.remove('hidden');
-                        formContent.classList.add('hidden');
+                        isValid = true;
                         clearFormFields();
+                        setTimeout(() => isValid = false, 1000)
+                        setTimeout(()=> {
+                            refreshFileInputs();
+                        }, 50)
                         console.log('Success:', result);
                     })
                     .catch(error => {
                         console.error('Error:', error);
-                    });*/
+                    });
             }
 
             return allValid;
@@ -126,15 +130,6 @@ export function createFormValidation(forms) {
             inputs.forEach(input => {
                 validateInput(input);
             });
-
-            if (checkAllFieldsValid()) {
-                isValid = true;
-                clearFormFields();
-                setTimeout(() => isValid = false, 1000) // TODO: убрать таймаут, переместить в fetch при успешной отправке данных
-                setTimeout(()=> {
-                    refreshFileInputs();
-                }, 50)
-            }
         });
 
         inputs.forEach((input) => {

@@ -192,7 +192,7 @@
     <section class="vacancies js-vacancies-parent">
         <div class="vacancies__container container js-vacancies-container">
             <h2 class="vacancies__title section-title">Вакансии в&nbsp;твоем городе</h2>
-            <div class="vacancies__select-wrapper choices-wrapper">
+            <div class="vacancies__select-wrapper choices-wrapper" style="display: none;"> <!--TODO: Убрать инлайновый стиль, когда будет реализовано подтягивание списка из админки. Для создания списка используется библиотека choices.js. Функционал данного селекта находится в js/pages/career.js-->
                 <select class="vacancies__select js-vacancies-select" data-select-type="big">
                     <option value="Москва">Москва</option>
                     <option value="Город 1">Город 1</option>
@@ -207,32 +207,26 @@
             <div class="vacancies__swiper swiper js-vacancies-slider">
                 <ul class="vacancies__list swiper-wrapper js-vacancies-content">
                     <li class="vacancies__list-item swiper-slide">
-                        <p class="vacancies__list-title">Мерчендайзер</p>
+                        <p class="vacancies__list-title">Водитель-экспедитор</p>
                         <p class="vacancies__list-descr">Условия:</p>
                         <ul class="vacancies__list-conditions">
-                            <li class="vacancies__list-conditions-text">График работы: 5/2,<br/>с 9:00 до 18:00;</li>
-                            <li class="vacancies__list-conditions-text">Заработная плата –
-                                от&nbsp;35&nbsp;000&nbsp;руб;
-                            </li>
-                            <li class="vacancies__list-conditions-text">Оплата проезда, мобильной связи;</li>
-                            <li class="vacancies__list-conditions-text">Посещение офиса<br/>один раз в неделю;</li>
-                            <li class="vacancies__list-conditions-text">Вакантные территории<br/>уточняйте по телефону.
-                            </li>
+                            <li class="vacancies__list-conditions-text">Официальное трудоустройство.</li>
+                            <li class="vacancies__list-conditions-text">Стабильная, 2 раза в месяц, выплата заработной платы.</li>
+                            <li class="vacancies__list-conditions-text">График работы – 5/2 с плавающими выходными, летом возможно 6/1.</li>
+                            <li class="vacancies__list-conditions-text">Работа разъездного характера.</li>
+                            <li class="vacancies__list-conditions-text">Оплачиваемая стажировка.</li>
                         </ul>
                         <button class="vacancies__list-button button js-modal-trigger">Узнать подробнее</button>
                     </li>
                     <li class="vacancies__list-item swiper-slide">
-                        <p class="vacancies__list-title">Водитель-экспедитор</p>
+                        <p class="vacancies__list-title">Торговый представитель</p>
                         <p class="vacancies__list-descr">Условия:</p>
                         <ul class="vacancies__list-conditions">
-                            <li class="vacancies__list-conditions-text">График работы: 5/2,<br/>с 9:00 до 18:00;</li>
-                            <li class="vacancies__list-conditions-text">Заработная плата –
-                                от&nbsp;35&nbsp;000&nbsp;руб;
-                            </li>
-                            <li class="vacancies__list-conditions-text">Оплата проезда, мобильной связи;</li>
-                            <li class="vacancies__list-conditions-text">Посещение офиса<br/>один раз в неделю;</li>
-                            <li class="vacancies__list-conditions-text">Вакантные территории<br/>уточняйте по телефону.
-                            </li>
+                            <li class="vacancies__list-conditions-text">Полностью официальный доход;</li>
+                            <li class="vacancies__list-conditions-text">5/2 с 09-00 до 18-00;</li>
+                            <li class="vacancies__list-conditions-text">Оплата мобильной связи</li>
+                            <li class="vacancies__list-conditions-text">Компенсация топлива;</li>
+                            <li class="vacancies__list-conditions-text">По зп ПОТОЛКА НЕТ, все будет зависеть от Вас.</li>
                         </ul>
                         <button class="vacancies__list-button button js-modal-trigger">Узнать подробнее</button>
                     </li>
@@ -319,34 +313,32 @@
 <div class="career-modal modal js-modal">
     <div class="career-modal__wrapper modal__wrapper js-modal-wrapper disable">
         <img class="career-modal__close modal__close js-close-modal" src="/img/close-icon.svg" alt="Закрыть">
-        <p class="career-modal__title">Мерчендайзер</p>
+        <p class="career-modal__title">Название вакансии</p>
         <ul class="career-modal__list">
             <li class="career-modal__list-item">
                 <p class="career-modal__list-title">Условия:</p>
                 <ul class="career-modal__list-conditions">
-                    <li class="career-modal__list-conditions-text">График работы: 5/2,<br/>с 9:00 до 18:00;</li>
-                    <li class="career-modal__list-conditions-text">Заработная плата –<br/>от 35 000 руб;</li>
-                    <li class="career-modal__list-conditions-text">Оплата проезда, мобильной связи;</li>
-                    <li class="career-modal__list-conditions-text">Посещение офиса<br/>один раз в неделю;</li>
-                    <li class="career-modal__list-conditions-text">Вакантные территории уточняйте по телефону.</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
                 </ul>
             </li>
             <li class="career-modal__list-item">
                 <p class="career-modal__list-title">Обязанности:</p>
                 <ul class="career-modal__list-conditions">
-                    <li class="career-modal__list-conditions-text">Выкладка продукции в&nbsp;сетевых магазинах;</li>
-                    <li class="career-modal__list-conditions-text">Проверка сроков годности;</li>
-                    <li class="career-modal__list-conditions-text">Фотоотчетность;</li>
-                    <li class="career-modal__list-conditions-text">Сбор заказов.</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
                 </ul>
             </li>
             <li class="career-modal__list-item">
                 <p class="career-modal__list-title">Требования:</p>
                 <ul class="career-modal__list-conditions">
-                    <li class="career-modal__list-conditions-text">Наличие медицинской книжки (желательно);</li>
-                    <li class="career-modal__list-conditions-text">Желателен опыт работы мерчендайзером или торговым
-                        представителем.
-                    </li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
+                    <li class="career-modal__list-conditions-text">Пункт</li>
                 </ul>
             </li>
         </ul>

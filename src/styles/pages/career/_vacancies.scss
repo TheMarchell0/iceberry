@@ -168,6 +168,7 @@
 
     &-conditions {
       padding-left: 24px;
+      min-height: 180px;
 
       @media (max-width: $mobile) {
         padding-left: 21px;
