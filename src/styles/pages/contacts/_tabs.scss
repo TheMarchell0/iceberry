@@ -236,12 +236,16 @@
       margin: -19px 0 47px;
       z-index: 1;
       position: relative;
-      max-width: 274px;
-      width: 100%;
+      flex: 0 1 100%;
 
       @media (max-width: $tablet) {
         margin: 4px 0 32px;
         max-width: 63vw;
+      }
+
+      & .choices {
+        max-width: 274px;
+        width: 100%;
       }
     }
 

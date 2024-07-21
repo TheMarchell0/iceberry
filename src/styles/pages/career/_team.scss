@@ -12,6 +12,7 @@
   }
 
   &__title {
+    color: black;
     @media (max-width: $mobile) {
       text-align: center;
     }

@@ -267,31 +267,31 @@
                     </picture>
                 </div>
                 <div class="work__form">
-                    <form class="work__form-content js-form">
+                    <form class="work__form-content js-form" data-send-to="Карьера">
                         <div class="work__form-item career-form-item form__item">
                             <label for="name" class="work__form-label career-form-label form__label required">ФИО</label>
-                            <input type="text" id="name" class="work__form-input form__input js-form-input">
+                            <input type="text" id="name" name="ФИО" class="work__form-input form__input js-form-input js-form-input_required">
                         </div>
                         <div class="work__form-item career-form-item form__item">
                             <label for="city" class="work__form-label career-form-label form__label required">Город</label>
-                            <input type="text" id="city" class="work__form-input form__input js-form-input">
+                            <input type="text" id="city" name="Город" class="work__form-input form__input js-form-input js-form-input_required">
                         </div>
                         <div class="work__form-item career-form-item form__item">
                             <label for="phone" class="work__form-label career-form-label form__label required">Контактный телефон</label>
-                            <input type="text" id="phone" inputmode="numeric" class="work__form-input form__input js-phone-input js-form-input">
+                            <input type="text" id="phone" inputmode="numeric" name="Контактный телефон" class="work__form-input form__input js-phone-input js-form-input js-form-input_required">
                         </div>
                         <div class="work__form-item career-form-item form__item">
                             <label for="position" class="work__form-label career-form-label form__label required">Желаемая
                                 должность</label>
-                            <input type="text" id="position" class="work__form-input form__input js-form-input">
+                            <input type="text" id="position" name="Желаемая должность" class="work__form-input form__input js-form-input js-form-input_required">
                         </div>
                         <p class="work__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="work__form-item career-form-item career-form-item_file form__item">
-                            <p class="work__form-label form__label career-form-label required">Прикрепить резюме</p>
+                            <p class="work__form-label form__label career-form-label required">Прикрепить резюме (до 5&nbsp;МБ)</p>
                             <ul id="work-form" class="work__form-file-list form__files js-form-files" data-max-files="2">
                                 <li class="form__files-item js-files-list-item">
                                     <input type="file" id="work-form_file-1"
-                                           class="form__files-input js-files-input js-form-input">
+                                           class="form__files-input js-files-input js-form-input js-form-input_required" name="Прикрепленный файл">
                                     <label for="work-form_file-1" class="form__files-text js-files-label">Добавить</label>
                                     <span class="form__files-delete js-files-delete">X</span>
                                 </li>
@@ -361,31 +361,31 @@
                 </picture>
             </div>
             <div class="career-modal__form-wrapper">
-                <form class="career-modal__form-content js-form">
+                <form class="career-modal__form-content js-form" data-send-to="Карьера">
                     <div class="career-modal__form-item career-form-item form__item">
                         <label for="modal-name" class="career-modal__form-label career-form-label form__label required">ФИО</label>
-                        <input type="text" id="modal-name" class="career-modal__form-input form__input js-form-input">
+                        <input type="text" id="modal-name" name="ФИО" class="career-modal__form-input form__input js-form-input js-form-input_required">
                     </div>
                     <div class="career-modal__form-item career-form-item form__item">
                         <label for="modal-city" class="career-modal__form-label career-form-label form__label required">Город</label>
-                        <input type="text" id="modal-city" class="career-modal__form-input form__input js-form-input">
+                        <input type="text" id="modal-city" name="Город" class="career-modal__form-input form__input js-form-input js-form-input_required">
                     </div>
                     <div class="career-modal__form-item career-form-item form__item">
                         <label for="modal-phone" class="career-modal__form-label career-form-label form__label required">Контактный телефон</label>
-                        <input type="text" id="modal-phone" inputmode="numeric" class="career-modal__form-input form__input js-phone-input js-form-input">
+                        <input type="text" id="modal-phone" name="Контактный телефон" inputmode="numeric" class="career-modal__form-input form__input js-phone-input js-form-input js-form-input_required">
                     </div>
                     <div class="career-modal__form-item career-form-item form__item">
                         <label for="modal-position" class="career-modal__form-label career-form-label form__label required">Желаемая
                             должность</label>
-                        <input type="text" id="modal-position" class="career-modal__form-input form__input js-form-input">
+                        <input type="text" id="modal-position" name="Желаемая должность" class="career-modal__form-input form__input js-form-input js-form-input_required">
                     </div>
                     <p class="career-modal__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                     <div class="career-modal__form-item career-modal__form-item_file career-form-item_file form__item">
-                        <p class="career-modal__form-label career-form-label form__label required">Прикрепить резюме</p>
+                        <p class="career-modal__form-label career-form-label form__label required">Прикрепить резюме (до 5&nbsp;МБ)</p>
                         <ul id="work-modal-form" class="career-modal__form-file-list form__files js-form-files" data-max-files="2">
                             <li class="form__files-item js-files-list-item">
                                 <input type="file" id="work-modal-form_file-1"
-                                       class="form__files-input js-files-input js-form-input">
+                                       class="form__files-input js-files-input js-form-input js-form-input_required" name="Прикрепленный файл">
                                 <label for="work-modal-form_file-1" class="form__files-text js-files-label">Добавить</label>
                                 <span class="form__files-delete js-files-delete">X</span>
                             </li>

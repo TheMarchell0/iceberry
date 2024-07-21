@@ -15,25 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
         vacancies = parent.querySelector('.js-vacancies-content'),
         vacanciesLength = vacancies.querySelectorAll('.swiper-slide').length,
         forms = document.querySelectorAll('.js-form');
-    let dropdowns;
 
-    checkDropdowns();
     fileInputInitialization(forms);
     phoneMaskInitialization();
     openModalFunctional();
     createFormValidation(forms);
-
-    function checkDropdowns() {
-        dropdowns = parent.querySelectorAll('.choices__list--dropdown .choices__item');
-
-        if (dropdowns.length > 0) {
-            for (let dropdown of dropdowns) {
-                console.log(dropdown.innerHTML)
-            }
-        } else {
-            setTimeout(checkDropdowns, 200)
-        }
-    }
 
     const heroSlider = new Swiper(".js-hero-slider", {
         loop: true,

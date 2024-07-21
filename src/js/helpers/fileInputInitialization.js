@@ -34,7 +34,7 @@ export function fileInputInitialization(forms) {
             fileTemplate =
                 `<li class="form__files-item js-files-list-item">
                         <input type="file" id="${fileList.id}-file_${inputId}"
-                               class="form__files-input js-files-input js-form-input">
+                               class="form__files-input js-files-input js-form-input js-form-input_required" name="Прикрепленный файл">
                             <label for="${fileList.id}-file_${inputId}"
                                    class="form__files-text js-files-label">Добавить</label>
                             <span class="form__files-delete js-files-delete">X</span>

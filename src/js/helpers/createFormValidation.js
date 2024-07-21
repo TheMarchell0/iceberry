@@ -1,9 +1,15 @@
 export let isValid = false;
 
+const maxFileSize = 5 * 1024 * 1024,
+    phoneRegex = /^(\+7 \(\d{3}\) \d{3}-\d{2}-\d{2})$/,
+    emailRegex = /\S+@\S+\.\S+/,
+    allowedFormats = ['jpg', 'jpeg', 'png', 'gif', 'pdf', 'doc', 'docx', 'txt', 'xls', 'xlsx', 'csv', 'ppt', 'pptx', 'mp3', 'wav', 'mp4', 'avi', 'mov'];
+
 export function createFormValidation(forms) {
     for (let form of forms) {
         const submitButton = form.querySelector('.js-submit-button'),
-            dateInputs = form.querySelectorAll('.js-date-input');
+            dateInputs = form.querySelectorAll('.js-date-input'),
+            formType = form.getAttribute('data-send-to');
         let inputs = form.querySelectorAll('.js-form-input'),
             deleteButtons = form.querySelectorAll('.js-files-delete');
 
@@ -35,46 +41,74 @@ export function createFormValidation(forms) {
         }
 
         function validateEmail(email) {
-            const emailRegex = /\S+@\S+\.\S+/;
             return emailRegex.test(email);
         }
 
+
         function validateFile(fileInput) {
             const fileInputLength = Array.from(inputs).filter(input => input.classList.contains('js-files-input')).length;
-            const validate = fileInputLength === 1 && fileInput.files.length === 0;
-            return validate;
+            const firstItemEmpty = fileInputLength == 1 && fileInput.files.length === 0;
+
+            if (firstItemEmpty) { //Если не прикреплено ни одного файла, то валидация провалена
+                return false;
+            }
+
+            if (!firstItemEmpty && fileInput.files.length === 0) { // Если хотя бы один файл прикреплен и проходит валидацию, то убираем проверку для оставшегося пустого инпута с текстом "Добавить"
+                return true;
+            }
+
+            const file = fileInput.files[0];
+            const fileExtension = file.name.split('.').pop().toLowerCase();
+
+            if (!allowedFormats.includes(fileExtension)) {
+                alert('Недопустимый формат файла. Пожалуйста, прикрепите файл в одном из допустимых форматов.');
+                return false;
+            }
+
+            if (file.size > maxFileSize) {
+                alert('Размер одного из прикреплённых файлов превышает максимально допустимый.')
+                return false; // Если размер файла превышает максимальный размер, возвращаем false
+            }
+
+            return true; // Все проверки пройдены, файл валиден
         }
 
         function validatePhone(phoneInput) {
-            const phoneRegex = /^(\+7 \(\d{3}\) \d{3}-\d{2}-\d{2})$/;
             return phoneRegex.test(phoneInput)
         }
 
         function validateInput(input) {
-            const isEmailInput = input.classList.contains('js-email-input');
-            const isFileInput = input.classList.contains('js-files-input');
-            const isPhoneInput = input.classList.contains('js-phone-input');
-            const value = input.value.trim();
-            const isEmpty = value === '';
-            input.classList.remove('error', 'email-error');
+            if (input.classList.contains('js-form-input_required')) {
+                const isEmailInput = input.classList.contains('js-email-input');
+                const isFileInput = input.classList.contains('js-files-input');
+                const isPhoneInput = input.classList.contains('js-phone-input');
+                const value = input.value.trim();
+                const isEmpty = value === '';
+                input.classList.remove('error', 'email-error');
 
-            if (isEmpty && !isFileInput) {
-                input.classList.add('error');
-            } else {
-                input.classList.add('touched');
+                if (isEmpty && !isFileInput) {
+                    input.classList.add('error');
+                } else {
+                    input.classList.add('touched');
 
-                if (isEmailInput && !validateEmail(value)) {
-                    input.classList.add('error', 'email-error');
-                }
+                    if (isEmailInput && !validateEmail(value)) {
+                        input.classList.add('error', 'email-error');
+                    }
 
-                if (isFileInput && validateFile(input)) {
-                    input.classList.add('error', 'file-error');
-                }
-
-                if (isPhoneInput && !validatePhone(value)) {
-                    input.classList.add('error', 'phone-error');
+                    if (isFileInput && !validateFile(input)) {
+                        input.classList.add('error', 'file-error');
+                    }
+                    if (isPhoneInput && !validatePhone(value)) {
+                        input.classList.add('error', 'phone-error');
+                    }
                 }
             }
+        }
+
+        function formatPhoneNumber(phone) {
+            const phoneNumber = phone.replace(/\D/g, '');
+            const formattedPhoneNumber = `${phoneNumber.slice(0, 1)} ${phoneNumber.slice(1, 4)} ${phoneNumber.slice(4, 7)} ${phoneNumber.slice(7, 9)} ${phoneNumber.slice(9)}`;
+            return formattedPhoneNumber;
         }
 
         function checkAllFieldsValid() {
@@ -85,28 +119,27 @@ export function createFormValidation(forms) {
             if (allValid) {
                 let formData = new FormData();
                 inputs.forEach((input) => {
-                    if (input.type === 'file') {
+                    if (input.type === 'file' && input.files[0]) {
                         formData.append(input.name, input.files[0]);
-                    } else {
+                    } else if (input.type !== 'file') {
                         formData.append(input.name, input.value);
                     }
+/*                    if (input.classList.contains('js-phone-input')) {
+                        console.log(formatPhoneNumber(input.value))
+                        formData.append(input.name, formatPhoneNumber(input.value));
+                    }*/
                 });
-                fetch('https://script.google.com/macros/s/AKfycbzWtnv7MOYlXeUUGwSiv06WfFLTfmo-0N0IAowCCKn8kSWaqx_cS6YIzwhneQ4YhqX5/exec', {
+                formData.append('Sheet', formType);
+                for (var pair of formData.entries()) {
+                    console.log(pair[0] + ': ' + pair[1]);
+                }
+                fetch('https://script.google.com/macros/s/AKfycbwEUMBr2FCeF_lBJBK2zkya1gZd00AckQorlRY4N49nG_2ZGbaKjPovRA7L-CZ0zsqsQQ/exec', {
                     method: 'POST',
                     body: formData,
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    mode: 'cors'
+                    mode: 'no-cors',
                 })
                     .then(response => response.text())
                     .then(result => {
-                        isValid = true;
-                        clearFormFields();
-                        setTimeout(() => isValid = false, 1000)
-                        setTimeout(()=> {
-                            refreshFileInputs();
-                        }, 50)
                         console.log('Success:', result);
                     })
                     .catch(error => {
@@ -130,9 +163,19 @@ export function createFormValidation(forms) {
             inputs.forEach(input => {
                 validateInput(input);
             });
+
+            if (checkAllFieldsValid()) {
+                isValid = true;
+                clearFormFields();
+                setTimeout(() => isValid = false, 1000) // TODO: убрать таймаут, переместить в fetch при успешной отправке данных
+                setTimeout(() => {
+                    refreshFileInputs();
+                }, 50)
+            }
         });
 
         inputs.forEach((input) => {
+
             input.addEventListener('input', () => {
                 validateInput(input);
 

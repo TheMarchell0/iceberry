@@ -119,53 +119,53 @@
                     </div>
                 </div>
                 <div class="tabs__form active tabs__form_questions js-tab-form js-questions-form">
-                    <div class="tabs__form-select-wrapper">
-                        <select class="info__select js-choices-select" data-select-type="small">
-                            <option value="Москва">Потребитель</option>
-                            <option value="Lorem Ipsum1">Lorem Ipsum</option>
-                            <option value="Lorem Ipsum2">Lorem Ipsum</option>
-                            <option value="Lorem Ipsum3">Lorem Ipsum</option>
-                            <option value="Lorem Ipsum4">Lorem Ipsum</option>
-                        </select>
-                    </div>
-                    <form class="tabs__form-content js-form">
+                    <form class="tabs__form-content js-form" data-send-to="Обратная связь">
+                        <div class="tabs__form-select-wrapper">
+                            <select class="info__select js-choices-select js-form-input" data-select-type="small" name="От кого обращение">
+                                <option value="Потребитель">Потребитель</option>
+                                <option value="Lorem Ipsum1">Lorem Ipsum</option>
+                                <option value="Lorem Ipsum2">Lorem Ipsum</option>
+                                <option value="Lorem Ipsum3">Lorem Ipsum</option>
+                                <option value="Lorem Ipsum4">Lorem Ipsum</option>
+                            </select>
+                        </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_name" class="tabs__form-label form__label required">Имя</label>
-                            <input type="text" id="questions-form_name" class="tabs__form-input form__input js-form-input">
+                            <input type="text" id="questions-form_name" name="Имя" class="tabs__form-input form__input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_surname"
                                    class="tabs__form-label form__label required">Фамилия</label>
-                            <input type="text" id="questions-form_surname" class="tabs__form-input form__input js-form-input">
+                            <input type="text" id="questions-form_surname" name="Фамилия" class="tabs__form-input form__input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_email" class="tabs__form-label form__label required">Электронная
                                 почта</label>
-                            <input type="text" id="questions-form_email" class="tabs__form-input form__input js-form-input js-email-input">
+                            <input type="text" id="questions-form_email" name="Электронная почта" class="tabs__form-input form__input js-form-input js-form-input_required js-email-input">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_phone" class="tabs__form-label form__label required">Контактный
                                 телефон</label>
-                            <input type="text" id="questions-form_phone" inputmode="numeric" class="tabs__form-input form__input js-phone-input js-form-input">
+                            <input type="text" id="questions-form_phone" name="Контактный телефон" inputmode="numeric" class="tabs__form-input form__input js-phone-input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_city" class="tabs__form-label form__label required">Город</label>
-                            <input type="text" id="questions-form_city" class="tabs__form-input form__input js-form-input">
+                            <input type="text" id="questions-form_city" name="Город" class="tabs__form-input form__input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_communication-method"
                                    class="tabs__form-label form__label required">Предпочтительный способ связи</label>
                             <input type="text" id="questions-form_communication-method"
-                                   class="tabs__form-input form__input js-form-input">
+                                   class="tabs__form-input form__input js-form-input js-form-input_required" name="Предпочтительный способ связи">
                         </div>
-                        <textarea class="tabs__form-textarea form__textarea" placeholder="Ваше сообщение..."></textarea>
+                        <textarea class="tabs__form-textarea form__textarea js-form-input " name="Текст сообщения" placeholder="Ваше сообщение..."></textarea>
                         <p class="tabs__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="tabs__form-item form__item">
-                            <p class="tabs__form-label tabs__form-label_file form__label required">Прикрепить файл</p>
+                            <p class="tabs__form-label tabs__form-label_file form__label required">Прикрепить файл (до 5&nbsp;МБ)</p>
                             <ul id="feedback-form" class="tabs__form-file-list form__files js-form-files" data-max-files="4">
                                 <li class="form__files-item js-files-list-item">
                                     <input type="file" id="feedback-form_file-1"
-                                           class="tabs__form-file-list-input form__files-input js-files-input js-form-input">
+                                           class="tabs__form-file-list-input form__files-input js-files-input js-form-input js-form-input_required" name="Прикрепленный файл">
                                     <label for="feedback-form_file-1"
                                            class="form__files-text js-files-label">Добавить</label>
                                     <span class="form__files-delete js-files-delete">X</span>
@@ -180,28 +180,28 @@
                     </form>
                 </div>
                 <div class="tabs__form tabs__form_feedback js-tab-form js-feedback-form">
-                    <form class="tabs__form-content js-form">
+                    <form class="tabs__form-content js-form" data-send-to="Вопросы по качеству продуктов">
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_name" class="tabs__form-label form__label required">Имя и
                                 фамилия</label>
-                            <input type="text" id="feedback-form_name" class="tabs__form-input form__input js-form-input">
+                            <input type="text" id="feedback-form_name" name="Имя и фамилия" class="tabs__form-input form__input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_phone" class="tabs__form-label form__label required">Контактный
                                 телефон</label>
-                            <input type="text" id="feedback-form_phone" inputmode="numeric" class="tabs__form-input form__input js-phone-input js-form-input">
+                            <input type="text" id="feedback-form_phone" name="Контактный телефон" nputmode="numeric" class="tabs__form-input form__input js-phone-input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_email" class="tabs__form-label form__label required">Электронная
                                 почта</label>
-                            <input type="text" id="feedback-form_email" class="tabs__form-input form__input js-form-input js-email-input">
+                            <input type="text" id="feedback-form_email" name="Электронная почта" class="tabs__form-input form__input js-form-input js-form-input_required js-email-input">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_category" class="tabs__form-label form__label required">Категория
                                 продукта</label>
-                            <select id="feedback-form_category" class="info__select js-choices-select"
-                                    data-select-type="input">
-                                <option value="Москва">Вафельные стаканчики</option>
+                            <select id="feedback-form_category" class="info__select js-choices-select js-form-input"
+                                    data-select-type="input" name="Категория продукта" name="Категория продукта">
+                                <option value="Вафельные стаканчики">Вафельные стаканчики</option>
                                 <option value="Наименование1">Наименование</option>
                                 <option value="Наименование2">Наименование</option>
                                 <option value="Наименование3">Наименование</option>
@@ -211,8 +211,8 @@
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_brand" class="tabs__form-label form__label required">Бренд</label>
-                            <select id="feedback-form_brand" class="info__select js-choices-select"
-                                    data-select-type="input">
+                            <select id="feedback-form_brand" class="info__select js-choices-select js-form-input"
+                                    data-select-type="input" name="Бренд" name="Бренд">
                                 <option value="Вологодский пломбир">Вологодский пломбир</option>
                                 <option value="Наименование1">Наименование</option>
                                 <option value="Наименование2">Наименование</option>
@@ -223,26 +223,26 @@
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_flavor" class="tabs__form-label form__label required">Вкус</label>
-                            <input type="text" id="feedback-form_flavor" class="tabs__form-input form__input js-form-input">
+                            <input type="text" id="feedback-form_flavor" class="tabs__form-input form__input js-form-input js-form-input_required" name="Вкус">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_date" class="tabs__form-label form__label required">Дата
                                 производства</label>
-                            <input type="text" id="feedback-form_date" inputmode="numeric" class="tabs__form-input form__input js-date-input js-form-input">
+                            <input type="text" id="feedback-form_date" inputmode="numeric" name="Дата производства" class="tabs__form-input form__input js-date-input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item tabs__form-item_big">
                             <label for="feedback-form_purchase-place" class="tabs__form-label form__label required">Где
                                 приобретали товар</label>
-                            <input type="text" id="feedback-form_purchase-place" class="tabs__form-input form__input js-form-input">
+                            <input type="text" id="feedback-form_purchase-place" name="Где приобретали товар" class="tabs__form-input form__input js-form-input js-form-input_required">
                         </div>
-                        <textarea class="tabs__form-textarea form__textarea" placeholder="Ваше сообщение..."></textarea>
+                        <textarea class="tabs__form-textarea form__textarea js-form-input" placeholder="Ваше сообщение..." name="Текст сообщения"></textarea>
                         <p class="tabs__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="tabs__form-item form__item">
-                            <p class="tabs__form-label form__label required">Прикрепить файл</p>
+                            <p class="tabs__form-label form__label required">Прикрепить файл (до 5&nbsp;МБ)</p>
                             <ul id="questions-form" class="tabs__form-file-list form__files js-form-files" data-max-files="4">
                                 <li class="tabs__form-file-list-item form__files-item js-files-list-item">
                                     <input type="file" id="questions-form_file-1"
-                                           class="tabs__form-file-list-input form__files-input js-files-input js-form-input">
+                                           class="tabs__form-file-list-input form__files-input js-files-input js-form-input js-form-input_required" name="Прикрепленный файл">
                                     <label for="questions-form_file-1"
                                            class="tabs__form-file-text form__files-text js-files-label">Добавить</label>
                                     <span class="tabs__form-file-delete form__files-delete js-files-delete">X</span>
