@@ -117,34 +117,61 @@ export function createFormValidation(forms) {
             });
 
             if (allValid) {
-                let formData = new FormData();
+                let formData = new FormData(),
+                    uploadFiles = [],
+                    promiseList = [];
+
                 inputs.forEach((input) => {
-                    if (input.type === 'file' && input.files[0]) {
-                        formData.append(input.name, input.files[0]);
+                    if (input.type === 'file' && input.files.length > 0) {
+                        const file = input.files[0];
+                        const fr = new FileReader();
+                        let promise = new Promise((resolve) => {
+                            fr.onload = (event) => {
+                                try {
+                                    let fileInfo = {
+                                        fileArray: [...new Int8Array(event.target.result)],
+                                        filename: file.name,
+                                        mimeType: file.type,
+                                    };
+                                    uploadFiles.push(fileInfo);
+                                    resolve();
+                                } catch (error) {
+                                    console.error('Ошибка при обработке файла:', error);
+                                    resolve();
+                                }
+                            };
+
+                            fr.onerror = () => {
+                                console.error('Ошибка чтения файла:', file.name);
+                                resolve();
+                            };
+
+                            fr.readAsArrayBuffer(file);
+                        });
+
+                        promiseList.push(promise);
                     } else if (input.type !== 'file') {
                         formData.append(input.name, input.value);
                     }
-/*                    if (input.classList.contains('js-phone-input')) {
-                        console.log(formatPhoneNumber(input.value))
-                        formData.append(input.name, formatPhoneNumber(input.value));
-                    }*/
                 });
+
                 formData.append('Sheet', formType);
-                for (var pair of formData.entries()) {
-                    console.log(pair[0] + ': ' + pair[1]);
-                }
-                fetch('https://script.google.com/macros/s/AKfycbwEUMBr2FCeF_lBJBK2zkya1gZd00AckQorlRY4N49nG_2ZGbaKjPovRA7L-CZ0zsqsQQ/exec', {
-                    method: 'POST',
-                    body: formData,
-                    mode: 'no-cors',
-                })
-                    .then(response => response.text())
-                    .then(result => {
-                        console.log('Success:', result);
+
+                Promise.all(promiseList).then(() => {
+                    formData.append('files', JSON.stringify(uploadFiles));
+
+                    fetch('https://script.google.com/macros/s/AKfycbzFcCA6SwOOcTBTR6zeIWtWa_tlk5k2M5Ecy_lPlHlxvEup_gAzf583Gaj1vxEaB6jHwQ/exec', {
+                        method: 'POST',
+                        body: formData,
                     })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                        .then(response => response.text())
+                        .then(result => {
+                            console.log('Успех:', result);
+                        })
+                        .catch(error => {
+                            console.error('Ошибка:', error);
+                        });
+                });
             }
 
             return allValid;
