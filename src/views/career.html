@@ -267,14 +267,14 @@
                     </picture>
                 </div>
                 <div class="work__form">
-                    <form class="work__form-content js-form" data-send-to="Карьера" enctype="multipart/form-data">
+                    <form class="work__form-content js-form form" data-send-to="Карьера">
                         <div class="work__form-item career-form-item form__item">
                             <label for="name" class="work__form-label career-form-label form__label required">ФИО</label>
-                            <input type="text" id="name" name="ФИО" class="work__form-input form__input js-form-input js-form-input_required">
+                            <input type="text" id="name" name="ФИО" class="work__form-input form__input js-form-input js-form-input_required" maxlength="50">
                         </div>
                         <div class="work__form-item career-form-item form__item">
                             <label for="city" class="work__form-label career-form-label form__label required">Город</label>
-                            <input type="text" id="city" name="Город" class="work__form-input form__input js-form-input js-form-input_required">
+                            <input type="text" id="city" name="Город" class="work__form-input form__input js-form-input js-form-input_required" maxlength="50">
                         </div>
                         <div class="work__form-item career-form-item form__item">
                             <label for="phone" class="work__form-label career-form-label form__label required">Контактный телефон</label>
@@ -283,7 +283,7 @@
                         <div class="work__form-item career-form-item form__item">
                             <label for="position" class="work__form-label career-form-label form__label required">Желаемая
                                 должность</label>
-                            <input type="text" id="position" name="Желаемая должность" class="work__form-input form__input js-form-input js-form-input_required">
+                            <input type="text" id="position" name="Желаемая должность" class="work__form-input form__input js-form-input js-form-input_required" maxlength="50">
                         </div>
                         <p class="work__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="work__form-item career-form-item career-form-item_file form__item">
@@ -298,7 +298,7 @@
                             </ul>
                         </div>
                         <div class="work__form-footer form__footer">
-                            <button class="work__form-footer-button button js-submit-button js-modal-trigger">Отправить анкету</button>
+                            <button class="work__form-footer-button button js-submit-button">Отправить анкету</button>
                             <p class="work__form-footer-text career-form-footer-text form__footer-text">Нажимая на кнопку «Отправить анкету», вы
                                 даете согласие на
                                 обработку персональных данных.</p>
@@ -361,14 +361,14 @@
                 </picture>
             </div>
             <div class="career-modal__form-wrapper">
-                <form class="career-modal__form-content js-form" data-send-to="Карьера">
+                <form class="career-modal__form-content js-form form" data-send-to="Карьера">
                     <div class="career-modal__form-item career-form-item form__item">
                         <label for="modal-name" class="career-modal__form-label career-form-label form__label required">ФИО</label>
-                        <input type="text" id="modal-name" name="ФИО" class="career-modal__form-input form__input js-form-input js-form-input_required">
+                        <input type="text" id="modal-name" name="ФИО" class="career-modal__form-input form__input js-form-input js-form-input_required" maxlength="50">
                     </div>
                     <div class="career-modal__form-item career-form-item form__item">
                         <label for="modal-city" class="career-modal__form-label career-form-label form__label required">Город</label>
-                        <input type="text" id="modal-city" name="Город" class="career-modal__form-input form__input js-form-input js-form-input_required">
+                        <input type="text" id="modal-city" name="Город" class="career-modal__form-input form__input js-form-input js-form-input_required" maxlength="50">
                     </div>
                     <div class="career-modal__form-item career-form-item form__item">
                         <label for="modal-phone" class="career-modal__form-label career-form-label form__label required">Контактный телефон</label>
@@ -377,7 +377,7 @@
                     <div class="career-modal__form-item career-form-item form__item">
                         <label for="modal-position" class="career-modal__form-label career-form-label form__label required">Желаемая
                             должность</label>
-                        <input type="text" id="modal-position" name="Желаемая должность" class="career-modal__form-input form__input js-form-input js-form-input_required">
+                        <input type="text" id="modal-position" name="Желаемая должность" class="career-modal__form-input form__input js-form-input js-form-input_required" maxlength="50">
                     </div>
                     <p class="career-modal__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                     <div class="career-modal__form-item career-modal__form-item_file career-form-item_file form__item">
@@ -392,7 +392,7 @@
                         </ul>
                     </div>
                     <div class="career-modal__form-footer form__footer">
-                        <button class="career-modal__form-footer-button button js-submit-button js-modal-trigger">Отправить анкету</button>
+                        <button class="career-modal__form-footer-button button js-submit-button">Отправить анкету</button>
                         <p class="career-modal__form-footer-text career-form-footer-text form__footer-text">Нажимая на кнопку «Отправить анкету», вы
                             даете согласие на
                             обработку персональных данных.</p>

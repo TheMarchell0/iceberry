@@ -4,7 +4,7 @@ import Choices from "choices.js";
 import 'choices.js/public/assets/styles/choices.min.css';
 import {fileInputInitialization} from "../helpers/fileInputInitialization";
 import {phoneMaskInitialization} from "../helpers/phoneMaskInitialization";
-import createFormValidation from "../helpers/createFormValidation";
+import {createFormValidation} from "../helpers/createFormValidation";
 import {openModalFunctional} from "../helpers/openModalFunctional";
 
 document.addEventListener('DOMContentLoaded', function () {
