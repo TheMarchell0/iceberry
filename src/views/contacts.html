@@ -33,78 +33,359 @@
             </picture>
         </div>
     </section>
-    <section class="info js-info-parent">
+    <section class="info">
         <div class="info__container container">
             <h2 class="info__title section-title">Айсберри в&nbsp;Вашем регионе</h2>
             <div class="info__select-wrapper choices-wrapper">
-                <select class="info__select js-choices-select city-select" data-select-type="big">
-                    <option value="Дивизион Москва и МО">Дивизион Москва и МО</option>
-                    <option value="Дивизион Санкт-Петербург, Ярославль - Кострома, Архангельск, Смоленск, Иваново, Владимир">
-                        Дивизион Санкт-Петербург, Ярославль - Кострома, Архангельск, Смоленск, Иваново, Владимир
-                    </option>
-                    <option value="Дивизион Екатеринбург, Пермь, Курган, Казань - Самара - Оренбург, Пенза">Дивизион
-                        Екатеринбург, Пермь, Курган, Казань - Самара - Оренбург, Пенза
-                    </option>
-                    <option value="Дивизион Воронеж, Курск, Тамбов, Липецк, Брянск, Борисоглебск">Дивизион Воронеж,
-                        Курск, Тамбов, Липецк, Брянск, Борисоглебск
-                    </option>
-                    <option value="Дивизион Краснодар, логисты и дистрибьюторы Побережья, Крым, Северный Кавказ">
-                        Дивизион Краснодар, логисты и дистрибьюторы Побережья, Крым, Северный Кавказ
-                    </option>
-                    <option value="Дивизион Тверь, Тула, Калуга">Дивизион Тверь, Тула, Калуга</option>
-                    <option value="Директора филиалов">Директора филиалов</option>
+                <select class="info__select js-choices-select city-select js-contacts-select" data-select-type="big">
+                    <option value="Департамент продаж">Департамент продаж</option>
+                    <option value="Департамент экспортных продаж">Департамент экспортных продаж</option>
+                    <option value="Департамент продаж Хорека">Департамент продаж Хорека</option>
+                    <option value="Департамент региональных продаж">Департамент региональных продаж</option>
+                    <option value="Департамент по работе с персоналом">Департамент по работе с персоналом</option>
                     <option value="Департамент закупок">Департамент закупок</option>
                     <option value="Отдел управления товарными запасами">Отдел управления товарными запасами</option>
                     <option value="Отдел закупок ЗПФ">Отдел закупок ЗПФ</option>
-                    <option value="Департамент экспортных продаж">Департамент экспортных продаж</option>
-                    <option value="Управление продаж в канале Хорека">Управление продаж в канале Хорека</option>
-                    <option value="Отдел региональных продаж">Отдел региональных продаж</option>
                     <option value="Производственная площадка, г. Тутаев">Производственная площадка, г. Тутаев</option>
                     <option value="Производственная площадка, г. Пенза">Производственная площадка, г. Пенза</option>
                     <option value="Производственная площадка, г. Вологда">Производственная площадка, г. Вологда</option>
                 </select>
             </div>
-            <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
-                <ul class="info__list swiper-wrapper js-info-content">
-                    <li class="info__list-item swiper-slide">
-                        <p class="info__list-position">Директор<br/>по&nbsp;продажам</p>
-                        <p class="info__list-name">Беседин<br/>Денис Александрович</p>
-                        <a href="mailto:Denis.Besedin@iceberry.ru" class="info__list-link">Denis.Besedin@iceberry.ru</a>
-                        <button class="info__list-button button">Связаться</button>
-                    </li>
-                    <li class="info__list-item swiper-slide">
-                        <p class="info__list-position">Начальник<br/>управления<br/>продаж Москвы</p>
-                        <p class="info__list-name">Сидорков<br/>Николай Александрович</p>
-                        <a href="tel:+79163431887" class="info__list-link">+7 (916) 343-18-87</a>
-                        <a href="mailto:Nikolay.Sidorkov@iceberry.ru" class="info__list-link">Nikolay.Sidorkov@iceberry.ru</a>
-                        <button class="info__list-button button">Связаться</button>
-                    </li>
-                    <li class="info__list-item swiper-slide">
-                        <p class="info__list-position">Начальник<br/>управления<br/>продаж МО</p>
-                        <p class="info__list-name">Бычкин<br/>Матвей Вячеславович</p>
-                        <a href="tel:+79161059159" class="info__list-link">+7 (916) 105-91-59</a>
-                        <a href="mailto:Matvey.Bychkin@iceberry.ru"
-                           class="info__list-link">Matvey.Bychkin@iceberry.ru</a>
-                        <button class="info__list-button button">Связаться</button>
-                    </li>
-                    <li class="info__list-item swiper-slide">
-                        <p class="info__list-position">Call-центр для заказа<br/>мороженого<br/>в&nbsp;Москве и&nbsp;МО
-                        </p>
-                        <a href="tel:+79150426740" class="info__list-link">+7 (915) 042-67-40</a>
-                        <button class="info__list-button button">Связаться</button>
-                    </li>
-                    <li class="info__list-item swiper-slide">
-                        <p class="info__list-position">Директор<br/>по продажам</p>
-                        <p class="info__list-name">Беседин<br/>Денис Александрович</p>
-                        <a href="mailto:Denis.Besedin@iceberry.ru" class="info__list-link">Denis.Besedin@iceberry.ru</a>
-                        <button class="info__list-button button">Связаться</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="info__slider-arrows slider-arrows">
-                <div class="info__slider-prev swiper-button-prev"></div>
-                <div class="info__slider-next swiper-button-next"></div>
-            </div>
+            <ul class="info__options">
+                <li class="info__options-item js-option-content info_active" data-value-content="Департамент продаж">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель дивизиона</p>
+                                <p class="info__list-name">Артемьев Михаил Юрьевич</p>
+                                <p class="info__list-text">Дивизион Москва и МО</p>
+                                <a href="mailto:mikhail.artemev@iceberry.ru" class="info__list-text">mikhail.artemev@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Заместитель директора по продажам</p>
+                                <p class="info__list-name">Петров Андрей Александрович</p>
+                                <p class="info__list-text">Дивизион Санкт-Петербург, Ярославль, Кострома, Архангельск,
+                                    Смоленск, Иваново, Владимир</p>
+                                <a href="mailto:Andrey.Petrov@iceberry.ru" class="info__list-text">Andrey.Petrov@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель дивизиона</p>
+                                <p class="info__list-name">Ковалев Александр Контантинович</p>
+                                <p class="info__list-text">Дивизион Екатеринбург, Пермь, Курган, Казань, Самара,
+                                    Оренбург, Пенза</p>
+                                <a href="mailto:Alexandr.Kovalev@iceberry.ru" class="info__list-text">Alexandr.Kovalev@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель дивизиона</p>
+                                <p class="info__list-name">Харламов Дмитрий Владимирович</p>
+                                <p class="info__list-text">Дивизион Воронеж, Курск, Тамбов, Липецк, Брянск,
+                                    Борисоглебск</p>
+                                <a href="mailto:Dmitry.Harlamov@iceberry.ru" class="info__list-text">Dmitry.Harlamov@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель дивизиона</p>
+                                <p class="info__list-name">Кравцов Андрей Николаевич</p>
+                                <p class="info__list-text">Дивизион Краснодар, логисты и дистрибьюторы Побережья, Крым,
+                                    Северный Кавказ</p>
+                                <a href="mailto:Andrey.Kravcov@iceberry.ru" class="info__list-text">Andrey.Kravcov@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель дивизиона</p>
+                                <p class="info__list-name">Иванов Виталий Геннадьевич</p>
+                                <p class="info__list-text">Дивизион Тверь, Тула, Калуга</p>
+                                <a href="mailto:Vitaly.Ivanov@iceberry.ru" class="info__list-text">Vitaly.Ivanov@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Поломошнов Дмитрий Александрович</p>
+                                <p class="info__list-text">ОП в г. Вологда, Вытегра</p>
+                                <a href="mailto:PolomoshDA@iceberry.ru"
+                                   class="info__list-text">PolomoshDA@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Рубцов Максим Алексеевич</p>
+                                <p class="info__list-text">ОП в г. Череповец</p>
+                                <a href="mailto:Maksim.Rubcov@iceberry.ru" class="info__list-text">Maksim.Rubcov@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Белоруков Денис Владимирович</p>
+                                <p class="info__list-text">ОП в г. Великий Устюг, Котлас</p>
+                                <a href="mailto:BelorukovD@iceberry.ru"
+                                   class="info__list-text">BelorukovD@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Головинский Александр Николаевич</p>
+                                <p class="info__list-text">ОП в г. Вельск</p>
+                                <a href="mailto:A.Golovinskiy@iceberry.ru" class="info__list-text">A.Golovinskiy@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Попова Екатерина Юрьевна</p>
+                                <p class="info__list-text">ОП в г. Тарнога</p>
+                                <a href="mailto:Ekaterina.Popova@iceberry.ru" class="info__list-text">Ekaterina.Popova@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Фирсов Евгений Анатольевич</p>
+                                <p class="info__list-text">ОП в г. Нижний Новгород, Киров</p>
+                                <a href="mailto:Evgeny.Firsov@iceberry.ru" class="info__list-text">Evgeny.Firsov@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Буровкин Алексей Александрович</p>
+                                <p class="info__list-text">ОП в г. Рязань</p>
+                                <a href="mailto:Alexey.Burovkin@iceberry.ru" class="info__list-text">Alexey.Burovkin@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Шейкина Ольга Владимировна</p>
+                                <p class="info__list-text">ОП в г. Ростов-на-Дону</p>
+                                <a href="mailto:Olga.Sheykina@iceberry.ru" class="info__list-text">Olga.Sheykina@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Департамент экспортных продаж">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель</p>
+                                <p class="info__list-name">Штырева Наталия Александровна</p>
+                                <p class="info__list-text">Направление Азия</p>
+                                <a href="mailto:Natalia.Shtyreva@iceberry.ru" class="info__list-text">Natalia.Shtyreva@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Департамент продаж Хорека">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Начальник</p>
+                                <p class="info__list-name">Шуршин Владимир Александрович</p>
+                                <p class="info__list-text">Управление продаж в канале Хорека</p>
+                                <a href="mailto:Vladimir.Shurshin@iceberry.ru" class="info__list-text">Vladimir.Shurshin@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Департамент региональных продаж">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель</p>
+                                <p class="info__list-name">Дашкевич Виталий Александрович</p>
+                                <p class="info__list-text">Отдел региональных продаж</p>
+                                <a href="mailto:Vitaly.Dashkevich@iceberry.ru" class="info__list-text">Vitaly.Dashkevich@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Департамент по работе с персоналом">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Беляева Эльмира Фаритовна</p>
+                                <p class="info__list-text">Департамент по работе с персоналом</p>
+                                <a href="mailto:Elmira.Belyaeva@iceberry.ru" class="info__list-text">Elmira.Belyaeva@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель</p>
+                                <p class="info__list-name">Комарова Инна Валерьевна</p>
+                                <p class="info__list-text">Отдел подбора персонала г. Москва</p>
+                                <a href="mailto:Inna.Komarova@iceberry.ru" class="info__list-text">Inna.Komarova@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель</p>
+                                <p class="info__list-name">Дашук Мария Валерьевна</p>
+                                <p class="info__list-text">Отдел подбора персонала г. Москва</p>
+                                <a href="mailto:Mariya.Dashuk@iceberry.ru" class="info__list-text">Mariya.Dashuk@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель</p>
+                                <p class="info__list-name">Хусу Екатерина Николаевна</p>
+                                <p class="info__list-text">Отдел подбора персонала г. Вологда</p>
+                                <a href="mailto:HusuEN@iceberry.ru" class="info__list-text">HusuEN@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель</p>
+                                <p class="info__list-name">Масленикова Ирина Николаевна</p>
+                                <p class="info__list-text">Отдел подбора персонала г. Тутаев</p>
+                                <a href="mailto:Irina.Maslenikova@iceberry.ru" class="info__list-text">Irina.Maslenikova@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Менеджер по персоналу</p>
+                                <p class="info__list-name">Кульчева Дарья Игоревна</p>
+                                <p class="info__list-text">Отдел подбора персонала г. Пенза</p>
+                                <a href="mailto:Daria.Surgucheva@iceberry.ru" class="info__list-text">Daria.Surgucheva@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Департамент закупок">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Директор</p>
+                                <p class="info__list-name">Еременко Олег Владимирович</p>
+                                <p class="info__list-text">Департамент закупок</p>
+                                <a href="mailto:Oleg.Eremenko@iceberry.ru" class="info__list-text">Oleg.Eremenko@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель отдела по проведению тендеров</p>
+                                <p class="info__list-name">Абрахимова Марина Анатольевна</p>
+                                <p class="info__list-text">Департамент закупок</p>
+                                <a href="mailto:Marina.Abrakhimova@iceberry.ru" class="info__list-text">Marina.Abrakhimova@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Менеджер по упаковке</p>
+                                <p class="info__list-name">Вологжанникова Ольга</p>
+                                <p class="info__list-text">Департамент закупок</p>
+                                <a href="mailto:VolOA@iceberry.ru" class="info__list-text">VolOA@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Отдел управления товарными запасами">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель</p>
+                                <p class="info__list-name">Игнатова Анна Евгеньевна</p>
+                                <p class="info__list-text">Группа управления товарными запасами</p>
+                                <a href="mailto:Anna.Ignatova@iceberry.ru" class="info__list-text">Anna.Ignatova@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Отдел закупок ЗПФ">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Руководитель</p>
+                                <p class="info__list-name">Рыхлицкая Ольга Владимировна</p>
+                                <p class="info__list-text">Отдел закупок ЗПФ</p>
+                                <a href="mailto:olga.ryhlickaya@iceberry.ru" class="info__list-text">olga.ryhlickaya@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Производственная площадка, г. Тутаев">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Помощник генерального директора</p>
+                                <p class="info__list-name">Бурлакова Мария</p>
+                                <p class="info__list-text">Производственная площадка, г. Тутаев</p>
+                                <a href="mailto:Maria.Buralkova@iceberry.ru" class="info__list-text">Maria.Buralkova@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Производственная площадка, г. Пенза">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Менеджер по персоналу</p>
+                                <p class="info__list-name">Кульчева Дарья Игоревна</p>
+                                <p class="info__list-text">Производственная площадка, г. Пенза</p>
+                                <a href="mailto:Daria.Surgucheva@iceberry.ru" class="info__list-text">Daria.Surgucheva@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+                <li class="info__options-item js-option-content" data-value-content="Производственная площадка, г. Вологда">
+                    <div class="info__swiper swiper js-info-slider swiper-overflow-hidden">
+                        <ul class="info__list swiper-wrapper">
+                            <li class="info__list-item swiper-slide">
+                                <p class="info__list-position">Офис-менеджер</p>
+                                <p class="info__list-name">Зажигина Елена</p>
+                                <p class="info__list-text">Производственная площадка, г. Вологда</p>
+                                <a href="mailto:Elena.Zazhigina@iceberry.ru" class="info__list-text">Elena.Zazhigina@iceberry.ru</a>
+                                <button class="info__list-button button">Связаться</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info__slider-arrows slider-arrows">
+                        <div class="info__slider-prev swiper-button-prev"></div>
+                        <div class="info__slider-next swiper-button-next"></div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
     <section class="tabs">
@@ -121,7 +402,8 @@
                 <div class="tabs__form active tabs__form_questions js-tab-form js-questions-form">
                     <form class="tabs__form-content js-form form" data-send-to="Обратная связь">
                         <div class="tabs__form-select-wrapper">
-                            <select class="info__select js-choices-select js-form-input" data-select-type="small" name="От кого обращение">
+                            <select class="info__select js-choices-select js-form-input" data-select-type="small"
+                                    name="От кого обращение">
                                 <option value="Потребитель" selected>Потребитель</option>
                                 <option value="Lorem Ipsum1">Lorem Ipsum</option>
                                 <option value="Lorem Ipsum2">Lorem Ipsum</option>
@@ -131,41 +413,54 @@
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_name" class="tabs__form-label form__label required">Имя</label>
-                            <input type="text" id="questions-form_name" name="Имя" class="tabs__form-input form__input js-form-input js-form-input_required" maxlength="50">
+                            <input type="text" id="questions-form_name" name="Имя"
+                                   class="tabs__form-input form__input js-form-input js-form-input_required"
+                                   maxlength="50">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_surname"
                                    class="tabs__form-label form__label required">Фамилия</label>
-                            <input type="text" id="questions-form_surname" name="Фамилия" class="tabs__form-input form__input js-form-input js-form-input_required" maxlength="50">
+                            <input type="text" id="questions-form_surname" name="Фамилия"
+                                   class="tabs__form-input form__input js-form-input js-form-input_required"
+                                   maxlength="50">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_email" class="tabs__form-label form__label required">Электронная
                                 почта</label>
-                            <input type="text" id="questions-form_email" name="Электронная почта" class="tabs__form-input form__input js-form-input js-form-input_required js-email-input" maxlength="50">
+                            <input type="text" id="questions-form_email" name="Электронная почта"
+                                   class="tabs__form-input form__input js-form-input js-form-input_required js-email-input"
+                                   maxlength="50">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_phone" class="tabs__form-label form__label required">Контактный
                                 телефон</label>
-                            <input type="text" id="questions-form_phone" name="Контактный телефон" inputmode="numeric" class="tabs__form-input form__input js-phone-input js-form-input js-form-input_required">
+                            <input type="text" id="questions-form_phone" name="Контактный телефон" inputmode="numeric"
+                                   class="tabs__form-input form__input js-phone-input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_city" class="tabs__form-label form__label required">Город</label>
-                            <input type="text" id="questions-form_city" name="Город" class="tabs__form-input form__input js-form-input js-form-input_required" maxlength="50">
+                            <input type="text" id="questions-form_city" name="Город"
+                                   class="tabs__form-input form__input js-form-input js-form-input_required"
+                                   maxlength="50">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="questions-form_communication-method"
                                    class="tabs__form-label form__label required">Предпочтительный способ связи</label>
                             <input type="text" id="questions-form_communication-method"
-                                   class="tabs__form-input form__input js-form-input js-form-input_required" name="Предпочтительный способ связи" maxlength="50">
+                                   class="tabs__form-input form__input js-form-input js-form-input_required"
+                                   name="Предпочтительный способ связи" maxlength="50">
                         </div>
-                        <textarea class="tabs__form-textarea form__textarea js-form-input" name="Текст сообщения" placeholder="Ваше сообщение..." maxlength="500"></textarea>
+                        <textarea class="tabs__form-textarea form__textarea js-form-input" name="Текст сообщения"
+                                  placeholder="Ваше сообщение..." maxlength="500"></textarea>
                         <p class="tabs__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="tabs__form-item form__item">
                             <p class="tabs__form-label tabs__form-label_file form__label required">Прикрепить файл (до 5&nbsp;МБ)</p>
-                            <ul id="feedback-form" class="tabs__form-file-list form__files js-form-files" data-max-files="4">
+                            <ul id="feedback-form" class="tabs__form-file-list form__files js-form-files"
+                                data-max-files="4">
                                 <li class="form__files-item js-files-list-item">
                                     <input type="file" id="feedback-form_file-1"
-                                           class="tabs__form-file-list-input form__files-input js-files-input js-form-input js-form-input_required" name="Прикрепленный файл">
+                                           class="tabs__form-file-list-input form__files-input js-files-input js-form-input js-form-input_required"
+                                           name="Прикрепленный файл">
                                     <label for="feedback-form_file-1"
                                            class="form__files-text js-files-label">Добавить</label>
                                     <span class="form__files-delete js-files-delete">X</span>
@@ -184,17 +479,22 @@
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_name" class="tabs__form-label form__label required">Имя и
                                 фамилия</label>
-                            <input type="text" id="feedback-form_name" name="Имя и фамилия" class="tabs__form-input form__input js-form-input js-form-input_required" maxlength="50">
+                            <input type="text" id="feedback-form_name" name="Имя и фамилия"
+                                   class="tabs__form-input form__input js-form-input js-form-input_required"
+                                   maxlength="50">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_phone" class="tabs__form-label form__label required">Контактный
                                 телефон</label>
-                            <input type="text" id="feedback-form_phone" name="Контактный телефон" inputmode="numeric" class="tabs__form-input form__input js-phone-input js-form-input js-form-input_required">
+                            <input type="text" id="feedback-form_phone" name="Контактный телефон" inputmode="numeric"
+                                   class="tabs__form-input form__input js-phone-input js-form-input js-form-input_required">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_email" class="tabs__form-label form__label required">Электронная
                                 почта</label>
-                            <input type="text" id="feedback-form_email" name="Электронная почта" class="tabs__form-input form__input js-form-input js-form-input_required js-email-input" maxlength="50">
+                            <input type="text" id="feedback-form_email" name="Электронная почта"
+                                   class="tabs__form-input form__input js-form-input js-form-input_required js-email-input"
+                                   maxlength="50">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_category" class="tabs__form-label form__label required">Категория
@@ -223,26 +523,35 @@
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_flavor" class="tabs__form-label form__label required">Вкус</label>
-                            <input type="text" id="feedback-form_flavor" class="tabs__form-input form__input js-form-input js-form-input_required" name="Вкус" maxlength="50">
+                            <input type="text" id="feedback-form_flavor"
+                                   class="tabs__form-input form__input js-form-input js-form-input_required" name="Вкус"
+                                   maxlength="50">
                         </div>
                         <div class="tabs__form-item form__item">
                             <label for="feedback-form_date" class="tabs__form-label form__label required">Дата
                                 производства</label>
-                            <input type="text" id="feedback-form_date" inputmode="numeric" name="Дата производства" class="tabs__form-input form__input js-date-input js-form-input js-form-input_required" maxlength="50">
+                            <input type="text" id="feedback-form_date" inputmode="numeric" name="Дата производства"
+                                   class="tabs__form-input form__input js-date-input js-form-input js-form-input_required"
+                                   maxlength="50">
                         </div>
                         <div class="tabs__form-item form__item tabs__form-item_big">
                             <label for="feedback-form_purchase-place" class="tabs__form-label form__label required">Где
                                 приобретали товар</label>
-                            <input type="text" id="feedback-form_purchase-place" name="Где приобретали товар" class="tabs__form-input form__input js-form-input js-form-input_required" maxlength="50">
+                            <input type="text" id="feedback-form_purchase-place" name="Где приобретали товар"
+                                   class="tabs__form-input form__input js-form-input js-form-input_required"
+                                   maxlength="50">
                         </div>
-                        <textarea class="tabs__form-textarea form__textarea js-form-input" placeholder="Ваше сообщение..." name="Текст сообщения" maxlength="500"></textarea>
+                        <textarea class="tabs__form-textarea form__textarea js-form-input"
+                                  placeholder="Ваше сообщение..." name="Текст сообщения" maxlength="500"></textarea>
                         <p class="tabs__form-notification form__notification">* Поля, обязательные для заполнения.</p>
                         <div class="tabs__form-item form__item">
                             <p class="tabs__form-label form__label required">Прикрепить файл (до 5&nbsp;МБ)</p>
-                            <ul id="questions-form" class="tabs__form-file-list form__files js-form-files" data-max-files="4">
+                            <ul id="questions-form" class="tabs__form-file-list form__files js-form-files"
+                                data-max-files="4">
                                 <li class="tabs__form-file-list-item form__files-item js-files-list-item">
                                     <input type="file" id="questions-form_file-1"
-                                           class="tabs__form-file-list-input form__files-input js-files-input js-form-input js-form-input_required" name="Прикрепленный файл">
+                                           class="tabs__form-file-list-input form__files-input js-files-input js-form-input js-form-input_required"
+                                           name="Прикрепленный файл">
                                     <label for="questions-form_file-1"
                                            class="tabs__form-file-text form__files-text js-files-label">Добавить</label>
                                     <span class="tabs__form-file-delete form__files-delete js-files-delete">X</span>

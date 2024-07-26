@@ -6,10 +6,6 @@
   @media (max-width: $mobile) {
     margin-top: -24px;
   }
-  
-  &__container {
-    position: relative;
-  }
 
   &__title {
     color: $black;
@@ -41,13 +37,14 @@
     }
 
     &-item {
-      min-height: 289px;
       border: 1px solid $black;
       border-radius: 28px;
       padding: 29px 19px;
       background-color: #FFFFFF;
-      display: flex!important;
+      display: flex !important;
       flex-direction: column;
+      width: 100%;
+      height: auto !important;
 
       @media (max-width: $mobile) {
         min-height: 269px;
@@ -61,10 +58,11 @@
       line-height: 24.2px;
       margin-bottom: 17px;
       min-height: 72px;
+      max-width: 260px;
     }
 
     &-name,
-    &-link {
+    &-text {
       font-size: 17px;
       font-weight: 400;
       line-height: 18.7px;
@@ -74,14 +72,18 @@
       margin-bottom: 6px;
     }
 
-    &-name~&-link {
-      margin: initial;
-    }
-
-    &-link {
+    &-text {
       color: $black;
       text-decoration: none;
-      margin: auto 0;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 350px) {
+        font-size: 15px;
+        line-height: 16.7px;
+      }
     }
 
     &-button {
@@ -89,8 +91,39 @@
     }
   }
 
+  &__options {
+
+    &-item {
+      position: relative;
+      display: none;
+      min-height: 408px;
+
+      @media (max-width: $mobile) {
+        min-height: 361px;
+      }
+
+      &.info_active {
+        display: block;
+      }
+
+      &:not(.info__options-item_slider) {
+        & .info__list-item:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        & .info__list-item {
+          max-width: 310px;
+        }
+      }
+    }
+  }
+
   &__slider-arrows {
-    display: flex;
+    display: none;
+
+    .info__options-item_slider & {
+      display: flex;
+    }
 
     @media (min-width: 1200px) and (max-width: $laptop) {
       left: 20px;
@@ -99,8 +132,8 @@
 
     @media (min-width: 1200px) {
       position: absolute;
-      bottom: 141px;
-      left: 116px;
+      bottom: 180px;
+      left: 95px;
       max-width: 1109px;
     }
   }
