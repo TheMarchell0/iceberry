@@ -177,7 +177,7 @@
           }
         }
 
-        &:nth-child(-n+5) {
+        &:nth-child(-n+6) {
           @media (max-width: $tablet) {
             margin-bottom: 41px;
           }
@@ -278,6 +278,7 @@
         @media (max-width: $mobile) {
           flex-wrap: wrap;
           max-width: 234px;
+          margin-bottom: 20px;
         }
 
         &-item {
