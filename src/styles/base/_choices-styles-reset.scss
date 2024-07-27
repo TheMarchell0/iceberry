@@ -49,6 +49,10 @@
         height: 20px !important;
         background-size: cover;
       }
+
+      @media (max-width: 350px) {
+        display: none;
+      }
     }
 
     & .choices__inner {
