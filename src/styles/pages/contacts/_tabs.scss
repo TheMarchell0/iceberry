@@ -273,12 +273,12 @@
         @media (max-width: $tablet) {
           max-width: 60%;
           width: 100%;
+          margin-bottom: 20px;
         }
 
         @media (max-width: $mobile) {
           flex-wrap: wrap;
           max-width: 234px;
-          margin-bottom: 20px;
         }
 
         &-item {
