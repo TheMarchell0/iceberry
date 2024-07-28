@@ -66,11 +66,14 @@
       overflow: hidden;
       position: relative;
       min-height: 350px;
-      max-width: 310px;
       width: 100%;
       margin-bottom: 20px;
       padding: 23px 20px;
       z-index: 1;
+
+      &:only-child {
+        max-width: 310px;
+      }
 
 
       &:not(:nth-child(4n)) {

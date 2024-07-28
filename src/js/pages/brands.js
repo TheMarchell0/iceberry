@@ -14,13 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
             clickable: true,
         },
         effect: 'fade',
-        slidesPerView: 1,
         allowTouchMove: false,
-        speed: 800,
+        speed: 800,/*
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-        },
+        },*/
     });
 
     heroSlider.on('slideChange', function () {

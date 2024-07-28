@@ -34,8 +34,8 @@
   overflow: visible!important;
 }
 
-.swiper-slide {
-  transition: 0.2s linear!important;
+.swiper:not(.swiper-fade) .swiper-slide {
+  transition: 0.2s linear !important;
 }
 
 .swiper-overflow-hidden {

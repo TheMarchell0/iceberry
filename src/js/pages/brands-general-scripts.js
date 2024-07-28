@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 nextEl: ".assortment__slider-next",
                 prevEl: ".assortment__slider-prev",
             },
-            slidesPerView: 'auto',
+            width: 310,
         });
     }
 });
