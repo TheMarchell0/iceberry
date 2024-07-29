@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         effect: 'fade',
         allowTouchMove: false,
-        speed: 800,/*
+        speed: 800,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-        },*/
+        },
     });
 
     heroSlider.on('slideChange', function () {
