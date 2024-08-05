@@ -45,6 +45,7 @@
       flex-direction: column;
       width: 100%;
       height: auto !important;
+      min-height: 300px;
 
       @media (max-width: $mobile) {
         min-height: 269px;
@@ -56,8 +57,8 @@
       font-size: 22px;
       font-weight: 700;
       line-height: 24.2px;
-      margin-bottom: 17px;
-      min-height: 72px;
+      margin-bottom: 10px;
+      min-height: 49px;
       max-width: 260px;
     }
 
@@ -75,9 +76,11 @@
     &-text {
       color: $black;
       text-decoration: none;
+      margin-bottom: 10px;
+      min-height: 44px;
 
-      &:not(:last-child) {
-        margin-bottom: 10px;
+      &[href] {
+        min-height: auto;
       }
 
       @media (max-width: 350px) {
